@@ -1,0 +1,124 @@
+/**
+ * @author: Jose A Felix
+ * @editor: Jose A Felix
+ * @name: Routing.fallback.styles
+ * @description: Routing fallback stylesheet
+ */
+
+/* --------------------------------------------- */
+
+/** @import Global style */
+@import "./../../../assets/style/Styles.scss";
+
+/* --------------------------------------------- */
+
+/** Space background */
+.space-video-background {
+   height: 100%;
+   width: 100%;
+   object-fit: fill;
+}
+
+/* --------------------------------------------- */
+
+/** Moon */
+.moon-object {
+   position: absolute;
+   bottom: -1rem;
+   left: 0;
+   height: auto;
+   width: 40vw;
+}
+
+.moon-object img {
+   width: 100%;
+}
+
+@media (min-width: $breakpointTablet) {
+   .moon-object {
+      bottom: -3rem;
+   }
+}
+
+@media (min-width: $breakpointLaptop) {
+   .moon-object {
+      bottom: -5rem;
+      width: 35vw;
+   }
+}
+
+@media (min-width: $breakpointDesktop) {
+   .moon-object {
+      bottom: -10rem;
+   }
+}
+
+/* --------------------------------------------- */
+
+/** Error message */
+.error-message {
+   bottom: 0;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   left: 0;
+   margin: -2rem 3rem 0;
+   max-width: 20rem;
+   min-width: 10rem;
+   position: absolute;
+   right: 0;
+   top: 0;
+}
+
+@media (min-width: $breakpointMobile) {
+   .error-message {
+      left: auto;
+      margin: 0 3rem;
+   }
+}
+
+@media (min-width: $breakpointTablet) {
+   .error-message {
+      right: 10vw;
+   }
+}
+
+@media (min-width: $breakpointLaptop) {
+   .error-message {
+      max-width: 25rem;
+   }
+}
+
+/* --------------------------------------------- */
+
+/** Error message elements */
+.error-header {
+   color: $primaryLight;
+   margin-bottom: 1rem;
+}
+
+.error-apology {
+   margin-bottom: 1rem;
+}
+
+/* --------------------------------------------- */
+
+/** Back home button */
+.back-home-button {
+   align-self: baseline;
+   background-color: $primaryMain;
+}
+
+.back-home-button:hover {
+   background-color: $primaryMain;
+}
+
+/* --------------------------------------------- */
+
+/** Custom copyright style for error page */
+.copyright {
+   color: white;
+   height: auto;
+   padding: 2rem;
+}

@@ -1,0 +1,27 @@
+/**
+ * @author: Jose A Felix
+ * @editor: Jose A Felix
+ * @name: App.fallback.styles
+ * @description: App fallback component stylesheet
+ */
+
+/* --------------------------------------------- */
+
+/** @import Global style */
+@import "./../../../assets/style/Styles.scss";
+
+/* --------------------------------------------- */
+
+.app-fallback-container {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  height: 100%;
+  justify-content: center;
+}
+
+.app-fallback-message {
+  height: auto;
+}

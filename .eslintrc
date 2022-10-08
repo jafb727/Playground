@@ -1,0 +1,20 @@
+/**
+ * @author: Jose A Felix
+ * @editor: Jose A Felix
+ * @name: .eslintrc
+ * @description: ESLint configuration file
+ */
+
+/* --------------------------------------------- */
+
+/** @module ESLint setup */
+{
+   "extends": ["react-app", "react-app/jest"],
+   "rules": {},
+   "overrides": [
+      {
+         "files": ["**/*.ts?(x)"],
+         "rules": {}
+      }
+   ]
+}

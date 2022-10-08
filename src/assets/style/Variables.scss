@@ -1,0 +1,32 @@
+/**
+ * @author: Jose A Felix
+ * @editor: Jose A Felix
+ * @name: Variables.scss
+ * @description: Global variables
+ * @note: Stylesheet will be used to support varibles to keep project standardized.
+ * Check Variables.modules.scss to maintain both files updated
+ */
+
+/* --------------------------------------------- */
+
+/** @description Primary app theming */
+$primaryLight: #B27FF5;
+$primaryMain: #6a30bd;
+$primaryDark: #34008c;
+$primaryContrastText: #fff;
+
+/* --------------------------------------------- */
+
+/** @description Secondary app theming */
+$secondaryLight: #66ffa6;
+$secondaryMain: #00e676;
+$secondaryDark: #00b248;
+$secondaryContrastText: #000;
+
+/* --------------------------------------------- */
+
+/** @constant Breakpoints for media queries */
+$breakpointMobile: 480px;
+$breakpointTablet: 768px;
+$breakpointLaptop: 1024px;
+$breakpointDesktop: 1200px;

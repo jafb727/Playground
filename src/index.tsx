@@ -1,19 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/**
+ * @author: Jose A Felix
+ * @editor: Jose A Felix
+ * @name: index
+ * @description: Project Application entry point
+ */
 
+/* --------------------------------------------- */
+
+/** @import Libraries */
+import React, { Suspense } from "react";
+import ReactDOM from "react-dom/client";
+
+/** @import Components */
+import { AppFallback } from "./components/Fallback";
+import { StyledEngineProvider } from "@mui/material";
+
+/** @constant @import App */
+const App = React.lazy(() => import("./containers/App"));
+
+/* --------------------------------------------- */
+
+/** Creating root element in DOM */
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+   document.getElementById("root") as HTMLElement
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+/** Rendering App */
+root.render(
+   <Suspense fallback={<AppFallback />}>
+      {/** Adds fist MUI styles to be able to override them after */}
+      <StyledEngineProvider injectFirst>
+         <App />
+      </StyledEngineProvider>
+   </Suspense>
+);
