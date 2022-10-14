@@ -6,38 +6,104 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="MuiBox-root css-0"
-        data-testid="login-page"
+        class="full-page-background MuiBox-root css-0"
       >
         <div
-          class="copyrightContainer undefined MuiBox-root css-0"
-          data-testid="copyright-component"
+          class="MuiBox-root css-0"
+          data-testid="login-page"
+          id="login-page"
         >
-          <p
-            class="MuiTypography-root MuiTypography-body2 css-6g3fvq-MuiTypography-root"
+          <header
+            class="header-full-page"
           >
-            © 
-            All rights reserved.
-          </p>
+            <div
+              class="ribbonContainer ribbon MuiBox-root css-1fn0841"
+              data-testid="ribbon-container"
+            >
+              <div
+                class="MuiBox-root css-0"
+                data-testid="logo-component"
+              >
+                <h4
+                  class="MuiTypography-root MuiTypography-h4 logo css-95oyd8-MuiTypography-root"
+                >
+                  MY
+                </h4>
+              </div>
+            </div>
+          </header>
+          <footer
+            class="footer-full-page"
+          >
+            <div
+              class="ribbonContainer ribbon MuiBox-root css-1a9getn"
+              data-testid="ribbon-container"
+            >
+              <div
+                class="MuiBox-root css-0"
+                data-testid="copyright-component"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-n6q3br-MuiTypography-root"
+                >
+                  © 
+                  All rights reserved.
+                </p>
+              </div>
+            </div>
+          </footer>
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="MuiBox-root css-0"
-      data-testid="login-page"
+      class="full-page-background MuiBox-root css-0"
     >
       <div
-        class="copyrightContainer undefined MuiBox-root css-0"
-        data-testid="copyright-component"
+        class="MuiBox-root css-0"
+        data-testid="login-page"
+        id="login-page"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body2 css-6g3fvq-MuiTypography-root"
+        <header
+          class="header-full-page"
         >
-          © 
-          All rights reserved.
-        </p>
+          <div
+            class="ribbonContainer ribbon MuiBox-root css-1fn0841"
+            data-testid="ribbon-container"
+          >
+            <div
+              class="MuiBox-root css-0"
+              data-testid="logo-component"
+            >
+              <h4
+                class="MuiTypography-root MuiTypography-h4 logo css-95oyd8-MuiTypography-root"
+              >
+                MY
+              </h4>
+            </div>
+          </div>
+        </header>
+        <footer
+          class="footer-full-page"
+        >
+          <div
+            class="ribbonContainer ribbon MuiBox-root css-1a9getn"
+            data-testid="ribbon-container"
+          >
+            <div
+              class="MuiBox-root css-0"
+              data-testid="copyright-component"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-n6q3br-MuiTypography-root"
+              >
+                © 
+                All rights reserved.
+              </p>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   </div>,

@@ -1,34 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Copyright.component Passes shallow snapshot test 1`] = `
+exports[`App.fallback.component Passes shallow snapshot test 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="MuiBox-root css-0"
-        data-testid="copyright-component"
+        class="full-page-background"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+        <div
+          class="app-fallback-container"
+          data-testid="app-fallback-component"
         >
-          © 
-          All rights reserved.
-        </p>
+          <div
+            class="app-fallback-message"
+          >
+            Something awesome is rendering
+          </div>
+          <div
+            class="ellipsis"
+          >
+            <div />
+            <div />
+            <div />
+            <div />
+          </div>
+        </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="MuiBox-root css-0"
-      data-testid="copyright-component"
+      class="full-page-background"
     >
-      <p
-        class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+      <div
+        class="app-fallback-container"
+        data-testid="app-fallback-component"
       >
-        © 
-        All rights reserved.
-      </p>
+        <div
+          class="app-fallback-message"
+        >
+          Something awesome is rendering
+        </div>
+        <div
+          class="ellipsis"
+        >
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
+      </div>
     </div>
   </div>,
   "debug": [Function],

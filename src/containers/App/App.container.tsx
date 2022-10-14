@@ -32,7 +32,7 @@ const App = () => {
    /** Setting app routes */
    const router = createBrowserRouter(
       createRoutesFromElements(
-         <Route path="/" element={null} errorElement={<RoutingFallback />}>
+         <Route path="/" element={<Login />} errorElement={<RoutingFallback />}>
             <Route path="/login" element={<Login />} />
          </Route>
       )

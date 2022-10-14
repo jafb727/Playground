@@ -1,34 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Copyright.component Passes shallow snapshot test 1`] = `
+exports[`Logo.component Passes shallow snapshot test 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
         class="MuiBox-root css-0"
-        data-testid="copyright-component"
+        data-testid="logo-component"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+        <h4
+          class="MuiTypography-root MuiTypography-h4 logo css-5lbw0b-MuiTypography-root"
         >
-          © 
-          All rights reserved.
-        </p>
+          MY
+        </h4>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
       class="MuiBox-root css-0"
-      data-testid="copyright-component"
+      data-testid="logo-component"
     >
-      <p
-        class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+      <h4
+        class="MuiTypography-root MuiTypography-h4 logo css-5lbw0b-MuiTypography-root"
       >
-        © 
-        All rights reserved.
-      </p>
+        MY
+      </h4>
     </div>
   </div>,
   "debug": [Function],

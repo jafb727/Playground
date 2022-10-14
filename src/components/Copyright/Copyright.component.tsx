@@ -14,9 +14,6 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-/** @import Styles */
-import Style from "./Copyright.module.scss";
-
 /** @import Assets */
 import Text from "./../../assets/typography/Text.json";
 
@@ -44,7 +41,7 @@ function Copyright(props: CopyrightProps) {
    return (
       <Box
          sx={customStyle}
-         className={`${Style.copyrightContainer} ${className}`}
+         className={className}
          data-testid="copyright-component"
       >
          <Typography variant="body2">&copy; {Text.copyright}</Typography>

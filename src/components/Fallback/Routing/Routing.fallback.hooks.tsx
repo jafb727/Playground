@@ -27,11 +27,11 @@ import SmallPoster from "./../../../assets/images/404/ThumbnailSpaceS.png";
 /* --------------------------------------------- */
 
 /**
- * @function Error
- * @description Main functional component
- * @returns {JSX} A React hook
+ * @function useFallbackRoutingStateAndEvents
+ * @description Main component hook
+ * @returns {object} Hook functions and state
  */
-export const useErrorStateAndEvents = () => {
+export const useFallbackRoutingStateAndEvents = () => {
    /** @constant */
    const videoRef: any = useRef();
 

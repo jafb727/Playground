@@ -2,8 +2,7 @@
  * @author: Jose A Felix
  * @editor: Jose A Felix
  * @name: App.fallback.component
- * @description: App fallback component.
- * Contains different fallback components for many purposes and uses
+ * @description: App fallback component. Used when application is being rendered
  */
 
 /* --------------------------------------------- */
@@ -23,10 +22,10 @@ import Text from "../../../assets/typography/Text.json";
  */
 const AppFallback = () => {
    return (
-      <div className="app-background">
+      <div className="full-page-background">
          <div
             className="app-fallback-container"
-            data-testid="fallback-component"
+            data-testid="app-fallback-component"
          >
             <div className="app-fallback-message">{Text.fallAppMessage}</div>
             <div className="ellipsis">

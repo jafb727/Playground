@@ -2,7 +2,8 @@
  * @author: Jose A Felix
  * @editor: Jose A Felix
  * @name: Routing.fallback.component
- * @description: Routing fallback component
+ * @description: Routing fallback component. Whenever a route is not recognized
+ * or built wrong this is the error page to show by default
  */
 
 /* --------------------------------------------- */
@@ -15,11 +16,12 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Copyright from "../../../components/Copyright";
 import { Link } from "react-router-dom";
+import Ribbon from "./../../../containers/Ribbon";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import Typography from "@mui/material/Typography";
 
 /** @import Hooks */
-import { useErrorStateAndEvents } from "./Routing.fallback.hooks";
+import { useFallbackRoutingStateAndEvents } from "./Routing.fallback.hooks";
 
 /** @import Theme */
 import Theme from "./../../../config/theme.config";
@@ -40,13 +42,14 @@ import Moon from "./../../../assets/images/404/MoonAstronaut.png";
  */
 const RoutingFallback = () => {
    /** Hooks */
-   const { videoSource, videoRef, videoPoster } = useErrorStateAndEvents();
+   const { videoSource, videoRef, videoPoster } =
+      useFallbackRoutingStateAndEvents();
 
    /* ----------------------- */
 
    return (
-      <Box className="app-background">
-         <Box className="square-container" data-testid="eror-page">
+      <Box className="full-page-background">
+         <Box className="frame-container" data-testid="eror-page">
             <ThemeProvider theme={Theme}>
                {/** Space background */}
                <video
@@ -98,8 +101,13 @@ const RoutingFallback = () => {
                   </Link>
                </Box>
 
-               {/** Copyright */}
-               <Copyright className="copyright" />
+               {/** Footer */}
+               <footer className="footer-full-page">
+                  <Ribbon horizontalAlignment="right">
+                     {/** Copyright */}
+                     <Copyright className="copyright" />
+                  </Ribbon>
+               </footer>
             </ThemeProvider>
          </Box>
       </Box>

@@ -10,7 +10,7 @@
 /* --------------------------------------------- */
 
 /** @description Fonts */
-$headerFont: "Lato", sans-serif;
+$headerFont: "Koulen", sans-serif;
 $globalFont: "Montserrat", sans-serif;
 
 :export {
@@ -21,10 +21,10 @@ $globalFont: "Montserrat", sans-serif;
 /* --------------------------------------------- */
 
 /** @description Primary theming colors for MUI */
-$primaryLight: #B27FF5;
-$primaryMain: #6a30bd;
-$primaryDark: #34008c;
-$primaryContrastText: #fff;
+$primaryLight: #ff79b0;
+$primaryMain: #ff4081;
+$primaryDark: #c60055;
+$primaryContrastText: #000;
 
 :export {
   primaryLight: $primaryLight;
@@ -36,10 +36,10 @@ $primaryContrastText: #fff;
 /* --------------------------------------------- */
 
 /** @description Secondary theming colors for MUI */
-$secondaryLight: #66ffa6;
-$secondaryMain: #00e676;
-$secondaryDark: #00b248;
-$secondaryContrastText: #000;
+$secondaryLight: #62727b;
+$secondaryMain: #37474f;
+$secondaryDark: #102027;
+$secondaryContrastText: #fff;
 
 :export {
   secondaryLight: $secondaryLight;

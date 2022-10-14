@@ -97,7 +97,7 @@ const Theme = createTheme({
          fontFamily: Variables.headerFont,
       },
       h1_1: {
-         fontSize: 80,
+         fontSize: 100,
          fontFamily: Variables.headerFont,
       },
       h2: {

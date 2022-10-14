@@ -1,27 +1,27 @@
-/**
+/*
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: App.fallback.component.test
- * @description: App fallback component test cases
+ * @name: Logo.component.test
+ * @description: Logo component test cases
  */
 
 /* --------------------------------------------- */
 
-/** Libraries */
+/** @import Libraries */
 import { screen } from "@testing-library/react";
 
-/** Components */
-import Component from "../App.fallback.component";
+/** @import Components */
+import Component from "../Logo.component";
 
-/** Utilities */
-import { basicSetup } from "../../../../test/setupTests";
+/** @import Utilities */
+import { basicSetup } from "../../../test/setupTests";
 
 /* --------------------------------------------- */
 
-describe("App.fallback.component", () => {
+describe("Logo.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("app-fallback-component")).toBeInTheDocument();
+      expect(screen.getByTestId("logo-component")).toBeInTheDocument();
    });
 
    /* ----------------------- */

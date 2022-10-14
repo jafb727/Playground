@@ -55,7 +55,7 @@
 
 /* --------------------------------------------- */
 
-/** Error message */
+/** Routing fallback error message */
 .error-message {
    bottom: 0;
    color: white;
@@ -92,10 +92,11 @@
 
 /* --------------------------------------------- */
 
-/** Error message elements */
+/** Routing fallback error message elements */
 .error-header {
-   color: $primaryLight;
-   margin-bottom: 1rem;
+   color: $primaryMain;
+   margin-bottom: 0;
+   line-height: 1.25;
 }
 
 .error-apology {
@@ -116,9 +117,8 @@
 
 /* --------------------------------------------- */
 
-/** Custom copyright style for error page */
 .copyright {
    color: white;
    height: auto;
-   padding: 2rem;
+   padding: 2rem 3rem;
 }

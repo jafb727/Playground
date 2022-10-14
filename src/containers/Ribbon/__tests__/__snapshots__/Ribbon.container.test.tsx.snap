@@ -1,35 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Copyright.component Passes shallow snapshot test 1`] = `
+exports[`Ribbon.container Passes shallow snapshot test 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="MuiBox-root css-0"
-        data-testid="copyright-component"
-      >
-        <p
-          class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
-        >
-          © 
-          All rights reserved.
-        </p>
-      </div>
+        class="ribbonContainer undefined MuiBox-root css-1fn0841"
+        data-testid="ribbon-container"
+      />
     </div>
   </body>,
   "container": <div>
     <div
-      class="MuiBox-root css-0"
-      data-testid="copyright-component"
-    >
-      <p
-        class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
-      >
-        © 
-        All rights reserved.
-      </p>
-    </div>
+      class="ribbonContainer undefined MuiBox-root css-1fn0841"
+      data-testid="ribbon-container"
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

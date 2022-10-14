@@ -1,6 +1,6 @@
 {
-   "name": "myform",
-   "version": "1.0.0",
+   "name": "playground",
+   "version": "1.0.1",
    "private": true,
    "scripts": {
       "start": "react-scripts start",
