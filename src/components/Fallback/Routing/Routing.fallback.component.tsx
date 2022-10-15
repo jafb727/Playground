@@ -17,17 +17,18 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Copyright from "../../../components/Copyright";
 import { Link } from "react-router-dom";
-import Ribbon from "./../../../containers/Ribbon";
+import Ribbon from "../../../containers/Collection";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import Typography from "@mui/material/Typography";
 
 /** @import Hooks */
-import { useFallbackRoutingStateAndEvents } from "./Routing.fallback.hooks";
+import { useRoutingFallbackStateAndEvents } from "./Routing.fallback.hooks";
 
 /** @import Theme */
 import Theme from "./../../../config/theme.config";
 
 /** @import Styles */
+import GlobalStyle from "./../../../assets/style/Styles.module.scss";
 import Style from "./Routing.fallback.styles.module.scss";
 
 /** @import Assets */
@@ -44,14 +45,14 @@ import Moon from "./../../../assets/images/404/MoonAstronaut.png";
 const RoutingFallback = () => {
    /** Hooks */
    const { videoSource, videoRef, videoPoster } =
-      useFallbackRoutingStateAndEvents();
+      useRoutingFallbackStateAndEvents();
 
    /* ----------------------- */
 
    return (
       <Box data-testid="routing-fallback">
          <Background defaultBackground fullPage>
-            <Box className={Style.frameContainer}>
+            <Box className={GlobalStyle.frameContainer}>
                <ThemeProvider theme={Theme}>
                   {/** Space background */}
                   <video
@@ -107,7 +108,7 @@ const RoutingFallback = () => {
                   </Box>
 
                   {/** Footer */}
-                  <footer className={Style.footerFullPage}>
+                  <footer className={GlobalStyle.footerFullPage}>
                      <Ribbon horizontalAlignment="right">
                         {/** Copyright */}
                         <Copyright className={Style.copyright} />

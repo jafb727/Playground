@@ -1,10 +1,10 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Ribbon.container
- * @description: Ribbon container. Renders a queue of elements organized
- * from left to right using flexbox. Each element can have is own flex size
- * to fit inside the ribbon of elements.
+ * @name: Collection.container
+ * @description: Collection container. Renders a queue of elements organized
+ * from left to right by default. Each element can have is own flex size
+ * to fit inside the collection of elements.
  */
 
 /* --------------------------------------------- */
@@ -16,15 +16,15 @@ import React from "react";
 import { Box } from "@mui/material";
 
 /** @import Hooks */
-import { useRibbonContainerStateAndEvents } from "./Ribbon.container.hooks";
+import { useCollectionStateAndEvents } from "./Collection.container.hooks";
 
 /** @import Styles */
-import Style from "./Ribbon.module.scss";
+import Style from "./Collection.module.scss";
 
 /* --------------------------------------------- */
 
 /** @exports @interface Ribbon properties */
-export interface RibbonProps {
+export interface CollectionProps {
    children?: React.ReactNode;
    className?: string;
    horizontalAlignment?: string;
@@ -34,24 +34,24 @@ export interface RibbonProps {
 /* --------------------------------------------- */
 
 /**
- * @function Ribbon
+ * @function Collection
  * @description Main functional component
  * @returns {JSX} A React element
  */
-const Ribbon = (props: RibbonProps) => {
+const Collection = (props: CollectionProps) => {
    /** @constant Properties */
    const { children, className, style: customStyle } = props;
 
    /** @constant Hooks call */
-   const { ribbonAlignment } = useRibbonContainerStateAndEvents(props);
+   const { collectionAlignment } = useCollectionStateAndEvents(props);
 
    /* ----------------------- */
 
    return (
       <Box
-         sx={{ ...ribbonAlignment, ...customStyle }}
-         className={`${Style.ribbonContainer} ${className}`}
-         data-testid="ribbon"
+         sx={{ ...collectionAlignment, ...customStyle }}
+         className={`${Style.collectionContainer} ${className}`}
+         data-testid="collection"
       >
          {children}
       </Box>
@@ -61,4 +61,4 @@ const Ribbon = (props: RibbonProps) => {
 /* --------------------------------------------- */
 
 /** @exports @default component */
-export default Ribbon;
+export default Collection;

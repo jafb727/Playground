@@ -8,6 +8,7 @@
 /* --------------------------------------------- */
 
 /** @import Styles */
+import GlobalStyle from "./../../../assets/style/Styles.module.scss";
 import Style from "./App.fallback.styles.module.scss";
 
 /** @import Assets */
@@ -25,15 +26,15 @@ const AppFallback = () => {
    return (
       <div data-testid="app-fallback">
          <div
-            className={`${Style.defaultBackground} ${Style.fullPageBackground}`}
+            className={`${GlobalStyle.defaultBackground} ${GlobalStyle.fullPageBackground}`}
          >
             <div
-               className={`${Style.fullSizeContainer} ${Style.appFallbackContainer}`}
+               className={`${GlobalStyle.fullSizeContainer} ${Style.appFallbackContainer}`}
             >
                <div className={Style.appFallbackMessage}>
                   {Text.fallAppMessage}
                </div>
-               <div className={Style.ellipsis}>
+               <div className={GlobalStyle.ellipsis}>
                   <div></div>
                   <div></div>
                   <div></div>

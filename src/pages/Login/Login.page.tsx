@@ -14,14 +14,16 @@ import React from "react";
 import Background from "../../containers/Background";
 import Box from "@mui/material/Box";
 import Copyright from "../../components/Copyright";
+import Form from "../../components/Form";
 import Logo from "./../../components/Logo";
-import Ribbon from "./../../containers/Ribbon";
+import Collection from "../../containers/Collection";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 
 /** @import Theme */
 import Theme from "./../../config/theme.config";
 
 /** @import Styles */
+import GlobalStyle from "./../../assets/style/Styles.module.scss";
 import Style from "./Login.styles.module.scss";
 
 /* --------------------------------------------- */
@@ -36,29 +38,36 @@ const Login = () => {
       <Box id="login" data-testid="login">
          <Background defaultBackground fullPage>
             <ThemeProvider theme={Theme}>
-               <Box id="workspace" className={Style.fullSizeContainer}>
+               <Box id="workspace" className={GlobalStyle.fullSizeContainer}>
                   {/** Header */}
-                  <header id="header" className={Style.headerFullPage}>
-                     <Ribbon className={Style.ribbon}>
+                  <header id="header" className={GlobalStyle.headerFullPage}>
+                     <Collection className={Style.collection}>
                         <Logo />
-                     </Ribbon>
+                     </Collection>
                   </header>
 
                   {/** Login form */}
                   <section
                      id="content"
-                     className={Style.fullSizeContainer}
-                  ></section>
+                     className={GlobalStyle.fullSizeContainer}
+                  >
+                     <Collection className={Style.loginContentContainer}>
+                        <Form></Form>
+                        <Background
+                           className={Style.loginBackground}
+                        ></Background>
+                     </Collection>
+                  </section>
 
                   {/** Footer */}
-                  <footer id="footer" className={Style.footerFullPage}>
-                     <Ribbon
-                        horizontalAlignment="right"
-                        className={Style.ribbon}
+                  <footer id="footer" className={GlobalStyle.footerFullPage}>
+                     <Collection
+                        horizontalAlignment="end"
+                        className={Style.collection}
                      >
                         {/** Copyright */}
                         <Copyright />
-                     </Ribbon>
+                     </Collection>
                   </footer>
                </Box>
             </ThemeProvider>

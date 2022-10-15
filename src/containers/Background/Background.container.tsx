@@ -2,7 +2,8 @@
  * @author: Jose A Felix
  * @editor: Jose A Felix
  * @name: Background.container
- * @description: Background container
+ * @description: Background container. Used to represent an element with
+ * a background or simply a background in full page mode.
  */
 
 /* --------------------------------------------- */
@@ -14,11 +15,11 @@ import React from "react";
 import { Box } from "@mui/material";
 
 /** @import Hooks */
-import { useBackgroundContainerStateAndEvents } from "./Background.container.hooks";
+import { useBackgroundStateAndEvents } from "./Background.container.hooks";
 
 /* --------------------------------------------- */
 
-/** @@exports interface Background properties */
+/** @@exports @interface Background properties */
 export interface BackgroundProps {
    children?: React.ReactNode;
    className?: string;
@@ -38,14 +39,13 @@ const Background = (props: BackgroundProps) => {
    const { children, className } = props;
 
    /** @constant Hooks call */
-   const { defaultBackground, fullPageBackground } =
-      useBackgroundContainerStateAndEvents(props);
+   const { defaultBg, fullPage } = useBackgroundStateAndEvents(props);
 
    /* ----------------------- */
 
    return (
       <Box
-         className={`${fullPageBackground} ${defaultBackground} ${className}`}
+         className={`${fullPage} ${defaultBg} ${className}`}
          data-testid="background"
       >
          {children}

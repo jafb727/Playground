@@ -19,23 +19,19 @@ import {
 /* --------------------------------------------- */
 
 /**
- * @function useBackgroundContainerStateAndEvents
+ * @function useBackgroundStateAndEvents
  * @description Main container hook
  * @returns {object} Hook functions and state
  */
-export const useBackgroundContainerStateAndEvents = (
-   props: BackgroundProps
-) => {
+export const useBackgroundStateAndEvents = (props: BackgroundProps) => {
    /** @constant */
-   const defaultBackground: string = setDefaultBackground(
-      props.defaultBackground
-   );
-   const fullPageBackground: string = setFullPageBackground(props.fullPage);
+   const defaultBg: string = setDefaultBackground(props.defaultBackground);
+   const fullPage: string = setFullPageBackground(props.fullPage);
 
    /* ----------------------- */
 
    return {
-      defaultBackground,
-      fullPageBackground,
+      defaultBg,
+      fullPage,
    };
 };

@@ -1,34 +1,34 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Ribbon.container.hooks
- * @description: Ribbon container hooks
+ * @name: Collection.container.hooks
+ * @description: Collection container hooks
  */
 
 /* --------------------------------------------- */
 
 /** @import Interfaces */
-import { RibbonProps } from "./Ribbon.container";
+import { CollectionProps } from "./Collection.container";
 
 /** @import Utilities */
-import { calcHorizontalAlignInRibbon } from "./Ribbon.container.utils";
+import { setCollectionAlignment } from "./Collection.container.utils";
 
 /* --------------------------------------------- */
 
 /**
- * @function useRibbonContainerStateAndEvents
+ * @function useCollectionStateAndEvents
  * @description Main container hook
  * @returns {object} Hook functions and state
  */
-export const useRibbonContainerStateAndEvents = (props: RibbonProps) => {
+export const useCollectionStateAndEvents = (props: CollectionProps) => {
    /** @constant */
-   const ribbonAlignment: any = calcHorizontalAlignInRibbon(
+   const collectionAlignment: any = setCollectionAlignment(
       props.horizontalAlignment
    );
 
    /* ----------------------- */
 
    return {
-      ribbonAlignment,
+      collectionAlignment,
    };
 };

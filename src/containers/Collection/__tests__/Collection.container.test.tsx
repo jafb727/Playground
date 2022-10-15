@@ -1,8 +1,8 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Ribbon.container.test
- * @description: Ribbon container test cases
+ * @name: Collection.container.test
+ * @description: Collection container test cases
  */
 
 /* --------------------------------------------- */
@@ -11,17 +11,17 @@
 import { screen } from "@testing-library/react";
 
 /** Components */
-import Component from "../../Ribbon";
+import Component from "..";
 
 /** Utilities */
 import { basicSetup } from "../../../test/setupTests";
 
 /* --------------------------------------------- */
 
-describe("Ribbon.container", () => {
+describe("Collection.container", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("ribbon")).toBeInTheDocument();
+      expect(screen.getByTestId("collection")).toBeInTheDocument();
    });
 
    /* ----------------------- */

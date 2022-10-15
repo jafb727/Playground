@@ -7,11 +7,17 @@
 
 /* --------------------------------------------- */
 
-/** @import Global style */
-@import "./../../assets/style/Styles.module.scss";
-
-/* --------------------------------------------- */
-
-.ribbon {
+.collection {
   padding: 1rem;
+}
+
+.loginContentContainer {
+  background-color: white;
+  height: auto;
+  min-height: 10rem;
+  max-height: 30rem;
+}
+
+.loginBackground {
+  background-color: aquamarine;
 }

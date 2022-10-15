@@ -8,7 +8,6 @@
 /* --------------------------------------------- */
 
 /** @import Stylesheets */
-@import "./Variables.module.scss";
 @import "./Animations.module.scss";
 
 /* --------------------------------------------- */
@@ -42,6 +41,8 @@ header {
    width: 100%;
 }
 
+/* --------------------------------------------- */
+
 /** 
  * @description Footer layout when page is supposed to be
  * full view port height and width
@@ -49,6 +50,7 @@ header {
 .footerFullPage {
    bottom: 0;
    position: absolute;
+   z-index: 1;
 }
 
 /** 
@@ -58,6 +60,7 @@ header {
 .headerFullPage {
    position: absolute;
    top: 0;
+   z-index: 1;
 }
 
 /* --------------------------------------------- */
