@@ -8,7 +8,7 @@
 /* --------------------------------------------- */
 
 /** @import Styles */
-import "./App.fallback.styles.scss";
+import Style from "./App.fallback.styles.module.scss";
 
 /** @import Assets */
 import Text from "../../../assets/typography/Text.json";
@@ -24,10 +24,16 @@ import Text from "../../../assets/typography/Text.json";
 const AppFallback = () => {
    return (
       <div data-testid="app-fallback">
-         <div className="default-background full-page-background">
-            <div className="full-size-container app-fallback-container">
-               <div className="app-fallback-message">{Text.fallAppMessage}</div>
-               <div className="ellipsis">
+         <div
+            className={`${Style.defaultBackground} ${Style.fullPageBackground}`}
+         >
+            <div
+               className={`${Style.fullSizeContainer} ${Style.appFallbackContainer}`}
+            >
+               <div className={Style.appFallbackMessage}>
+                  {Text.fallAppMessage}
+               </div>
+               <div className={Style.ellipsis}>
                   <div></div>
                   <div></div>
                   <div></div>

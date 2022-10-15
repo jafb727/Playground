@@ -9,13 +9,13 @@ Object {
         data-testid="app-fallback"
       >
         <div
-          class="default-background full-page-background"
+          class="defaultBackground fullPageBackground"
         >
           <div
-            class="full-size-container app-fallback-container"
+            class="fullSizeContainer appFallbackContainer"
           >
             <div
-              class="app-fallback-message"
+              class="appFallbackMessage"
             >
               Something awesome is rendering
             </div>
@@ -37,13 +37,13 @@ Object {
       data-testid="app-fallback"
     >
       <div
-        class="default-background full-page-background"
+        class="defaultBackground fullPageBackground"
       >
         <div
-          class="full-size-container app-fallback-container"
+          class="fullSizeContainer appFallbackContainer"
         >
           <div
-            class="app-fallback-message"
+            class="appFallbackMessage"
           >
             Something awesome is rendering
           </div>

@@ -8,12 +8,12 @@
 /* --------------------------------------------- */
 
 /** @import Global style */
-@import "./../../../assets/style/Styles.scss";
+@import "./../../../assets/style/Styles.module.scss";
 
 /* --------------------------------------------- */
 
 /** Space background */
-.space-video-background {
+.spaceVideoBackground {
    height: 100%;
    width: 100%;
    object-fit: fill;
@@ -22,33 +22,32 @@
 /* --------------------------------------------- */
 
 /** Moon */
-.moon-object {
+.moonObject {
    position: absolute;
    bottom: -1rem;
    left: 0;
-   height: auto;
    width: 40vw;
 }
 
-.moon-object img {
+.moonObject img {
    width: 100%;
 }
 
 @media (min-width: $breakpointTablet) {
-   .moon-object {
+   .moonObject {
       bottom: -3rem;
    }
 }
 
 @media (min-width: $breakpointLaptop) {
-   .moon-object {
+   .moonObject {
       bottom: -5rem;
       width: 35vw;
    }
 }
 
 @media (min-width: $breakpointDesktop) {
-   .moon-object {
+   .moonObject {
       bottom: -10rem;
    }
 }
@@ -56,7 +55,7 @@
 /* --------------------------------------------- */
 
 /** Routing fallback error message */
-.error-message {
+.errorMessage {
    bottom: 0;
    color: white;
    display: flex;
@@ -72,20 +71,20 @@
 }
 
 @media (min-width: $breakpointMobile) {
-   .error-message {
+   .errorMessage {
       left: auto;
       margin: 0 3rem;
    }
 }
 
 @media (min-width: $breakpointTablet) {
-   .error-message {
+   .errorMessage {
       right: 10vw;
    }
 }
 
 @media (min-width: $breakpointLaptop) {
-   .error-message {
+   .errorMessage {
       max-width: 25rem;
    }
 }
@@ -93,25 +92,19 @@
 /* --------------------------------------------- */
 
 /** Routing fallback error message elements */
-.error-header {
-   color: $primaryMain;
+.errorHeader {
    margin-bottom: 0;
    line-height: 1.25;
 }
 
-.error-apology {
+.errorApology {
    margin-bottom: 1rem;
 }
 
 /* --------------------------------------------- */
 
 /** Back home button */
-.back-home-button {
-   align-self: baseline;
-   background-color: $primaryMain;
-}
-
-.back-home-button:hover {
+.backHomeButton {
    background-color: $primaryMain;
 }
 
@@ -119,6 +112,5 @@
 
 .copyright {
    color: white;
-   height: auto;
    padding: 2rem 3rem;
 }

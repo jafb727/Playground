@@ -8,15 +8,15 @@
 /* --------------------------------------------- */
 
 /** @import Global style */
-@import "./../../../assets/style/Styles.scss";
+@import "./../../../assets/style/Styles.module.scss";
 
 /* --------------------------------------------- */
 
-.app-fallback-container {
+.appFallbackContainer {
   color: white;
   font-family: sans-serif;
 }
 
-.app-fallback-message {
+.appFallbackMessage {
   height: auto;
 }

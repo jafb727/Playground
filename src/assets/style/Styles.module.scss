@@ -1,9 +1,64 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Styles.module.scss
- * @description: Global module stylesheet
+ * @name: Styles.scss
+ * @description: Global stylesheet
  */
+
+/* --------------------------------------------- */
+
+/** @import Stylesheets */
+@import "./Variables.module.scss";
+@import "./Animations.module.scss";
+
+/* --------------------------------------------- */
+
+/** Fonts */
+@font-face {
+   font-family: Montserrat;
+   src: url("./../typography/fonts/Montserrat-regular.woff2");
+}
+
+@font-face {
+   font-family: Koulen;
+   src: url("./../typography/fonts/Koulen-regular.woff2");
+}
+
+/* --------------------------------------------- */
+
+/** Global styles */
+a {
+   text-decoration: none;
+   display: inline-block;
+   align-self: baseline;
+}
+
+body {
+   margin: 0;
+}
+
+footer,
+header {
+   width: 100%;
+}
+
+/** 
+ * @description Footer layout when page is supposed to be
+ * full view port height and width
+ */
+.footerFullPage {
+   bottom: 0;
+   position: absolute;
+}
+
+/** 
+ * @description Header layout when page is supposed to be
+ * full view port height and width
+ */
+.headerFullPage {
+   position: absolute;
+   top: 0;
+}
 
 /* --------------------------------------------- */
 
@@ -27,4 +82,28 @@
    position: absolute;
    right: 0;
    top: 0;
+}
+
+/** 
+ * @description This container will take full size of the parent container
+ * and render elements stacked in a column. It was thought to be used in
+ * to very simple implementations like showing a loading image
+ */
+.fullSizeContainer {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   justify-content: center;
+   width: 100%;
+}
+
+/** 
+ * @description Gives the impression of a square surrounding page content
+ * like a frame, needs to be combined with full-page-background to work. 
+ * Used in routing fallback error page.
+ */
+.frameContainer {
+   margin: 1rem;
+   height: calc(100% - 2rem);
 }

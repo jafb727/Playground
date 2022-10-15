@@ -22,7 +22,7 @@ import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import Theme from "./../../config/theme.config";
 
 /** @import Styles */
-import Styles from "./Login.styles.module.scss";
+import Style from "./Login.styles.module.scss";
 
 /* --------------------------------------------- */
 
@@ -36,10 +36,10 @@ const Login = () => {
       <Box id="login" data-testid="login">
          <Background defaultBackground fullPage>
             <ThemeProvider theme={Theme}>
-               <Box id="workspace" className="full-size-container">
+               <Box id="workspace" className={Style.fullSizeContainer}>
                   {/** Header */}
-                  <header id="header" className="header-full-page">
-                     <Ribbon className={Styles.ribbon}>
+                  <header id="header" className={Style.headerFullPage}>
+                     <Ribbon className={Style.ribbon}>
                         <Logo />
                      </Ribbon>
                   </header>
@@ -47,14 +47,14 @@ const Login = () => {
                   {/** Login form */}
                   <section
                      id="content"
-                     className="full-size-container"
+                     className={Style.fullSizeContainer}
                   ></section>
 
                   {/** Footer */}
-                  <footer id="footer" className="footer-full-page">
+                  <footer id="footer" className={Style.footerFullPage}>
                      <Ribbon
                         horizontalAlignment="right"
-                        className={Styles.ribbon}
+                        className={Style.ribbon}
                      >
                         {/** Copyright */}
                         <Copyright />

@@ -15,11 +15,11 @@ Object {
           data-testid="background"
         >
           <div
-            class="full-size-container MuiBox-root css-0"
+            class="fullSizeContainer MuiBox-root css-0"
             id="workspace"
           >
             <header
-              class="header-full-page"
+              class="headerFullPage"
               id="header"
             >
               <div
@@ -39,11 +39,11 @@ Object {
               </div>
             </header>
             <section
-              class="full-size-container"
+              class="fullSizeContainer"
               id="content"
             />
             <footer
-              class="footer-full-page"
+              class="footerFullPage"
               id="footer"
             >
               <div
@@ -79,11 +79,11 @@ Object {
         data-testid="background"
       >
         <div
-          class="full-size-container MuiBox-root css-0"
+          class="fullSizeContainer MuiBox-root css-0"
           id="workspace"
         >
           <header
-            class="header-full-page"
+            class="headerFullPage"
             id="header"
           >
             <div
@@ -103,11 +103,11 @@ Object {
             </div>
           </header>
           <section
-            class="full-size-container"
+            class="fullSizeContainer"
             id="content"
           />
           <footer
-            class="footer-full-page"
+            class="footerFullPage"
             id="footer"
           >
             <div

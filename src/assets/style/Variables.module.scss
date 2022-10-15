@@ -51,10 +51,10 @@ $secondaryContrastText: #fff;
 /* --------------------------------------------- */
 
 /** @description Breakpoints for media queries */
-$breakpointMobile: 480;
-$breakpointTablet: 768;
-$breakpointLaptop: 1024;
-$breakpointDesktop: 1200;
+$breakpointMobile: 480px;
+$breakpointTablet: 768px;
+$breakpointLaptop: 1024px;
+$breakpointDesktop: 1200px;
 
 :export {
   breakpointMobile: $breakpointMobile;

@@ -28,7 +28,7 @@ import { useFallbackRoutingStateAndEvents } from "./Routing.fallback.hooks";
 import Theme from "./../../../config/theme.config";
 
 /** @import Styles */
-import "./Routing.fallback.styles.scss";
+import Style from "./Routing.fallback.styles.module.scss";
 
 /** @import Assets */
 import Text from "./../../../assets/typography/Text.json";
@@ -51,7 +51,7 @@ const RoutingFallback = () => {
    return (
       <Box data-testid="routing-fallback">
          <Background defaultBackground fullPage>
-            <Box className="frame-container">
+            <Box className={Style.frameContainer}>
                <ThemeProvider theme={Theme}>
                   {/** Space background */}
                   <video
@@ -60,7 +60,7 @@ const RoutingFallback = () => {
                      muted
                      ref={videoRef}
                      poster={videoPoster}
-                     className="space-video-background fade"
+                     className={`${Style.spaceVideoBackground} ${Style.fade}`}
                      data-testid="space-video-background"
                   >
                      <source src={videoSource} type="video/mp4" />
@@ -68,34 +68,37 @@ const RoutingFallback = () => {
                   </video>
 
                   {/** Moon */}
-                  <Box className="moon-object">
+                  <Box className={Style.moonObject}>
                      <img alt="Moon" src={Moon}></img>
                   </Box>
 
                   {/** Error message */}
-                  <Box className="error-message" data-testid="error-message">
+                  <Box
+                     className={Style.errorMessage}
+                     data-testid="error-message"
+                  >
                      <Typography
                         color="primary"
                         gutterBottom
                         variant="h1_1"
-                        className="error-header"
+                        className={Style.errorHeader}
                      >
                         {Text["404"]}
                      </Typography>
                      <Typography
                         gutterBottom
                         variant="h4"
-                        className="error-subtitle"
+                        className={Style.errorSubtitle}
                      >
                         {Text["404Subtitle"]}
                      </Typography>
-                     <Typography className="error-apology">
+                     <Typography className={Style.errorApology}>
                         {Text["404Apologies"]}
                      </Typography>
                      <Link to="/">
                         <Button
                            variant="contained"
-                           className="back-home-button"
+                           className={Style.backHomeButton}
                            data-testid="back-home-button"
                         >
                            <Typography>{Text.btnBackHome}</Typography>
@@ -104,10 +107,10 @@ const RoutingFallback = () => {
                   </Box>
 
                   {/** Footer */}
-                  <footer className="footer-full-page">
+                  <footer className={Style.footerFullPage}>
                      <Ribbon horizontalAlignment="right">
                         {/** Copyright */}
-                        <Copyright className="copyright" />
+                        <Copyright className={Style.copyright} />
                      </Ribbon>
                   </footer>
                </ThemeProvider>
