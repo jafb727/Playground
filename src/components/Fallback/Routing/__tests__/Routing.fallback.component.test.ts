@@ -24,7 +24,7 @@ window.HTMLMediaElement.prototype.load = () => {};
 
 /* --------------------------------------------- */
 
-describe("Routing.component.component", () => {
+describe("Routing.fallback.component", () => {
    /** @constant Routing setup */
    const routingSetup = {
       location: "/error",
@@ -35,7 +35,7 @@ describe("Routing.component.component", () => {
 
    test("Renders component ok", () => {
       routerSetup(Component, routingSetup);
-      expect(screen.getByTestId("space-video-background")).toBeInTheDocument();
+      expect(screen.getByTestId("routing-fallback")).toBeInTheDocument();
    });
 
    /* ----------------------- */

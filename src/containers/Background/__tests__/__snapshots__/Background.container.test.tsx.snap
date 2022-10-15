@@ -6,15 +6,15 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="MuiBox-root css-0"
-        data-testid="background-container"
+        class="defaultBackground undefined MuiBox-root css-0"
+        data-testid="background"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="MuiBox-root css-0"
-      data-testid="background-container"
+      class="defaultBackground undefined MuiBox-root css-0"
+      data-testid="background"
     />
   </div>,
   "debug": [Function],

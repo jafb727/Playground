@@ -21,7 +21,7 @@ import { basicSetup } from "../../../test/setupTests";
 describe("Login.page", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("login-page")).toBeInTheDocument();
+      expect(screen.getByTestId("login")).toBeInTheDocument();
    });
 
    /* ----------------------- */

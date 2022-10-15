@@ -21,7 +21,7 @@ import { basicSetup } from "../../../../test/setupTests";
 describe("App.fallback.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("app-fallback-component")).toBeInTheDocument();
+      expect(screen.getByTestId("app-fallback")).toBeInTheDocument();
    });
 
    /* ----------------------- */

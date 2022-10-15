@@ -42,7 +42,7 @@ const Ribbon = (props: RibbonProps) => {
    /** @constant Properties */
    const { children, className, style: customStyle } = props;
 
-   /** @constant Hooks calling */
+   /** @constant Hooks call */
    const { ribbonAlignment } = useRibbonContainerStateAndEvents(props);
 
    /* ----------------------- */
@@ -51,7 +51,7 @@ const Ribbon = (props: RibbonProps) => {
       <Box
          sx={{ ...ribbonAlignment, ...customStyle }}
          className={`${Style.ribbonContainer} ${className}`}
-         data-testid="ribbon-container"
+         data-testid="ribbon"
       >
          {children}
       </Box>

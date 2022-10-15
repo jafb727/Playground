@@ -6,11 +6,41 @@ Object {
   "baseElement": <body>
     <div>
       <div
+        data-testid="app-fallback"
+      >
+        <div
+          class="full-page-background"
+        >
+          <div
+            class="full-size-container app-fallback-container"
+          >
+            <div
+              class="app-fallback-message"
+            >
+              Something awesome is rendering
+            </div>
+            <div
+              class="ellipsis"
+            >
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      data-testid="app-fallback"
+    >
+      <div
         class="full-page-background"
       >
         <div
-          class="app-fallback-container"
-          data-testid="app-fallback-component"
+          class="full-size-container app-fallback-container"
         >
           <div
             class="app-fallback-message"
@@ -25,30 +55,6 @@ Object {
             <div />
             <div />
           </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="full-page-background"
-    >
-      <div
-        class="app-fallback-container"
-        data-testid="app-fallback-component"
-      >
-        <div
-          class="app-fallback-message"
-        >
-          Something awesome is rendering
-        </div>
-        <div
-          class="ellipsis"
-        >
-          <div />
-          <div />
-          <div />
-          <div />
         </div>
       </div>
     </div>

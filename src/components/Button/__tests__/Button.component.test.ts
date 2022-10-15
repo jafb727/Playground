@@ -21,7 +21,7 @@ import { basicSetup } from "../../../test/setupTests";
 describe("Button.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("button-component")).toBeInTheDocument();
+      expect(screen.getByTestId("button")).toBeInTheDocument();
    });
 
    /* ----------------------- */

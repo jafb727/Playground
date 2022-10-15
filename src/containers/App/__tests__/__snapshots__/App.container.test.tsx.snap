@@ -6,23 +6,93 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="full-page-background MuiBox-root css-0"
+        class="MuiBox-root css-0"
+        data-testid="login"
+        id="login"
       >
         <div
-          class="MuiBox-root css-0"
-          data-testid="login-page"
-          id="login-page"
+          class="defaultBackground undefined MuiBox-root css-0"
+          data-testid="background"
+        >
+          <div
+            class="full-size-container MuiBox-root css-0"
+            id="workspace"
+          >
+            <header
+              class="header-full-page"
+              id="header"
+            >
+              <div
+                class="ribbonContainer ribbon MuiBox-root css-1fn0841"
+                data-testid="ribbon"
+              >
+                <div
+                  class="MuiBox-root css-0"
+                  data-testid="logo"
+                >
+                  <h4
+                    class="MuiTypography-root MuiTypography-h4 logo css-95oyd8-MuiTypography-root"
+                  >
+                    MY
+                  </h4>
+                </div>
+              </div>
+            </header>
+            <section
+              class="full-size-container"
+              id="content"
+            />
+            <footer
+              class="footer-full-page"
+              id="footer"
+            >
+              <div
+                class="ribbonContainer ribbon MuiBox-root css-1a9getn"
+                data-testid="ribbon"
+              >
+                <div
+                  class="MuiBox-root css-0"
+                  data-testid="copyright-component"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-n6q3br-MuiTypography-root"
+                  >
+                    © 
+                    All rights reserved.
+                  </p>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiBox-root css-0"
+      data-testid="login"
+      id="login"
+    >
+      <div
+        class="defaultBackground undefined MuiBox-root css-0"
+        data-testid="background"
+      >
+        <div
+          class="full-size-container MuiBox-root css-0"
+          id="workspace"
         >
           <header
             class="header-full-page"
+            id="header"
           >
             <div
               class="ribbonContainer ribbon MuiBox-root css-1fn0841"
-              data-testid="ribbon-container"
+              data-testid="ribbon"
             >
               <div
                 class="MuiBox-root css-0"
-                data-testid="logo-component"
+                data-testid="logo"
               >
                 <h4
                   class="MuiTypography-root MuiTypography-h4 logo css-95oyd8-MuiTypography-root"
@@ -32,12 +102,17 @@ Object {
               </div>
             </div>
           </header>
+          <section
+            class="full-size-container"
+            id="content"
+          />
           <footer
             class="footer-full-page"
+            id="footer"
           >
             <div
               class="ribbonContainer ribbon MuiBox-root css-1a9getn"
-              data-testid="ribbon-container"
+              data-testid="ribbon"
             >
               <div
                 class="MuiBox-root css-0"
@@ -53,57 +128,6 @@ Object {
             </div>
           </footer>
         </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="full-page-background MuiBox-root css-0"
-    >
-      <div
-        class="MuiBox-root css-0"
-        data-testid="login-page"
-        id="login-page"
-      >
-        <header
-          class="header-full-page"
-        >
-          <div
-            class="ribbonContainer ribbon MuiBox-root css-1fn0841"
-            data-testid="ribbon-container"
-          >
-            <div
-              class="MuiBox-root css-0"
-              data-testid="logo-component"
-            >
-              <h4
-                class="MuiTypography-root MuiTypography-h4 logo css-95oyd8-MuiTypography-root"
-              >
-                MY
-              </h4>
-            </div>
-          </div>
-        </header>
-        <footer
-          class="footer-full-page"
-        >
-          <div
-            class="ribbonContainer ribbon MuiBox-root css-1a9getn"
-            data-testid="ribbon-container"
-          >
-            <div
-              class="MuiBox-root css-0"
-              data-testid="copyright-component"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-n6q3br-MuiTypography-root"
-              >
-                © 
-                All rights reserved.
-              </p>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
   </div>,

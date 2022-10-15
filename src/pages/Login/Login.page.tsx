@@ -11,6 +11,7 @@
 import React from "react";
 
 /** @import Components */
+import Background from "../../containers/Background";
 import Box from "@mui/material/Box";
 import Copyright from "../../components/Copyright";
 import Logo from "./../../components/Logo";
@@ -32,27 +33,36 @@ import Styles from "./Login.styles.module.scss";
  */
 const Login = () => {
    return (
-      <Box className="full-page-background">
-         <Box id="login-page" data-testid="login-page">
+      <Box id="login" data-testid="login">
+         <Background fullPage>
             <ThemeProvider theme={Theme}>
-               {/** Header */}
-               <header className="header-full-page">
-                  <Ribbon className={Styles.ribbon}>
-                     <Logo />
-                  </Ribbon>
-               </header>
+               <Box id="workspace" className="full-size-container">
+                  {/** Header */}
+                  <header id="header" className="header-full-page">
+                     <Ribbon className={Styles.ribbon}>
+                        <Logo />
+                     </Ribbon>
+                  </header>
 
-               {/** Login form */}
+                  {/** Login form */}
+                  <section
+                     id="content"
+                     className="full-size-container"
+                  ></section>
 
-               {/** Footer */}
-               <footer className="footer-full-page">
-                  <Ribbon horizontalAlignment="right" className={Styles.ribbon}>
-                     {/** Copyright */}
-                     <Copyright />
-                  </Ribbon>
-               </footer>
+                  {/** Footer */}
+                  <footer id="footer" className="footer-full-page">
+                     <Ribbon
+                        horizontalAlignment="right"
+                        className={Styles.ribbon}
+                     >
+                        {/** Copyright */}
+                        <Copyright />
+                     </Ribbon>
+                  </footer>
+               </Box>
             </ThemeProvider>
-         </Box>
+         </Background>
       </Box>
    );
 };

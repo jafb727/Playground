@@ -13,6 +13,18 @@ import React from "react";
 /** @import Components */
 import { Box } from "@mui/material";
 
+/** @import Hooks */
+import { useBackgroundContainerStateAndEvents } from "./Background.container.hooks";
+
+/* --------------------------------------------- */
+
+/** @@exports interface Background properties */
+export interface BackgroundProps {
+   children?: React.ReactNode;
+   className?: string;
+   fullPage?: boolean;
+}
+
 /* --------------------------------------------- */
 
 /**
@@ -20,8 +32,23 @@ import { Box } from "@mui/material";
  * @description Main functional component
  * @returns {JSX} A React element
  */
-const Background = () => {
-   return <Box data-testid="background-container"></Box>;
+const Background = (props: BackgroundProps) => {
+   /** @constant Properties */
+   const { children, className } = props;
+
+   /** @constant Hooks call */
+   const { defaultBackground } = useBackgroundContainerStateAndEvents(props);
+
+   /* ----------------------- */
+
+   return (
+      <Box
+         className={`${defaultBackground} ${className}`}
+         data-testid="background"
+      >
+         {children}
+      </Box>
+   );
 };
 
 /* --------------------------------------------- */

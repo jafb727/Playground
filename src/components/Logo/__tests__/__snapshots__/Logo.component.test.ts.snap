@@ -7,7 +7,7 @@ Object {
     <div>
       <div
         class="MuiBox-root css-0"
-        data-testid="logo-component"
+        data-testid="logo"
       >
         <h4
           class="MuiTypography-root MuiTypography-h4 logo css-5lbw0b-MuiTypography-root"
@@ -20,7 +20,7 @@ Object {
   "container": <div>
     <div
       class="MuiBox-root css-0"
-      data-testid="logo-component"
+      data-testid="logo"
     >
       <h4
         class="MuiTypography-root MuiTypography-h4 logo css-5lbw0b-MuiTypography-root"

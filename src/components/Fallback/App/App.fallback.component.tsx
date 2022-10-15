@@ -2,7 +2,7 @@
  * @author: Jose A Felix
  * @editor: Jose A Felix
  * @name: App.fallback.component
- * @description: App fallback component. Used when application is being rendered
+ * @description: App fallback component
  */
 
 /* --------------------------------------------- */
@@ -17,22 +17,22 @@ import Text from "../../../assets/typography/Text.json";
 
 /**
  * @function AppFallback
- * @description Main functional component
+ * @description Main functional component. Used when application
+ * is being rendered, thats why JSX markup is very simple
  * @returns {JSX} A react element
  */
 const AppFallback = () => {
    return (
-      <div className="full-page-background">
-         <div
-            className="app-fallback-container"
-            data-testid="app-fallback-component"
-         >
-            <div className="app-fallback-message">{Text.fallAppMessage}</div>
-            <div className="ellipsis">
-               <div></div>
-               <div></div>
-               <div></div>
-               <div></div>
+      <div data-testid="app-fallback">
+         <div className="full-page-background">
+            <div className="full-size-container app-fallback-container">
+               <div className="app-fallback-message">{Text.fallAppMessage}</div>
+               <div className="ellipsis">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
             </div>
          </div>
       </div>

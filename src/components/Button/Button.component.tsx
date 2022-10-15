@@ -10,6 +10,9 @@
 /** @import Libraries */
 import React from "react";
 
+/** @import Components */
+import Box from "@mui/material/Box";
+
 /** @import Styles */
 import Style from "./Button.module.scss";
 
@@ -22,9 +25,9 @@ import Style from "./Button.module.scss";
  */
 function Button() {
    return (
-      <div data-testid="button-component">
+      <Box data-testid="button">
          <button className={Style.myButton}>Click me!</button>
-      </div>
+      </Box>
    );
 }
 

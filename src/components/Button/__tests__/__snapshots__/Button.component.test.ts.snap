@@ -6,7 +6,8 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        data-testid="button-component"
+        class="MuiBox-root css-0"
+        data-testid="button"
       >
         <button
           class="myButton"
@@ -18,7 +19,8 @@ Object {
   </body>,
   "container": <div>
     <div
-      data-testid="button-component"
+      class="MuiBox-root css-0"
+      data-testid="button"
     >
       <button
         class="myButton"

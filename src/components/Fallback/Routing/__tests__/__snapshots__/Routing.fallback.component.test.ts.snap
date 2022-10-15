@@ -1,16 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Routing.component.component Passes shallow snapshot test 1`] = `
+exports[`Routing.fallback.component Passes shallow snapshot test 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="full-page-background MuiBox-root css-0"
+        class="MuiBox-root css-0"
+        data-testid="routing-fallback"
+      >
+        <div
+          class="defaultBackground undefined MuiBox-root css-0"
+          data-testid="background"
+        >
+          <div
+            class="frame-container MuiBox-root css-0"
+          >
+            <video
+              autoplay=""
+              class="space-video-background fade"
+              data-testid="space-video-background"
+              loop=""
+            >
+              <source
+                type="video/mp4"
+              />
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-10kbhik-MuiTypography-root"
+              >
+                Your browser does not support HTML5 video
+              </p>
+            </video>
+            <div
+              class="moon-object MuiBox-root css-0"
+            >
+              <img
+                alt="Moon"
+                src="MoonAstronaut.png"
+              />
+            </div>
+            <div
+              class="error-message MuiBox-root css-0"
+              data-testid="error-message"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-h1_1 MuiTypography-gutterBottom error-header css-kjxf0h-MuiTypography-root"
+              >
+                404
+              </span>
+              <h4
+                class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom error-subtitle css-1m6o9zw-MuiTypography-root"
+              >
+                Uh oh! You're lost
+              </h4>
+              <p
+                class="MuiTypography-root MuiTypography-body1 error-apology css-10kbhik-MuiTypography-root"
+              >
+                The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage
+              </p>
+              <a
+                href="/"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium back-home-button css-5y2byu-MuiButtonBase-root-MuiButton-root"
+                  data-testid="back-home-button"
+                  tabindex="0"
+                  type="button"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-10kbhik-MuiTypography-root"
+                  >
+                    Back Home
+                  </p>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </a>
+            </div>
+            <footer
+              class="footer-full-page"
+            >
+              <div
+                class="ribbonContainer undefined MuiBox-root css-1a9getn"
+                data-testid="ribbon"
+              >
+                <div
+                  class="copyright MuiBox-root css-0"
+                  data-testid="copyright-component"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-n6q3br-MuiTypography-root"
+                  >
+                    © 
+                    All rights reserved.
+                  </p>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiBox-root css-0"
+      data-testid="routing-fallback"
+    >
+      <div
+        class="defaultBackground undefined MuiBox-root css-0"
+        data-testid="background"
       >
         <div
           class="frame-container MuiBox-root css-0"
-          data-testid="eror-page"
         >
           <video
             autoplay=""
@@ -79,7 +182,7 @@ Object {
           >
             <div
               class="ribbonContainer undefined MuiBox-root css-1a9getn"
-              data-testid="ribbon-container"
+              data-testid="ribbon"
             >
               <div
                 class="copyright MuiBox-root css-0"
@@ -95,99 +198,6 @@ Object {
             </div>
           </footer>
         </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="full-page-background MuiBox-root css-0"
-    >
-      <div
-        class="frame-container MuiBox-root css-0"
-        data-testid="eror-page"
-      >
-        <video
-          autoplay=""
-          class="space-video-background fade"
-          data-testid="space-video-background"
-          loop=""
-        >
-          <source
-            type="video/mp4"
-          />
-          <p
-            class="MuiTypography-root MuiTypography-body1 css-10kbhik-MuiTypography-root"
-          >
-            Your browser does not support HTML5 video
-          </p>
-        </video>
-        <div
-          class="moon-object MuiBox-root css-0"
-        >
-          <img
-            alt="Moon"
-            src="MoonAstronaut.png"
-          />
-        </div>
-        <div
-          class="error-message MuiBox-root css-0"
-          data-testid="error-message"
-        >
-          <span
-            class="MuiTypography-root MuiTypography-h1_1 MuiTypography-gutterBottom error-header css-kjxf0h-MuiTypography-root"
-          >
-            404
-          </span>
-          <h4
-            class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom error-subtitle css-1m6o9zw-MuiTypography-root"
-          >
-            Uh oh! You're lost
-          </h4>
-          <p
-            class="MuiTypography-root MuiTypography-body1 error-apology css-10kbhik-MuiTypography-root"
-          >
-            The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage
-          </p>
-          <a
-            href="/"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium back-home-button css-5y2byu-MuiButtonBase-root-MuiButton-root"
-              data-testid="back-home-button"
-              tabindex="0"
-              type="button"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-10kbhik-MuiTypography-root"
-              >
-                Back Home
-              </p>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
-          </a>
-        </div>
-        <footer
-          class="footer-full-page"
-        >
-          <div
-            class="ribbonContainer undefined MuiBox-root css-1a9getn"
-            data-testid="ribbon-container"
-          >
-            <div
-              class="copyright MuiBox-root css-0"
-              data-testid="copyright-component"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-n6q3br-MuiTypography-root"
-              >
-                © 
-                All rights reserved.
-              </p>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
   </div>,

@@ -7,14 +7,14 @@ Object {
     <div>
       <div
         class="ribbonContainer undefined MuiBox-root css-1fn0841"
-        data-testid="ribbon-container"
+        data-testid="ribbon"
       />
     </div>
   </body>,
   "container": <div>
     <div
       class="ribbonContainer undefined MuiBox-root css-1fn0841"
-      data-testid="ribbon-container"
+      data-testid="ribbon"
     />
   </div>,
   "debug": [Function],

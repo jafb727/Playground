@@ -26,7 +26,7 @@ import Style from "./Logo.module.scss";
  */
 function Logo() {
    return (
-      <Box data-testid="logo-component">
+      <Box data-testid="logo">
          <Typography variant="h4" className={Style.logo}>
             MY
          </Typography>
