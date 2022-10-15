@@ -50,7 +50,7 @@ const RoutingFallback = () => {
 
    return (
       <Box data-testid="routing-fallback">
-         <Background fullPage>
+         <Background defaultBackground fullPage>
             <Box className="frame-container">
                <ThemeProvider theme={Theme}>
                   {/** Space background */}

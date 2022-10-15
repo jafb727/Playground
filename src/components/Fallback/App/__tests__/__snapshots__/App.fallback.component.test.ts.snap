@@ -9,7 +9,7 @@ Object {
         data-testid="app-fallback"
       >
         <div
-          class="full-page-background"
+          class="default-background full-page-background"
         >
           <div
             class="full-size-container app-fallback-container"
@@ -37,7 +37,7 @@ Object {
       data-testid="app-fallback"
     >
       <div
-        class="full-page-background"
+        class="default-background full-page-background"
       >
         <div
           class="full-size-container app-fallback-container"

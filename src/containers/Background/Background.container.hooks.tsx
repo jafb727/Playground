@@ -11,7 +11,10 @@
 import { BackgroundProps } from "./Background.container";
 
 /** @import Utilities */
-import { setDefaultBackground } from "./Background.container.utils";
+import {
+   setDefaultBackground,
+   setFullPageBackground,
+} from "./Background.container.utils";
 
 /* --------------------------------------------- */
 
@@ -24,11 +27,15 @@ export const useBackgroundContainerStateAndEvents = (
    props: BackgroundProps
 ) => {
    /** @constant */
-   const defaultBackground: string = setDefaultBackground(props.fullPage);
+   const defaultBackground: string = setDefaultBackground(
+      props.defaultBackground
+   );
+   const fullPageBackground: string = setFullPageBackground(props.fullPage);
 
    /* ----------------------- */
 
    return {
       defaultBackground,
+      fullPageBackground,
    };
 };

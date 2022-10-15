@@ -34,7 +34,7 @@ import Styles from "./Login.styles.module.scss";
 const Login = () => {
    return (
       <Box id="login" data-testid="login">
-         <Background fullPage>
+         <Background defaultBackground fullPage>
             <ThemeProvider theme={Theme}>
                <Box id="workspace" className="full-size-container">
                   {/** Header */}
