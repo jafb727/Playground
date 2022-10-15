@@ -6,14 +6,14 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="defaultBackground undefined MuiBox-root css-0"
+        class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
         data-testid="background"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="defaultBackground undefined MuiBox-root css-0"
+      class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
       data-testid="background"
     />
   </div>,

@@ -22,6 +22,7 @@ import { useBackgroundContainerStateAndEvents } from "./Background.container.hoo
 export interface BackgroundProps {
    children?: React.ReactNode;
    className?: string;
+   defaultBackground?: boolean;
    fullPage?: boolean;
 }
 
@@ -37,13 +38,14 @@ const Background = (props: BackgroundProps) => {
    const { children, className } = props;
 
    /** @constant Hooks call */
-   const { defaultBackground } = useBackgroundContainerStateAndEvents(props);
+   const { defaultBackground, fullPageBackground } =
+      useBackgroundContainerStateAndEvents(props);
 
    /* ----------------------- */
 
    return (
       <Box
-         className={`${defaultBackground} ${className}`}
+         className={`${fullPageBackground} ${defaultBackground} ${className}`}
          data-testid="background"
       >
          {children}

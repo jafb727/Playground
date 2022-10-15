@@ -24,7 +24,7 @@ import Text from "../../../assets/typography/Text.json";
 const AppFallback = () => {
    return (
       <div data-testid="app-fallback">
-         <div className="full-page-background">
+         <div className="default-background full-page-background">
             <div className="full-size-container app-fallback-container">
                <div className="app-fallback-message">{Text.fallAppMessage}</div>
                <div className="ellipsis">
