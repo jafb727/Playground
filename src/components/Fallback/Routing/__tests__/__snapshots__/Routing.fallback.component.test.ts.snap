@@ -82,8 +82,8 @@ Object {
               class="footerFullPage"
             >
               <div
-                class="ribbonContainer undefined MuiBox-root css-1a9getn"
-                data-testid="ribbon"
+                class="collectionContainer undefined MuiBox-root css-1a9getn"
+                data-testid="collection"
               >
                 <div
                   class="copyright MuiBox-root css-0"
@@ -181,8 +181,8 @@ Object {
             class="footerFullPage"
           >
             <div
-              class="ribbonContainer undefined MuiBox-root css-1a9getn"
-              data-testid="ribbon"
+              class="collectionContainer undefined MuiBox-root css-1a9getn"
+              data-testid="collection"
             >
               <div
                 class="copyright MuiBox-root css-0"

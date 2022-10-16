@@ -8,7 +8,7 @@
 /* --------------------------------------------- */
 
 /** @import Styles */
-import GlobalStyle from "./../../../assets/style/Styles.module.scss";
+import GlobalStyle from "./../../../assets/style/base/_styles.module.scss";
 import Style from "./App.fallback.styles.module.scss";
 
 /** @import Assets */
@@ -29,7 +29,7 @@ const AppFallback = () => {
             className={`${GlobalStyle.defaultBackground} ${GlobalStyle.fullPageBackground}`}
          >
             <div
-               className={`${GlobalStyle.fullSizeContainer} ${Style.appFallbackContainer}`}
+               className={`${GlobalStyle.fullSizeCentered} ${Style.appFallbackContainer}`}
             >
                <div className={Style.appFallbackMessage}>
                   {Text.fallAppMessage}

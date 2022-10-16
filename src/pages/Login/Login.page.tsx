@@ -13,17 +13,18 @@ import React from "react";
 /** @import Components */
 import Background from "../../containers/Background";
 import Box from "@mui/material/Box";
+import Collection from "../../containers/Collection";
 import Copyright from "../../components/Copyright";
 import Form from "../../components/Form";
 import Logo from "./../../components/Logo";
-import Collection from "../../containers/Collection";
+import Paper from "@mui/material/Paper";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 
 /** @import Theme */
 import Theme from "./../../config/theme.config";
 
 /** @import Styles */
-import GlobalStyle from "./../../assets/style/Styles.module.scss";
+import GlobalStyle from "./../../assets/style/base/_styles.module.scss";
 import Style from "./Login.styles.module.scss";
 
 /* --------------------------------------------- */
@@ -34,33 +35,45 @@ import Style from "./Login.styles.module.scss";
  * @returns {JSX} A React element
  */
 const Login = () => {
+   /** @constant */
+   const { footerFullPage, fullSizeCentered, fullSizeElement, headerFullPage } =
+      GlobalStyle;
+
+   /* ----------------------- */
+
    return (
       <Box id="login" data-testid="login">
          <Background defaultBackground fullPage>
             <ThemeProvider theme={Theme}>
-               <Box id="workspace" className={GlobalStyle.fullSizeContainer}>
+               <Box id="workspace" className={fullSizeCentered}>
                   {/** Header */}
-                  <header id="header" className={GlobalStyle.headerFullPage}>
+                  <header id="header" className={headerFullPage}>
                      <Collection className={Style.collection}>
                         <Logo />
                      </Collection>
                   </header>
 
                   {/** Login form */}
-                  <section
-                     id="content"
-                     className={GlobalStyle.fullSizeContainer}
-                  >
-                     <Collection className={Style.loginContentContainer}>
-                        <Form></Form>
-                        <Background
-                           className={Style.loginBackground}
-                        ></Background>
-                     </Collection>
+                  <section id="content" className={fullSizeCentered}>
+                     <Paper
+                        elevation={12}
+                        className={Style.loginContentContainer}
+                     >
+                        <Collection className={fullSizeCentered}>
+                           <Form
+                              style={{ flex: 1 }}
+                              className={fullSizeCentered}
+                           ></Form>
+                           <Background
+                              style={{ flex: 2 }}
+                              className={`${Style.loginBackground} ${fullSizeElement}`}
+                           ></Background>
+                        </Collection>
+                     </Paper>
                   </section>
 
                   {/** Footer */}
-                  <footer id="footer" className={GlobalStyle.footerFullPage}>
+                  <footer id="footer" className={footerFullPage}>
                      <Collection
                         horizontalAlignment="end"
                         className={Style.collection}

@@ -34,16 +34,12 @@ interface CopyrightProps {
  */
 function Copyright(props: CopyrightProps) {
    /** @constant Properties */
-   const { style: customStyle, className } = props;
+   const { className, style } = props;
 
    /* ----------------------- */
 
    return (
-      <Box
-         sx={customStyle}
-         className={className}
-         data-testid="copyright-component"
-      >
+      <Box sx={style} className={className} data-testid="copyright-component">
          <Typography variant="body2">&copy; {Text.copyright}</Typography>
       </Box>
    );

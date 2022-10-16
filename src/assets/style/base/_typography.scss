@@ -1,0 +1,19 @@
+/**
+ * @author: Jose A Felix
+ * @editor: Jose A Felix
+ * @name: _typography.scss
+ * @description: App SASS typography rules
+ */
+
+/* --------------------------------------------- */
+
+/** Fonts */
+@font-face {
+  font-family: Montserrat;
+  src: url("./../../typography/fonts/Montserrat-regular.woff2");
+}
+
+@font-face {
+  font-family: Koulen;
+  src: url("./../../typography/fonts/Koulen-regular.woff2");
+}

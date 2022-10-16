@@ -1,27 +1,16 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Styles.scss
+ * @name: _styles.module.scss
  * @description: Global stylesheet
  */
 
 /* --------------------------------------------- */
 
 /** @import Stylesheets */
-@import "./Animations.module.scss";
-
-/* --------------------------------------------- */
-
-/** Fonts */
-@font-face {
-   font-family: Montserrat;
-   src: url("./../typography/fonts/Montserrat-regular.woff2");
-}
-
-@font-face {
-   font-family: Koulen;
-   src: url("./../typography/fonts/Koulen-regular.woff2");
-}
+@import "../base/animations.module";
+@import "../abstracts/mixins";
+@import "../base/typography";
 
 /* --------------------------------------------- */
 
@@ -74,9 +63,7 @@ header {
    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff06ae'/%3E%3Cstop offset='1' stop-color='%23ff06ae' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff062d'/%3E%3Cstop offset='1' stop-color='%23ff062d' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff8400'/%3E%3Cstop offset='1' stop-color='%23ff8400' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23AB0CFF'/%3E%3Cstop offset='1' stop-color='%23AB0CFF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF0000'/%3E%3Cstop offset='1' stop-color='%23FF0000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23F7FF00'/%3E%3Cstop offset='1' stop-color='%23F7FF00' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
 }
 
-/** 
- * @description Sets a div element, that will be used as background, full size
- */
+/** @description Sets a div element, that will be used as full page background size */
 .fullPageBackground {
    background-attachment: fixed;
    background-size: cover;
@@ -85,28 +72,28 @@ header {
    position: absolute;
    right: 0;
    top: 0;
+   z-index: -1;
 }
 
-/** 
- * @description This container will take full size of the parent container
- * and render elements stacked in a column. It was thought to be used in
- * to very simple implementations like showing a loading image
- */
-.fullSizeContainer {
-   align-items: center;
-   display: flex;
-   flex-direction: column;
-   height: 100%;
-   justify-content: center;
-   width: 100%;
+/** @description Exposes referenced mixin to be used as module class */
+.fullSizeElement {
+   @include fullSizeElement;
 }
 
 /** 
  * @description Gives the impression of a square surrounding page content
- * like a frame, needs to be combined with full-page-background to work. 
- * Used in routing fallback error page.
+ * like a frame, needs to be combined with fullPageBackground to work
  */
 .frameContainer {
    margin: 1rem;
    height: calc(100% - 2rem);
+}
+
+/* --------------------------------------------- */
+
+/** @description Exposes referenced mixin to be used as module class */
+/** @description Sets a container full size and elements full centered using flexbox */
+.fullSizeCentered {
+   @include contentFullCentered;
+   @include fullSizeElement;
 }

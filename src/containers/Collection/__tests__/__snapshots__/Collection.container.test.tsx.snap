@@ -6,14 +6,14 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="collectionContainer undefined MuiBox-root css-1a9getn"
+        class="collectionContainer undefined MuiBox-root css-1fn0841"
         data-testid="collection"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="collectionContainer undefined MuiBox-root css-1a9getn"
+      class="collectionContainer undefined MuiBox-root css-1fn0841"
       data-testid="collection"
     />
   </div>,

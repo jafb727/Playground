@@ -12,7 +12,7 @@ Object {
           class="defaultBackground fullPageBackground"
         >
           <div
-            class="fullSizeContainer appFallbackContainer"
+            class="fullSizeCentered appFallbackContainer"
           >
             <div
               class="appFallbackMessage"
@@ -40,7 +40,7 @@ Object {
         class="defaultBackground fullPageBackground"
       >
         <div
-          class="fullSizeContainer appFallbackContainer"
+          class="fullSizeCentered appFallbackContainer"
         >
           <div
             class="appFallbackMessage"

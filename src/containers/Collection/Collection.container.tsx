@@ -23,7 +23,7 @@ import Style from "./Collection.module.scss";
 
 /* --------------------------------------------- */
 
-/** @exports @interface Ribbon properties */
+/** @exports @interface Collection properties */
 export interface CollectionProps {
    children?: React.ReactNode;
    className?: string;
@@ -40,7 +40,7 @@ export interface CollectionProps {
  */
 const Collection = (props: CollectionProps) => {
    /** @constant Properties */
-   const { children, className, style: customStyle } = props;
+   const { children, className, style } = props;
 
    /** @constant Hooks call */
    const { collectionAlignment } = useCollectionStateAndEvents(props);
@@ -49,7 +49,7 @@ const Collection = (props: CollectionProps) => {
 
    return (
       <Box
-         sx={{ ...collectionAlignment, ...customStyle }}
+         sx={{ ...collectionAlignment, ...style }}
          className={`${Style.collectionContainer} ${className}`}
          data-testid="collection"
       >

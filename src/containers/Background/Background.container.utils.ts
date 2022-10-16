@@ -8,17 +8,19 @@
 /* --------------------------------------------- */
 
 /** @import Styles */
-import Style from "./../../assets/style/Styles.module.scss";
+import Style from "./../../assets/style/base/_styles.module.scss";
 
 /* --------------------------------------------- */
 
 /**
  * @exports @function setDefaultBackground
  * @description Sets default background referencing from global module styles
- * @param {boolen} defaultBackground - is background will have default background
+ * @param {boolean|undefined} defaultBackground - is background will have default background
  * @returns {string}
  */
-export const setDefaultBackground = (defaultBackground = true) => {
+export const setDefaultBackground = (
+   defaultBackground: boolean | undefined
+) => {
    /** @constant */
    let defaultBackgroundClassName: string = "";
 
@@ -34,10 +36,10 @@ export const setDefaultBackground = (defaultBackground = true) => {
 /**
  * @exports @function setFullPageBackground
  * @description Sets background at full size referencing from global module styles
- * @param {boolen} fullPage - is background will be shown full page
+ * @param {boolen|undefined} fullPage - is background will be shown full page
  * @returns {string}
  */
-export const setFullPageBackground = (fullPage = true) => {
+export const setFullPageBackground = (fullPage: boolean | undefined) => {
    /** @constant */
    let fullPageBackgroundClassName: string = "";
 

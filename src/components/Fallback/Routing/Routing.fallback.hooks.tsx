@@ -14,7 +14,7 @@ import { useEffect, useState, useRef } from "react";
 import { Device } from "./../../../utils/style.utils";
 
 /** @import Styles */
-import GlobalVariables from "./../../../assets/style/Variables.module.scss";
+import GlobalVariables from "./../../../assets/style/abstracts/_variables.module.scss";
 
 /** @import Assets */
 import LargeVideo from "./../../../assets/video/404/SpaceL.mp4";

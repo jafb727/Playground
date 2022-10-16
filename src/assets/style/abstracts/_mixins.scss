@@ -1,0 +1,22 @@
+/**
+ * @author: Jose A Felix
+ * @editor: Jose A Felix
+ * @name: _mixins.scss
+ * @description: App SASS mixins
+ */
+
+/* --------------------------------------------- */
+
+/** @description Content will be (X,Y) full centered using flexbox */
+@mixin contentFullCentered {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/** @description Element will take full size of the parent container */
+@mixin fullSizeElement {
+  height: 100%;
+  width: 100%;
+}

@@ -25,6 +25,7 @@ export interface BackgroundProps {
    className?: string;
    defaultBackground?: boolean;
    fullPage?: boolean;
+   style?: object;
 }
 
 /* --------------------------------------------- */
@@ -36,7 +37,7 @@ export interface BackgroundProps {
  */
 const Background = (props: BackgroundProps) => {
    /** @constant Properties */
-   const { children, className } = props;
+   const { children, className, style } = props;
 
    /** @constant Hooks call */
    const { defaultBg, fullPage } = useBackgroundStateAndEvents(props);
@@ -45,6 +46,7 @@ const Background = (props: BackgroundProps) => {
 
    return (
       <Box
+         sx={style}
          className={`${fullPage} ${defaultBg} ${className}`}
          data-testid="background"
       >

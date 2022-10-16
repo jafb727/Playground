@@ -15,9 +15,9 @@ import React from "react";
 import Background from "../../../containers/Background";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import Collection from "../../../containers/Collection";
 import Copyright from "../../../components/Copyright";
 import { Link } from "react-router-dom";
-import Ribbon from "../../../containers/Collection";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import Typography from "@mui/material/Typography";
 
@@ -28,7 +28,7 @@ import { useRoutingFallbackStateAndEvents } from "./Routing.fallback.hooks";
 import Theme from "./../../../config/theme.config";
 
 /** @import Styles */
-import GlobalStyle from "./../../../assets/style/Styles.module.scss";
+import GlobalStyle from "./../../../assets/style/base/_styles.module.scss";
 import Style from "./Routing.fallback.styles.module.scss";
 
 /** @import Assets */
@@ -109,10 +109,10 @@ const RoutingFallback = () => {
 
                   {/** Footer */}
                   <footer className={GlobalStyle.footerFullPage}>
-                     <Ribbon horizontalAlignment="right">
+                     <Collection horizontalAlignment="end">
                         {/** Copyright */}
                         <Copyright className={Style.copyright} />
-                     </Ribbon>
+                     </Collection>
                   </footer>
                </ThemeProvider>
             </Box>

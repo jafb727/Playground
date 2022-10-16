@@ -22,13 +22,28 @@ import Text from "../../assets/typography/Text.json";
 
 /* --------------------------------------------- */
 
+/** @interface Form properties */
+interface FormProps {
+   className?: string;
+   style?: object;
+}
+
+/* --------------------------------------------- */
+
 /**
  * @function Form
  * @description Main functional component
  * @returns {JSX} A react element
  */
-const Form = () => {
-   return <Box data-testid="form-component"></Box>;
+const Form = (props: FormProps) => {
+   /** @constant Properties */
+   const { className, style } = props;
+
+   /* ----------------------- */
+
+   return (
+      <Box sx={style} className={className} data-testid="form-component"></Box>
+   );
 };
 
 /* --------------------------------------------- */

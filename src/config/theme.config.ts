@@ -11,7 +11,7 @@
 import { createTheme } from "@mui/material/styles";
 
 /** @import Styles */
-import Variables from "./../assets/style/Variables.module.scss";
+import Variables from "./../assets/style/abstracts/_variables.module.scss";
 
 /* --------------------------------------------- */
 
