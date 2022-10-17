@@ -12,19 +12,19 @@ import React from "react";
 
 /** @import Components */
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+
+/** @import Hooks */
+import { useStyleProcessor } from "../../utils/hooks.utils";
 
 /** @import Styles */
 import "./Form.styles.scss";
-
-/** @import Assets */
-import Text from "../../assets/typography/Text.json";
 
 /* --------------------------------------------- */
 
 /** @interface Form properties */
 interface FormProps {
    className?: string;
+   elementSize?: number;
    style?: object;
 }
 
@@ -37,12 +37,19 @@ interface FormProps {
  */
 const Form = (props: FormProps) => {
    /** @constant Properties */
-   const { className, style } = props;
+   const { className, elementSize, style } = props;
+
+   /** @constant Hook call */
+   const { flexSize } = useStyleProcessor({ elementSize });
 
    /* ----------------------- */
 
    return (
-      <Box sx={style} className={className} data-testid="form-component"></Box>
+      <Box
+         sx={{ ...flexSize, ...style }}
+         className={className}
+         data-testid="form-component"
+      ></Box>
    );
 };
 

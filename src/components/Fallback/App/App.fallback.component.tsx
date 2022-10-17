@@ -23,18 +23,22 @@ import Text from "../../../assets/typography/Text.json";
  * @returns {JSX} A react element
  */
 const AppFallback = () => {
+   /** @constant */
+   const { ellipsis, defaultBackground, fullPageBackground, fullSizeCentered } =
+      GlobalStyle;
+
+   /* ----------------------- */
+
    return (
       <div data-testid="app-fallback">
-         <div
-            className={`${GlobalStyle.defaultBackground} ${GlobalStyle.fullPageBackground}`}
-         >
+         <div className={`${defaultBackground} ${fullPageBackground}`}>
             <div
-               className={`${GlobalStyle.fullSizeCentered} ${Style.appFallbackContainer}`}
+               className={`${fullSizeCentered} ${Style.appFallbackContainer}`}
             >
                <div className={Style.appFallbackMessage}>
                   {Text.fallAppMessage}
                </div>
-               <div className={GlobalStyle.ellipsis}>
+               <div className={ellipsis}>
                   <div></div>
                   <div></div>
                   <div></div>

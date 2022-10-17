@@ -32,12 +32,14 @@ import SmallPoster from "./../../../assets/images/404/ThumbnailSpaceS.png";
  * @returns {object} Hook functions and state
  */
 export const useRoutingFallbackStateAndEvents = () => {
-   /** @constant */
-   const videoRef: any = useRef();
-
    /** @constant State */
-   const [videoSource, setVideoSource] = useState<string>();
-   const [videoPoster, setVideoPoster] = useState<string>();
+   const [videoSource, setVideoSource] = useState<string>("");
+   const [videoPoster, setVideoPoster] = useState<string>("");
+
+   /** @constant References */
+   const videoRef: any = useRef();
+   const videoSrcRefreshCtrl: any = useRef();
+   const videoPosterRefreshCtrl: any = useRef();
 
    /* ----------------------- */
 
@@ -62,20 +64,44 @@ export const useRoutingFallbackStateAndEvents = () => {
     * @returns {(boolean|string)} A boolean or current device type as string
     */
    const setVideoSourceUponUA = (innerWidth: number) => {
-      /** No video for mobile or tablet */
-      if (innerWidth <= parseInt(GlobalVariables.breakpointTablet)) {
+      /** No video for mobile */
+      if (
+         innerWidth <= parseInt(GlobalVariables.breakpointMobile) &&
+         videoSrcRefreshCtrl.current !== Device.mobile
+      ) {
+         videoSrcRefreshCtrl.current = Device.mobile;
+         setVideoSource("");
+         return Device.mobile;
+      }
+
+      /** No video for tablet */
+      if (
+         innerWidth > parseInt(GlobalVariables.breakpointMobile) &&
+         innerWidth <= parseInt(GlobalVariables.breakpointTablet) &&
+         videoSrcRefreshCtrl.current !== Device.tablet
+      ) {
+         videoSrcRefreshCtrl.current = Device.tablet;
          setVideoSource("");
          return Device.tablet;
       }
 
       /** Source video for laptop */
-      if (innerWidth <= parseInt(GlobalVariables.breakpointLaptop)) {
+      if (
+         innerWidth > parseInt(GlobalVariables.breakpointTablet) &&
+         innerWidth <= parseInt(GlobalVariables.breakpointLaptop) &&
+         videoSrcRefreshCtrl.current !== Device.latop
+      ) {
+         videoSrcRefreshCtrl.current = Device.latop;
          setVideoSource(MediumVideo);
          return Device.latop;
       }
 
       /** Source video for desktop */
-      if (innerWidth > parseInt(GlobalVariables.breakpointLaptop)) {
+      if (
+         innerWidth > parseInt(GlobalVariables.breakpointLaptop) &&
+         videoSrcRefreshCtrl.current !== Device.desktop
+      ) {
+         videoSrcRefreshCtrl.current = Device.desktop;
          setVideoSource(LargeVideo);
          return Device.desktop;
       }
@@ -93,25 +119,43 @@ export const useRoutingFallbackStateAndEvents = () => {
     */
    const setVideoPosterUponUA = (innerWidth: number) => {
       /** Thumbnail for mobile userAgent */
-      if (innerWidth <= parseInt(GlobalVariables.breakpointMobile)) {
+      if (
+         innerWidth <= parseInt(GlobalVariables.breakpointMobile) &&
+         videoPosterRefreshCtrl.current !== Device.mobile
+      ) {
+         videoPosterRefreshCtrl.current = Device.mobile;
          setVideoPoster(MiniPoster);
          return Device.mobile;
       }
 
       /** Thumbnail for tablet userAgent */
-      if (innerWidth <= parseInt(GlobalVariables.breakpointTablet)) {
+      if (
+         innerWidth > parseInt(GlobalVariables.breakpointMobile) &&
+         innerWidth <= parseInt(GlobalVariables.breakpointTablet) &&
+         videoPosterRefreshCtrl.current !== Device.tablet
+      ) {
+         videoPosterRefreshCtrl.current = Device.tablet;
          setVideoPoster(SmallPoster);
          return Device.tablet;
       }
 
       /** Source for laptop userAgent */
-      if (innerWidth <= parseInt(GlobalVariables.breakpointLaptop)) {
+      if (
+         innerWidth > parseInt(GlobalVariables.breakpointTablet) &&
+         innerWidth <= parseInt(GlobalVariables.breakpointLaptop) &&
+         videoPosterRefreshCtrl.current !== Device.latop
+      ) {
+         videoPosterRefreshCtrl.current = Device.latop;
          setVideoPoster(MediumPoster);
          return Device.latop;
       }
 
       /** Source for desktop userAgent */
-      if (innerWidth > parseInt(GlobalVariables.breakpointLaptop)) {
+      if (
+         innerWidth > parseInt(GlobalVariables.breakpointLaptop) &&
+         videoPosterRefreshCtrl.current !== Device.desktop
+      ) {
+         videoPosterRefreshCtrl.current = Device.desktop;
          setVideoPoster(LargePoster);
          return Device.desktop;
       }

@@ -1,8 +1,8 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Background.container.test
- * @description: Background container test cases
+ * @name: Background.component.test
+ * @description: Background component test cases
  */
 
 /* --------------------------------------------- */
@@ -11,7 +11,7 @@
 import { screen } from "@testing-library/react";
 
 /** Components */
-import Component from "../../Background";
+import Component from "..";
 
 /** Utilities */
 import { basicSetup } from "../../../test/setupTests";

@@ -124,6 +124,13 @@ const Theme = createTheme({
             },
          },
       },
+      MuiPaper: {
+         styleOverrides: {
+            root: {
+               overflow: "hidden",
+            },
+         },
+      },
    },
 });
 

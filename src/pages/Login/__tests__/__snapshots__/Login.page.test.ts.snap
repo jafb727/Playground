@@ -11,7 +11,7 @@ Object {
         id="login"
       >
         <div
-          class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
+          class="fullPageBackground defaultBackground undefined MuiBox-root css-1rr4qq7"
           data-testid="background"
         >
           <div
@@ -43,10 +43,10 @@ Object {
               id="content"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation12 loginContentContainer css-15s4tt4-MuiPaper-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation12 loginContentContainer css-1e1fzod-MuiPaper-root"
               >
                 <div
-                  class="collectionContainer fullSizeCentered MuiBox-root css-1fn0841"
+                  class="collectionContainer fullSizeElement MuiBox-root css-1fn0841"
                   data-testid="collection"
                 >
                   <div
@@ -54,7 +54,7 @@ Object {
                     data-testid="form-component"
                   />
                   <div
-                    class="  loginBackground fullSizeElement MuiBox-root css-kzfr2u"
+                    class="  loginBackground fullSizeElement MuiBox-root css-1rr4qq7"
                     data-testid="background"
                   />
                 </div>
@@ -93,7 +93,7 @@ Object {
       id="login"
     >
       <div
-        class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
+        class="fullPageBackground defaultBackground undefined MuiBox-root css-1rr4qq7"
         data-testid="background"
       >
         <div
@@ -125,10 +125,10 @@ Object {
             id="content"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation12 loginContentContainer css-15s4tt4-MuiPaper-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation12 loginContentContainer css-1e1fzod-MuiPaper-root"
             >
               <div
-                class="collectionContainer fullSizeCentered MuiBox-root css-1fn0841"
+                class="collectionContainer fullSizeElement MuiBox-root css-1fn0841"
                 data-testid="collection"
               >
                 <div
@@ -136,7 +136,7 @@ Object {
                   data-testid="form-component"
                 />
                 <div
-                  class="  loginBackground fullSizeElement MuiBox-root css-kzfr2u"
+                  class="  loginBackground fullSizeElement MuiBox-root css-1rr4qq7"
                   data-testid="background"
                 />
               </div>

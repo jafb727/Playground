@@ -11,7 +11,7 @@
 import React from "react";
 
 /** @import Components */
-import Background from "../../containers/Background";
+import Background from "../../components/Background";
 import Box from "@mui/material/Box";
 import Collection from "../../containers/Collection";
 import Copyright from "../../components/Copyright";
@@ -59,13 +59,12 @@ const Login = () => {
                         elevation={12}
                         className={Style.loginContentContainer}
                      >
-                        <Collection className={fullSizeCentered}>
-                           <Form
-                              style={{ flex: 1 }}
-                              className={fullSizeCentered}
-                           ></Form>
+                        <Collection className={fullSizeElement}>
+                           <Form className={fullSizeCentered}></Form>
                            <Background
-                              style={{ flex: 2 }}
+                              sizeInMobile={0}
+                              sizeInTablet={0}
+                              sizeInLaptop={2}
                               className={`${Style.loginBackground} ${fullSizeElement}`}
                            ></Background>
                         </Collection>

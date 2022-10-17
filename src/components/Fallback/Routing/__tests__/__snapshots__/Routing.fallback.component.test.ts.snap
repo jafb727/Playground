@@ -10,7 +10,7 @@ Object {
         data-testid="routing-fallback"
       >
         <div
-          class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
+          class="fullPageBackground defaultBackground undefined MuiBox-root css-1rr4qq7"
           data-testid="background"
         >
           <div
@@ -21,8 +21,10 @@ Object {
               class="spaceVideoBackground fade"
               data-testid="space-video-background"
               loop=""
+              poster=""
             >
               <source
+                src=""
                 type="video/mp4"
               />
               <p
@@ -109,7 +111,7 @@ Object {
       data-testid="routing-fallback"
     >
       <div
-        class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
+        class="fullPageBackground defaultBackground undefined MuiBox-root css-1rr4qq7"
         data-testid="background"
       >
         <div
@@ -120,8 +122,10 @@ Object {
             class="spaceVideoBackground fade"
             data-testid="space-video-background"
             loop=""
+            poster=""
           >
             <source
+              src=""
               type="video/mp4"
             />
             <p

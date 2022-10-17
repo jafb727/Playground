@@ -1,8 +1,8 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Background.container
- * @description: Background container. Used to represent an element with
+ * @name: Background.component
+ * @description: Background component. Used to represent an element with
  * a background or simply a background in full page mode.
  */
 
@@ -15,7 +15,8 @@ import React from "react";
 import { Box } from "@mui/material";
 
 /** @import Hooks */
-import { useBackgroundStateAndEvents } from "./Background.container.hooks";
+import { useBackgroundStateAndEvents } from "./Background.component.hooks";
+import { useStyleProcessor } from "../../utils/hooks.utils";
 
 /* --------------------------------------------- */
 
@@ -24,7 +25,12 @@ export interface BackgroundProps {
    children?: React.ReactNode;
    className?: string;
    defaultBackground?: boolean;
+   elementSize?: number;
    fullPage?: boolean;
+   sizeInMobile?: number;
+   sizeInTablet?: number;
+   sizeInLaptop?: number;
+   sizeInDesktop?: number;
    style?: object;
 }
 
@@ -37,16 +43,32 @@ export interface BackgroundProps {
  */
 const Background = (props: BackgroundProps) => {
    /** @constant Properties */
-   const { children, className, style } = props;
+   const {
+      children,
+      className,
+      elementSize,
+      sizeInMobile,
+      sizeInTablet,
+      sizeInLaptop,
+      sizeInDesktop,
+      style,
+   } = props;
 
    /** @constant Hooks call */
    const { defaultBg, fullPage } = useBackgroundStateAndEvents(props);
+   const { flexSize } = useStyleProcessor({
+      elementSize,
+      sizeInMobile,
+      sizeInTablet,
+      sizeInLaptop,
+      sizeInDesktop,
+   });
 
    /* ----------------------- */
 
    return (
       <Box
-         sx={style}
+         sx={{ ...flexSize, ...style }}
          className={`${fullPage} ${defaultBg} ${className}`}
          data-testid="background"
       >

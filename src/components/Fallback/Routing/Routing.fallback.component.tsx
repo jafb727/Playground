@@ -12,7 +12,7 @@
 import React from "react";
 
 /** @import Components */
-import Background from "../../../containers/Background";
+import Background from "../../Background";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Collection from "../../../containers/Collection";
@@ -43,7 +43,7 @@ import Moon from "./../../../assets/images/404/MoonAstronaut.png";
  * @returns {JSX} A React element
  */
 const RoutingFallback = () => {
-   /** Hooks */
+   /** @constant Hooks call */
    const { videoSource, videoRef, videoPoster } =
       useRoutingFallbackStateAndEvents();
 
@@ -61,7 +61,7 @@ const RoutingFallback = () => {
                      muted
                      ref={videoRef}
                      poster={videoPoster}
-                     className={`${Style.spaceVideoBackground} ${Style.fade}`}
+                     className={`${Style.spaceVideoBackground} ${GlobalStyle.fade}`}
                      data-testid="space-video-background"
                   >
                      <source src={videoSource} type="video/mp4" />

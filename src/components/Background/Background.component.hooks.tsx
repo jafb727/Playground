@@ -1,26 +1,26 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Background.container.hooks
- * @description: Background container hooks
+ * @name: Background.component.hooks
+ * @description: Background component hooks
  */
 
 /* --------------------------------------------- */
 
 /** @import Interfaces */
-import { BackgroundProps } from "./Background.container";
+import { BackgroundProps } from "./Background.component";
 
 /** @import Utilities */
 import {
    setDefaultBackground,
    setFullPageBackground,
-} from "./Background.container.utils";
+} from "./Background.component.utils";
 
 /* --------------------------------------------- */
 
 /**
  * @function useBackgroundStateAndEvents
- * @description Main container hook
+ * @description Main component hook
  * @returns {object} Hook functions and state
  */
 export const useBackgroundStateAndEvents = (props: BackgroundProps) => {
