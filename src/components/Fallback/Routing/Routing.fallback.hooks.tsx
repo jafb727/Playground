@@ -89,11 +89,11 @@ export const useRoutingFallbackStateAndEvents = () => {
       if (
          innerWidth > parseInt(GlobalVariables.breakpointTablet) &&
          innerWidth <= parseInt(GlobalVariables.breakpointLaptop) &&
-         videoSrcRefreshCtrl.current !== Device.latop
+         videoSrcRefreshCtrl.current !== Device.laptop
       ) {
-         videoSrcRefreshCtrl.current = Device.latop;
+         videoSrcRefreshCtrl.current = Device.laptop;
          setVideoSource(MediumVideo);
-         return Device.latop;
+         return Device.laptop;
       }
 
       /** Source video for desktop */
@@ -143,11 +143,11 @@ export const useRoutingFallbackStateAndEvents = () => {
       if (
          innerWidth > parseInt(GlobalVariables.breakpointTablet) &&
          innerWidth <= parseInt(GlobalVariables.breakpointLaptop) &&
-         videoPosterRefreshCtrl.current !== Device.latop
+         videoPosterRefreshCtrl.current !== Device.laptop
       ) {
-         videoPosterRefreshCtrl.current = Device.latop;
+         videoPosterRefreshCtrl.current = Device.laptop;
          setVideoPoster(MediumPoster);
-         return Device.latop;
+         return Device.laptop;
       }
 
       /** Source for desktop userAgent */
@@ -165,10 +165,6 @@ export const useRoutingFallbackStateAndEvents = () => {
 
    /* ----------------------- */
 
-   /**
-    * @function React.useEffect
-    * @description Component mount effects
-    */
    useEffect(() => {
       /** Adding a resize listener */
       window.addEventListener("resize", setVideoResourcesUponUA);
@@ -187,11 +183,8 @@ export const useRoutingFallbackStateAndEvents = () => {
 
    /* ----------------------- */
 
-   /**
-    * @function React.useEffect
-    * @description Reload video space background when URL source changes
-    */
    useEffect(() => {
+      /** Reload video space background when URL source changes */
       videoRef.current?.load();
    }, [videoSource]);
 

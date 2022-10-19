@@ -7,18 +7,36 @@
 
 /* --------------------------------------------- */
 
+/** @import Global style */
+@import "../../assets/style/abstracts/variables.module";
+
+/* --------------------------------------------- */
+
+/** @description Affects header and footer */
 .collection {
   padding: 1rem;
 }
 
+/* --------------------------------------------- */
+
+/** @description Login main container */
 .loginContentContainer {
-  background-color: white;
-  max-height: 50rem;
-  max-width: 70rem;
+  max-height: 70rem;
+  max-width: 60rem;
   min-height: 70%;
-  min-width: 70%;
+  min-width: 60%;
 }
 
+@media (min-width: $breakpointMobile) {
+  .loginContentContainer {
+    min-width: 80%;
+  }
+}
+
+/* --------------------------------------------- */
+
+/** @description Background */
 .loginBackground {
-  background-color: aquamarine;
+  background-image: url("./../../assets/images/Login/LoginBackground.jpg");
+  background-size: 100% 100%;
 }

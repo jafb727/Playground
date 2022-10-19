@@ -60,11 +60,18 @@ const Login = () => {
                         className={Style.loginContentContainer}
                      >
                         <Collection className={fullSizeElement}>
-                           <Form className={fullSizeCentered}></Form>
+                           <Form
+                              sizeInMobile={1}
+                              sizeInTablet={1}
+                              sizeInLaptop={1}
+                              sizeInDesktop={1}
+                              className={fullSizeCentered}
+                           ></Form>
                            <Background
                               sizeInMobile={0}
                               sizeInTablet={0}
-                              sizeInLaptop={2}
+                              sizeInLaptop={0}
+                              sizeInDesktop={1}
                               className={`${Style.loginBackground} ${fullSizeElement}`}
                            ></Background>
                         </Collection>

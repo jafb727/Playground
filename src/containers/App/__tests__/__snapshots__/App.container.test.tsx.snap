@@ -11,7 +11,7 @@ Object {
         id="login"
       >
         <div
-          class="fullPageBackground defaultBackground undefined MuiBox-root css-1rr4qq7"
+          class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
           data-testid="background"
         >
           <div
@@ -50,11 +50,11 @@ Object {
                   data-testid="collection"
                 >
                   <div
-                    class="fullSizeCentered MuiBox-root css-1rr4qq7"
+                    class="fullSizeCentered MuiBox-root css-0"
                     data-testid="form-component"
                   />
                   <div
-                    class="  loginBackground fullSizeElement MuiBox-root css-1rr4qq7"
+                    class="  loginBackground fullSizeElement MuiBox-root css-0"
                     data-testid="background"
                   />
                 </div>
@@ -93,7 +93,7 @@ Object {
       id="login"
     >
       <div
-        class="fullPageBackground defaultBackground undefined MuiBox-root css-1rr4qq7"
+        class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
         data-testid="background"
       >
         <div
@@ -132,11 +132,11 @@ Object {
                 data-testid="collection"
               >
                 <div
-                  class="fullSizeCentered MuiBox-root css-1rr4qq7"
+                  class="fullSizeCentered MuiBox-root css-0"
                   data-testid="form-component"
                 />
                 <div
-                  class="  loginBackground fullSizeElement MuiBox-root css-1rr4qq7"
+                  class="  loginBackground fullSizeElement MuiBox-root css-0"
                   data-testid="background"
                 />
               </div>

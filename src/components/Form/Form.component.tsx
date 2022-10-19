@@ -25,6 +25,10 @@ import "./Form.styles.scss";
 interface FormProps {
    className?: string;
    elementSize?: number;
+   sizeInMobile?: number;
+   sizeInTablet?: number;
+   sizeInLaptop?: number;
+   sizeInDesktop?: number;
    style?: object;
 }
 
@@ -37,10 +41,24 @@ interface FormProps {
  */
 const Form = (props: FormProps) => {
    /** @constant Properties */
-   const { className, elementSize, style } = props;
+   const {
+      className,
+      elementSize,
+      sizeInMobile,
+      sizeInTablet,
+      sizeInLaptop,
+      sizeInDesktop,
+      style,
+   } = props;
 
    /** @constant Hook call */
-   const { flexSize } = useStyleProcessor({ elementSize });
+   const { flexSize } = useStyleProcessor({
+      elementSize,
+      sizeInMobile,
+      sizeInTablet,
+      sizeInLaptop,
+      sizeInDesktop,
+   });
 
    /* ----------------------- */
 

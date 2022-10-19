@@ -20,3 +20,9 @@
   height: 100%;
   width: 100%;
 }
+
+/** @description Element will take full size of the parent container */
+@mixin coverBackground {
+  background-attachment: fixed;
+  background-size: cover;
+}

@@ -10,7 +10,7 @@ Object {
         data-testid="routing-fallback"
       >
         <div
-          class="fullPageBackground defaultBackground undefined MuiBox-root css-1rr4qq7"
+          class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
           data-testid="background"
         >
           <div
@@ -111,7 +111,7 @@ Object {
       data-testid="routing-fallback"
     >
       <div
-        class="fullPageBackground defaultBackground undefined MuiBox-root css-1rr4qq7"
+        class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
         data-testid="background"
       >
         <div

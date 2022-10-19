@@ -16,7 +16,7 @@ import { Regexp } from "./regexp.utils";
 export const Device = {
    tablet: "tablet",
    mobile: "mobile",
-   latop: "laptop",
+   laptop: "laptop",
    desktop: "desktop",
 };
 
@@ -39,7 +39,7 @@ export const getDeviceType = (userAgent?: string) => {
       return Device.mobile;
    }
 
-   return Device.latop;
+   return Device.laptop;
 };
 
 /* --------------------------------------------- */

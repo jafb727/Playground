@@ -6,14 +6,14 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="MuiBox-root css-1rr4qq7"
+        class="MuiBox-root css-0"
         data-testid="form-component"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="MuiBox-root css-1rr4qq7"
+      class="MuiBox-root css-0"
       data-testid="form-component"
     />
   </div>,
