@@ -38,5 +38,6 @@
 /** @description Background */
 .loginBackground {
   background-image: url("./../../assets/images/Login/LoginBackground.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
 }

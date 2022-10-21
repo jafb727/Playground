@@ -65,7 +65,7 @@ header {
 
 /** @description Sets a div element, that will be used as full page background size */
 .fullPageBackground {
-   @include coverBackground;
+   @include fullContainerBackground;
    bottom: 0;
    left: 0;
    position: absolute;

@@ -55,10 +55,12 @@ $breakpointMobile: 480px;
 $breakpointTablet: 768px;
 $breakpointLaptop: 1024px;
 $breakpointDesktop: 1200px;
+$breakpointTV: 2560px;
 
 :export {
   breakpointMobile: $breakpointMobile;
   breakpointTablet: $breakpointTablet;
   breakpointLaptop: $breakpointLaptop;
   breakpointDesktop: $breakpointDesktop;
+  breakpointTV: $breakpointTV;
 }

@@ -14,22 +14,29 @@ import React from "react";
 import Box from "@mui/material/Box";
 
 /** @import Hooks */
+import { useFormStateAndEvents } from "./Form.component.hooks";
 import { useStyleProcessor } from "../../utils/hooks.utils";
 
+/** @import Interfaces */
+import { FormType } from "../../config/form.config";
+
 /** @import Styles */
-import "./Form.styles.scss";
+import Style from "./Form.styles.module.scss";
 
 /* --------------------------------------------- */
 
-/** @interface Form properties */
-interface FormProps {
+/** @exports @interface Form properties */
+export interface FormProps {
    className?: string;
    elementSize?: number;
+   onSubmit?: Function;
+   setup?: FormType;
    sizeInMobile?: number;
    sizeInTablet?: number;
    sizeInLaptop?: number;
    sizeInDesktop?: number;
    style?: object;
+   type?: string;
 }
 
 /* --------------------------------------------- */
@@ -52,6 +59,7 @@ const Form = (props: FormProps) => {
    } = props;
 
    /** @constant Hook call */
+   const { formLogo } = useFormStateAndEvents(props);
    const { flexSize } = useStyleProcessor({
       elementSize,
       sizeInMobile,
@@ -67,7 +75,9 @@ const Form = (props: FormProps) => {
          sx={{ ...flexSize, ...style }}
          className={className}
          data-testid="form-component"
-      ></Box>
+      >
+         <Box className={Style.formHeader}>{formLogo}</Box>
+      </Box>
    );
 };
 

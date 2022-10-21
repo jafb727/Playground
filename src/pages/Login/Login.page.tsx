@@ -20,6 +20,9 @@ import Logo from "./../../components/Logo";
 import Paper from "@mui/material/Paper";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 
+/** @import Utilities */
+import { LogIn as LogInFormSetup } from "../../config/form.config";
+
 /** @import Theme */
 import Theme from "./../../config/theme.config";
 
@@ -66,14 +69,16 @@ const Login = () => {
                               sizeInLaptop={1}
                               sizeInDesktop={1}
                               className={fullSizeCentered}
-                           ></Form>
+                              setup={LogInFormSetup}
+                              type="new"
+                           />
                            <Background
                               sizeInMobile={0}
                               sizeInTablet={0}
                               sizeInLaptop={0}
                               sizeInDesktop={1}
                               className={`${Style.loginBackground} ${fullSizeElement}`}
-                           ></Background>
+                           />
                         </Collection>
                      </Paper>
                   </section>

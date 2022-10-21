@@ -22,7 +22,7 @@
 }
 
 /** @description Element will take full size of the parent container */
-@mixin coverBackground {
+@mixin fullContainerBackground {
   background-attachment: fixed;
   background-size: cover;
 }

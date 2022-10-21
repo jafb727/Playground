@@ -52,7 +52,22 @@ Object {
                   <div
                     class="fullSizeCentered MuiBox-root css-0"
                     data-testid="form-component"
-                  />
+                  >
+                    <div
+                      class="formHeader MuiBox-root css-0"
+                    >
+                      <div
+                        class="MuiBox-root css-0"
+                        data-testid="logo"
+                      >
+                        <h4
+                          class="MuiTypography-root MuiTypography-h4 logo css-95oyd8-MuiTypography-root"
+                        >
+                          MY
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
                   <div
                     class="  loginBackground fullSizeElement MuiBox-root css-0"
                     data-testid="background"
@@ -134,7 +149,22 @@ Object {
                 <div
                   class="fullSizeCentered MuiBox-root css-0"
                   data-testid="form-component"
-                />
+                >
+                  <div
+                    class="formHeader MuiBox-root css-0"
+                  >
+                    <div
+                      class="MuiBox-root css-0"
+                      data-testid="logo"
+                    >
+                      <h4
+                        class="MuiTypography-root MuiTypography-h4 logo css-95oyd8-MuiTypography-root"
+                      >
+                        MY
+                      </h4>
+                    </div>
+                  </div>
+                </div>
                 <div
                   class="  loginBackground fullSizeElement MuiBox-root css-0"
                   data-testid="background"

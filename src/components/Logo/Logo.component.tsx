@@ -14,8 +14,18 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
+/** @import Interfaces */
+import { FormLogo } from "../../config/form.config";
+
 /** @import Styles */
 import Style from "./Logo.module.scss";
+
+/* --------------------------------------------- */
+
+/** @exports @interface Logo properties */
+export interface LogoProps {
+   setup?: FormLogo | undefined;
+}
 
 /* --------------------------------------------- */
 
@@ -24,7 +34,7 @@ import Style from "./Logo.module.scss";
  * @description Main functional component
  * @returns {JSX} A react element
  */
-function Logo() {
+function Logo(props: LogoProps) {
    return (
       <Box data-testid="logo">
          <Typography variant="h4" className={Style.logo}>

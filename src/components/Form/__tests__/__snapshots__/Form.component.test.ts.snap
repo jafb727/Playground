@@ -8,14 +8,22 @@ Object {
       <div
         class="MuiBox-root css-0"
         data-testid="form-component"
-      />
+      >
+        <div
+          class="formHeader MuiBox-root css-0"
+        />
+      </div>
     </div>
   </body>,
   "container": <div>
     <div
       class="MuiBox-root css-0"
       data-testid="form-component"
-    />
+    >
+      <div
+        class="formHeader MuiBox-root css-0"
+      />
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

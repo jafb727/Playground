@@ -59,6 +59,7 @@ declare module "@mui/material/styles" {
       tablet: true;
       laptop: true;
       desktop: true;
+      tv: true;
    }
 }
 
@@ -89,6 +90,7 @@ const Theme = createTheme({
          tablet: parseInt(Variables.breakpointTablet),
          laptop: parseInt(Variables.breakpointLaptop),
          desktop: parseInt(Variables.breakpointDesktop),
+         tv: parseInt(Variables.breakpointTV),
       },
    },
    typography: {
