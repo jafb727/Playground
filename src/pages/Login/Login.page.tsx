@@ -16,7 +16,6 @@ import Box from "@mui/material/Box";
 import Collection from "../../containers/Collection";
 import Copyright from "../../components/Copyright";
 import Form from "../../components/Form";
-import Logo from "./../../components/Logo";
 import Paper from "@mui/material/Paper";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 
@@ -51,9 +50,7 @@ const Login = () => {
                <Box id="workspace" className={fullSizeCentered}>
                   {/** Header */}
                   <header id="header" className={headerFullPage}>
-                     <Collection className={Style.collection}>
-                        <Logo />
-                     </Collection>
+                     <Collection className={Style.collection}></Collection>
                   </header>
 
                   {/** Login form */}
@@ -85,10 +82,7 @@ const Login = () => {
 
                   {/** Footer */}
                   <footer id="footer" className={footerFullPage}>
-                     <Collection
-                        horizontalAlignment="end"
-                        className={Style.collection}
-                     >
+                     <Collection alignment="right" className={Style.collection}>
                         {/** Copyright */}
                         <Copyright />
                      </Collection>

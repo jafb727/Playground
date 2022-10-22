@@ -23,11 +23,11 @@ import { render } from "@testing-library/react";
 /**
  * @exports @function basicSetup
  * @description Renders a component
- * @param {JSX} Component - Component to render
- * @param {object} [props] - Component properties
+ * @param {any} Component - Component to render
+ * @param {any} props - Component properties
  * @returns {HTML} A container to mount in DOM
  */
-export const basicSetup = (Component: React.FunctionComponent, props?: any) => {
+export const basicSetup = (Component: any, props?: any) => {
    return render(<Component {...props} />);
 };
 

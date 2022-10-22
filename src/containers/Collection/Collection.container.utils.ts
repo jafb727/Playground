@@ -12,21 +12,18 @@
  * @description Determines collection container alignment
  * @returns {object} an object to set on sx collection MUI container property
  */
-export const setCollectionAlignment = (alignment = "start") => {
-   /** @constant */
-   const _alignment: any = {};
-
+export const setCollectionAlignment = (alignment = "left") => {
    if (alignment === "center") {
-      _alignment.justifyContent = "center";
+      return { justifyContent: "center" };
    }
 
-   if (alignment === "end") {
-      _alignment.justifyContent = "flex-end";
+   if (alignment === "left") {
+      return { justifyContent: "flex-start" };
    }
 
-   if (alignment === "start") {
-      _alignment.justifyContent = "flex-start";
+   if (alignment === "right") {
+      return { justifyContent: "flex-end" };
    }
 
-   return _alignment;
+   return {};
 };

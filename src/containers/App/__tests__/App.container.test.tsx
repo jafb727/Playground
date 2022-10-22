@@ -7,6 +7,9 @@
 
 /* --------------------------------------------- */
 
+/** @import Libraries */
+import { act } from "@testing-library/react";
+
 /** Components */
 import Component from "./../../App";
 
@@ -17,7 +20,9 @@ import { basicSetup } from "./../../../test/setupTests";
 
 describe("App.container", () => {
    test("Passes shallow snapshot test", () => {
-      const component = basicSetup(Component);
-      expect(component).toMatchSnapshot();
+      act(() => {
+         const component = basicSetup(Component);
+         expect(component).toMatchSnapshot();
+      });
    });
 });

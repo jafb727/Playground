@@ -15,8 +15,10 @@ export interface FormAPI {
 
 /** @export @interface FormLogo */
 export interface FormLogo {
-   position: string;
-   source: string;
+   altText?: string;
+   alignment?: string;
+   size?: string;
+   color?: string;
 }
 
 /** @export @interface FormFieldInfo */
@@ -75,8 +77,10 @@ export const LogIn = {
          method: "GET",
       },
       logo: {
-         position: "center",
-         source: "",
+         altText: "Login form logo",
+         alignment: "center",
+         size: "small",
+         color: "primary",
       },
       fields: [
          {

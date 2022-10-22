@@ -109,7 +109,7 @@ const RoutingFallback = () => {
 
                   {/** Footer */}
                   <footer className={GlobalStyle.footerFullPage}>
-                     <Collection horizontalAlignment="end">
+                     <Collection alignment="right">
                         {/** Copyright */}
                         <Copyright className={Style.copyright} />
                      </Collection>

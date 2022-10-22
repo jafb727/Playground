@@ -27,7 +27,7 @@ import Style from "./Collection.module.scss";
 export interface CollectionProps {
    children?: React.ReactNode;
    className?: string;
-   horizontalAlignment?: string;
+   alignment?: string;
    style?: object;
 }
 

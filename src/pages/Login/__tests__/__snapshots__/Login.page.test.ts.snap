@@ -25,18 +25,7 @@ Object {
               <div
                 class="collectionContainer collection MuiBox-root css-1fn0841"
                 data-testid="collection"
-              >
-                <div
-                  class="MuiBox-root css-0"
-                  data-testid="logo"
-                >
-                  <h4
-                    class="MuiTypography-root MuiTypography-h4 logo css-95oyd8-MuiTypography-root"
-                  >
-                    MY
-                  </h4>
-                </div>
-              </div>
+              />
             </header>
             <section
               class="fullSizeCentered"
@@ -57,14 +46,16 @@ Object {
                       class="formHeader MuiBox-root css-0"
                     >
                       <div
-                        class="MuiBox-root css-0"
+                        class="logoContainer MuiBox-root css-0"
                         data-testid="logo"
                       >
-                        <h4
-                          class="MuiTypography-root MuiTypography-h4 logo css-95oyd8-MuiTypography-root"
+                        <div
+                          class="imageLogoContainer MuiBox-root css-1tyndxa"
                         >
-                          MY
-                        </h4>
+                          <img
+                            alt="Login form logo"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -122,18 +113,7 @@ Object {
             <div
               class="collectionContainer collection MuiBox-root css-1fn0841"
               data-testid="collection"
-            >
-              <div
-                class="MuiBox-root css-0"
-                data-testid="logo"
-              >
-                <h4
-                  class="MuiTypography-root MuiTypography-h4 logo css-95oyd8-MuiTypography-root"
-                >
-                  MY
-                </h4>
-              </div>
-            </div>
+            />
           </header>
           <section
             class="fullSizeCentered"
@@ -154,14 +134,16 @@ Object {
                     class="formHeader MuiBox-root css-0"
                   >
                     <div
-                      class="MuiBox-root css-0"
+                      class="logoContainer MuiBox-root css-0"
                       data-testid="logo"
                     >
-                      <h4
-                        class="MuiTypography-root MuiTypography-h4 logo css-95oyd8-MuiTypography-root"
+                      <div
+                        class="imageLogoContainer MuiBox-root css-1tyndxa"
                       >
-                        MY
-                      </h4>
+                        <img
+                          alt="Login form logo"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -19,15 +19,27 @@ import { basicSetup } from "../../../test/setupTests";
 /* --------------------------------------------- */
 
 describe("Logo.component", () => {
-   test("Renders component ok", () => {
-      basicSetup(Component);
-      expect(screen.getByTestId("logo")).toBeInTheDocument();
+   /** @constant Properties */
+   const props = {
+      options: {
+         altText: "Login form logo",
+         alignment: "center",
+         size: "small",
+         color: "primary",
+      },
+   };
+
+   test("Renders component ok", async () => {
+      basicSetup(Component, props);
+      const component = await screen.findByTestId("logo");
+      expect(component).toBeInTheDocument();
    });
 
    /* ----------------------- */
 
-   test("Passes shallow snapshot test", () => {
-      const component = basicSetup(Component);
+   test("Passes shallow snapshot test", async () => {
+      basicSetup(Component, props);
+      const component = await screen.findByTestId("logo");
       expect(component).toMatchSnapshot();
    });
 });

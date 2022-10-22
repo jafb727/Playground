@@ -11,7 +11,7 @@
 import { CollectionProps } from "./Collection.container";
 
 /** @import Utilities */
-import { setCollectionAlignment } from "./Collection.container.utils";
+import { setContainerAlignment } from "../../utils/common.utils";
 
 /* --------------------------------------------- */
 
@@ -22,9 +22,7 @@ import { setCollectionAlignment } from "./Collection.container.utils";
  */
 export const useCollectionStateAndEvents = (props: CollectionProps) => {
    /** @constant */
-   const collectionAlignment: any = setCollectionAlignment(
-      props.horizontalAlignment
-   );
+   const collectionAlignment: any = setContainerAlignment(props.alignment);
 
    /* ----------------------- */
 
