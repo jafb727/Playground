@@ -36,7 +36,7 @@ header {
  * @description Footer layout when page is supposed to be
  * full view port height and width
  */
-.footerFullPage {
+.footerInFullPage {
    bottom: 0;
    position: absolute;
    z-index: 1;
@@ -46,7 +46,7 @@ header {
  * @description Header layout when page is supposed to be
  * full view port height and width
  */
-.headerFullPage {
+.headerInFullPage {
    position: absolute;
    top: 0;
    z-index: 1;

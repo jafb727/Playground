@@ -20,7 +20,7 @@ import Text from "../../../assets/typography/Text.json";
  * @function AppFallback
  * @description Main functional component. Used when application
  * is being rendered, thats why JSX markup is very simple
- * @returns {JSX} A react element
+ * @returns {React.ReactNode} A react node
  */
 const AppFallback = () => {
    /** @constant */

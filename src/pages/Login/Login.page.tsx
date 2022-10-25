@@ -34,12 +34,16 @@ import Style from "./Login.styles.module.scss";
 /**
  * @function Login
  * @description Main functional component
- * @returns {JSX} A React element
+ * @returns {React.ReactNode} A React element
  */
 const Login = () => {
    /** @constant */
-   const { footerFullPage, fullSizeCentered, fullSizeElement, headerFullPage } =
-      GlobalStyle;
+   const {
+      footerInFullPage,
+      fullSizeCentered,
+      fullSizeElement,
+      headerInFullPage,
+   } = GlobalStyle;
 
    /* ----------------------- */
 
@@ -49,7 +53,7 @@ const Login = () => {
             <ThemeProvider theme={Theme}>
                <Box id="workspace" className={fullSizeCentered}>
                   {/** Header */}
-                  <header id="header" className={headerFullPage}>
+                  <header id="header" className={headerInFullPage}>
                      <Collection className={Style.collection}></Collection>
                   </header>
 
@@ -81,7 +85,7 @@ const Login = () => {
                   </section>
 
                   {/** Footer */}
-                  <footer id="footer" className={footerFullPage}>
+                  <footer id="footer" className={footerInFullPage}>
                      <Collection alignment="right" className={Style.collection}>
                         {/** Copyright */}
                         <Copyright />

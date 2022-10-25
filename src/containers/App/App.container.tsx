@@ -26,7 +26,7 @@ import {
 /**
  * @function App
  * @description Main functional component
- * @returns {JSX} A React element
+ * @returns {React.ReactNode} A React element
  */
 const App = () => {
    /** Setting app routes */

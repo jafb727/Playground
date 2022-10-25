@@ -40,7 +40,7 @@ import Moon from "./../../../assets/images/404/MoonAstronaut.png";
 /**
  * @function RoutingFallback
  * @description Main functional component
- * @returns {JSX} A React element
+ * @returns {React.ReactNode} A React element
  */
 const RoutingFallback = () => {
    /** @constant Hooks call */
@@ -108,7 +108,7 @@ const RoutingFallback = () => {
                   </Box>
 
                   {/** Footer */}
-                  <footer className={GlobalStyle.footerFullPage}>
+                  <footer className={GlobalStyle.footerInFullPage}>
                      <Collection alignment="right">
                         {/** Copyright */}
                         <Copyright className={Style.copyright} />

@@ -17,7 +17,7 @@ import Box from "@mui/material/Box";
 import { useLogoStateAndEvents } from "./Logo.component.hooks";
 
 /** @import Interfaces */
-import { FormLogo } from "../../config/form.config";
+import { FormLogo } from "../../config/interface.config";
 
 /** @import Styles */
 import Style from "./Logo.module.scss";
@@ -34,11 +34,13 @@ export interface LogoProps extends FormLogo {
 /**
  * @function Logo
  * @description Main functional component
- * @returns {JSX} A react element
+ * @returns {React.ReactNode} A react node
  */
 const Logo = (props: LogoProps) => {
    /** @constant Hooks call */
    const { altText, logoSource, logoAlignment } = useLogoStateAndEvents(props);
+
+   /* ----------------------- */
 
    return (
       <Box className={Style.logoContainer} data-testid="logo">

@@ -10,6 +10,9 @@
 /** @import Libraries */
 import { useEffect, useRef, useState } from "react";
 
+/** @import Interfaces */
+import { ResponsiveSize } from "../config/interface.config";
+
 /** @import Utilities */
 import { Device } from "./../utils/style.utils";
 
@@ -19,12 +22,8 @@ import GlobalVariables from "./../assets/style/abstracts/_variables.module.scss"
 /* --------------------------------------------- */
 
 /** @exports @interface Flex item properties */
-export interface FlexItemProps {
+export interface FlexItemProps extends ResponsiveSize {
    elementSize?: any;
-   sizeInMobile?: number;
-   sizeInTablet?: number;
-   sizeInLaptop?: number;
-   sizeInDesktop?: number;
 }
 
 /* --------------------------------------------- */

@@ -13,7 +13,7 @@ import { capitalizeFirstLetter, checkValue } from "../../utils/common.utils";
 /* --------------------------------------------- */
 
 /** @enum Logo sizes dictionary */
-const Logo = {
+const LogoSize = {
    large: "256x256",
    medium: "128x128",
    small: "64x64",
@@ -36,7 +36,7 @@ export const setLogoName = (size: any | string, color: any | string) => {
    let logoSize = "";
 
    if (checkValue(size)) {
-      logoSize = Logo[size as keyof typeof Logo];
+      logoSize = LogoSize[size as keyof typeof LogoSize];
    }
 
    return `My${logoSize}${logoColor}.png`;

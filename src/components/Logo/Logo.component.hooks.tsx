@@ -29,14 +29,14 @@ export const useLogoStateAndEvents = (props: LogoProps) => {
    const { options } = props;
    const { altText, alignment, size, color } = options;
 
-   /** Setting logo source */
-   const logoAlignment: any = setContainerAlignment(alignment);
-   const logoName = setLogoName(size, color);
-
    /** @constant State */
    const [logoSource, setLogoSource] = useState<any>();
 
    /* ----------------------- */
+
+   /** Setting logo source */
+   const logoAlignment: any = setContainerAlignment(alignment);
+   const logoName = setLogoName(size, color);
 
    /**
     * @async @function fetchLogo
@@ -44,7 +44,7 @@ export const useLogoStateAndEvents = (props: LogoProps) => {
     * @returns {File} a logo file as data:image
     */
    const fetchLogo = useCallback(async () => {
-      const response = await import(`./../../assets/images/Logo/${logoName}`);
+      const response = await import(`../../assets/images/Logo/${logoName}`);
       setLogoSource(response.default);
       return response.default;
    }, [logoName]);

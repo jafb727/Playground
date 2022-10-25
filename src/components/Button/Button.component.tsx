@@ -21,7 +21,7 @@ import Style from "./Button.module.scss";
 /**
  * @function Button
  * @description Main functional component
- * @returns {JSX} A react element
+ * @returns {React.ReactNode} A react node
  */
 function Button() {
    return (

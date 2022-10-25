@@ -12,7 +12,7 @@ import Logo from "../Logo";
 
 /** @import Interfaces */
 import { FormProps } from "./Form.component";
-import { FormMetadata, FormType } from "../../config/form.config";
+import { FormMetadata, FormType } from "../../config/interface.config";
 
 /* --------------------------------------------- */
 

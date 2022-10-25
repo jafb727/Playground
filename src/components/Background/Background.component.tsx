@@ -18,19 +18,17 @@ import { Box } from "@mui/material";
 import { useBackgroundStateAndEvents } from "./Background.component.hooks";
 import { useStyleProcessor } from "../../utils/hooks.utils";
 
+/** @import Interfaces */
+import { ResponsiveSize } from "../../config/interface.config";
+
 /* --------------------------------------------- */
 
 /** @@exports @interface Background properties */
-export interface BackgroundProps {
+export interface BackgroundProps extends ResponsiveSize {
    children?: React.ReactNode;
    className?: string;
    defaultBackground?: boolean;
-   elementSize?: number;
    fullPage?: boolean;
-   sizeInMobile?: number;
-   sizeInTablet?: number;
-   sizeInLaptop?: number;
-   sizeInDesktop?: number;
    style?: object;
 }
 
@@ -39,7 +37,7 @@ export interface BackgroundProps {
 /**
  * @function Background
  * @description Main functional component
- * @returns {JSX} A React element
+ * @returns {React.ReactNode} A React element
  */
 const Background = (props: BackgroundProps) => {
    /** @constant Properties */

@@ -48,7 +48,7 @@ export type RoutingSetupProps = {
  * @param Component - Component to render with routing
  * @param {object} routingSetup - Custom routing setup
  * @param {object} [props] - Component properties
- * @returns {JSX} A container to mount in DOM
+ * @returns {React.ReactNode} A container to mount in DOM
  */
 export const routerSetup = (
    Component: React.FunctionComponent,

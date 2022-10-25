@@ -36,7 +36,7 @@ export interface CollectionProps {
 /**
  * @function Collection
  * @description Main functional component
- * @returns {JSX} A React element
+ * @returns {React.ReactNode} A React element
  */
 const Collection = (props: CollectionProps) => {
    /** @constant Properties */

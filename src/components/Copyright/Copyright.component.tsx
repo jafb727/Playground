@@ -30,7 +30,7 @@ interface CopyrightProps {
 /**
  * @function Copyright
  * @description Main functional component
- * @returns {JSX} A react element
+ * @returns {React.ReactNode} A react node
  */
 function Copyright(props: CopyrightProps) {
    /** @constant Properties */

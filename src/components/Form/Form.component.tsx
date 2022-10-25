@@ -18,7 +18,7 @@ import { useFormStateAndEvents } from "./Form.component.hooks";
 import { useStyleProcessor } from "../../utils/hooks.utils";
 
 /** @import Interfaces */
-import { FormType } from "../../config/form.config";
+import { FormType, ResponsiveSize } from "../../config/interface.config";
 
 /** @import Styles */
 import Style from "./Form.styles.module.scss";
@@ -26,15 +26,10 @@ import Style from "./Form.styles.module.scss";
 /* --------------------------------------------- */
 
 /** @exports @interface Form properties */
-export interface FormProps {
+export interface FormProps extends ResponsiveSize {
    className?: string;
-   elementSize?: number;
    onSubmit?: Function;
    setup?: FormType;
-   sizeInMobile?: number;
-   sizeInTablet?: number;
-   sizeInLaptop?: number;
-   sizeInDesktop?: number;
    style?: object;
    type?: string;
 }
@@ -44,29 +39,15 @@ export interface FormProps {
 /**
  * @function Form
  * @description Main functional component
- * @returns {JSX} A react element
+ * @returns {React.ReactNode} A react node
  */
 const Form = (props: FormProps) => {
    /** @constant Properties */
-   const {
-      className,
-      elementSize,
-      sizeInMobile,
-      sizeInTablet,
-      sizeInLaptop,
-      sizeInDesktop,
-      style,
-   } = props;
+   const { className, style } = props;
 
    /** @constant Hook call */
    const { formLogo } = useFormStateAndEvents(props);
-   const { flexSize } = useStyleProcessor({
-      elementSize,
-      sizeInMobile,
-      sizeInTablet,
-      sizeInLaptop,
-      sizeInDesktop,
-   });
+   const { flexSize } = useStyleProcessor(props);
 
    /* ----------------------- */
 

@@ -19,7 +19,7 @@ Object {
             id="workspace"
           >
             <header
-              class="headerFullPage"
+              class="headerInFullPage"
               id="header"
             >
               <div
@@ -67,7 +67,7 @@ Object {
               </div>
             </section>
             <footer
-              class="footerFullPage"
+              class="footerInFullPage"
               id="footer"
             >
               <div
@@ -107,7 +107,7 @@ Object {
           id="workspace"
         >
           <header
-            class="headerFullPage"
+            class="headerInFullPage"
             id="header"
           >
             <div
@@ -155,7 +155,7 @@ Object {
             </div>
           </section>
           <footer
-            class="footerFullPage"
+            class="footerInFullPage"
             id="footer"
           >
             <div
