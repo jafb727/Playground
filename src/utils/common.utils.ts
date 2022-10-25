@@ -14,15 +14,15 @@
  */
 export const setContainerAlignment = (alignment = "left") => {
    if (alignment === "center") {
-      return { justifyContent: "center" };
+      return { justifyContent: "center", textAlign: "center" };
    }
 
    if (alignment === "left") {
-      return { justifyContent: "flex-start" };
+      return { justifyContent: "flex-start", textAlign: "left" };
    }
 
    if (alignment === "right") {
-      return { justifyContent: "flex-end" };
+      return { justifyContent: "flex-end", textAlign: "right" };
    }
 
    return {};

@@ -12,6 +12,7 @@ import React from "react";
 
 /** @import Components */
 import Box from "@mui/material/Box";
+import ErrorBoundary from "../ErrorBoundary";
 
 /** @import Hooks */
 import { useFormStateAndEvents } from "./Form.component.hooks";
@@ -27,6 +28,7 @@ import Style from "./Form.styles.module.scss";
 
 /** @exports @interface Form properties */
 export interface FormProps extends ResponsiveSize {
+   alignment?: string;
    className?: string;
    onSubmit?: Function;
    setup?: FormType;
@@ -46,19 +48,26 @@ const Form = (props: FormProps) => {
    const { className, style } = props;
 
    /** @constant Hook call */
-   const { formLogo } = useFormStateAndEvents(props);
+   const { formAlignment, formLogo, formSubTitle, formTitle } =
+      useFormStateAndEvents(props);
    const { flexSize } = useStyleProcessor(props);
 
    /* ----------------------- */
 
    return (
-      <Box
-         sx={{ ...flexSize, ...style }}
-         className={className}
-         data-testid="form-component"
-      >
-         <Box className={Style.formHeader}>{formLogo}</Box>
-      </Box>
+      <ErrorBoundary>
+         <Box
+            className={className}
+            sx={{ ...flexSize, ...formAlignment, ...style }}
+            data-testid="form-component"
+         >
+            <Box className={Style.formHeader}>
+               {formLogo}
+               {formTitle}
+               {formSubTitle}
+            </Box>
+         </Box>
+      </ErrorBoundary>
    );
 };
 

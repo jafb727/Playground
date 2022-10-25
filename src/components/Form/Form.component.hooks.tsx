@@ -8,11 +8,15 @@
 /* --------------------------------------------- */
 
 /** @import Components */
+import { Typography } from "@mui/material";
 import Logo from "../Logo";
 
 /** @import Interfaces */
 import { FormProps } from "./Form.component";
 import { FormMetadata, FormType } from "../../config/interface.config";
+
+/** @import Utilities */
+import { setContainerAlignment } from "../../utils/common.utils";
 
 /* --------------------------------------------- */
 
@@ -23,7 +27,7 @@ import { FormMetadata, FormType } from "../../config/interface.config";
  */
 export const useFormStateAndEvents = (props: FormProps) => {
    /** @constant Properties */
-   const { setup, type } = props;
+   const { alignment, setup, type } = props;
 
    /* ----------------------- */
 
@@ -36,37 +40,87 @@ export const useFormStateAndEvents = (props: FormProps) => {
     */
    const setFormMetadata = (setup: any | FormType, type: any | string) => {
       if (setup && type) {
-         return setup[type as keyof FormType];
-      }
+         const formSetup = setup[type as keyof FormType];
 
-      return null;
-   };
-
-   /** Getting form type setup */
-   const formMetadata = setFormMetadata(setup, type);
-
-   /* ----------------------- */
-
-   /**
-    * @function setupFormLogo
-    * @description Helps to setup a form logo depeding on form configuration
-    * @param {FormMetadata} formMetadata - Form metadata according to form.config schema
-    * @returns {null|React.ReactNode} a React node or null
-    */
-   const setupFormLogo = (formMetadata: any | FormMetadata) => {
-      if (formMetadata) {
-         if (formMetadata.logo) {
-            return <Logo options={formMetadata.logo} />;
+         if (formSetup) {
+            return formSetup;
          }
       }
 
       return null;
    };
 
-   /** Logo setup if required */
-   const formLogo = setupFormLogo(formMetadata);
+   /* ----------------------- */
+
+   /**
+    * @function setupFormLogo
+    * @description Helps to setup a form logo based on a setup
+    * @param {FormMetadata} formMetadata - Form metadata according to form.config schema
+    * @returns {null|React.ReactNode} a React node or null
+    */
+   const setupFormLogo = (formMetadata: any | FormMetadata) => {
+      if (formMetadata && formMetadata.logo) {
+         return <Logo options={{ ...formMetadata.logo, ...{ alignment } }} />;
+      }
+
+      return null;
+   };
 
    /* ----------------------- */
 
-   return { formLogo };
+   /**
+    * @function setupFormTitle
+    * @description Helps to setup a form title based on a setup
+    * @param {FormMetadata} formMetadata - Form metadata according to form.config schema
+    * @returns {null|React.ReactNode} a React node or null
+    */
+   const setupFormTitle = (formMetadata: any | FormMetadata) => {
+      if (formMetadata && formMetadata.title) {
+         return <Typography variant="h6">{formMetadata.title}</Typography>;
+      }
+
+      return null;
+   };
+
+   /* ----------------------- */
+
+   /**
+    * @function setupFormSubTitle
+    * @description Helps to setup a form subtitle based on setup
+    * @param {FormMetadata} formMetadata - Form metadata according to form.config schema
+    * @returns {null|React.ReactNode} a React node or null
+    */
+   const setupFormSubTitle = (formMetadata: any | FormMetadata) => {
+      if (formMetadata && formMetadata.title) {
+         return (
+            <Typography variant="body1">{formMetadata.subtitle}</Typography>
+         );
+      }
+
+      return null;
+   };
+
+   /* ----------------------- */
+
+   /** Getting form type setup */
+   const formMetadata = setFormMetadata(setup, type);
+
+   /** Setting up form */
+   const formAlignment = setContainerAlignment(alignment);
+   const formLogo = setupFormLogo(formMetadata);
+   const formSubTitle = setupFormSubTitle(formMetadata);
+   const formTitle = setupFormTitle(formMetadata);
+
+   /* ----------------------- */
+
+   return {
+      formAlignment,
+      formLogo,
+      formSubTitle,
+      formTitle,
+      setupFormLogo,
+      setFormMetadata,
+      setupFormSubTitle,
+      setupFormTitle,
+   };
 };

@@ -20,7 +20,7 @@
 /* --------------------------------------------- */
 
 /** @description Login main container */
-.loginContentContainer {
+.loginContent {
   max-height: 70rem;
   max-width: 60rem;
   min-height: 70%;
@@ -28,7 +28,7 @@
 }
 
 @media (min-width: $breakpointMobile) {
-  .loginContentContainer {
+  .loginContent {
     min-width: 80%;
   }
 }

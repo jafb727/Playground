@@ -44,6 +44,7 @@ const Login = () => {
       fullSizeElement,
       headerInFullPage,
    } = GlobalStyle;
+   const { collection, loginBackground, loginContent } = Style;
 
    /* ----------------------- */
 
@@ -54,17 +55,15 @@ const Login = () => {
                <Box id="workspace" className={fullSizeCentered}>
                   {/** Header */}
                   <header id="header" className={headerInFullPage}>
-                     <Collection className={Style.collection}></Collection>
+                     <Collection className={collection}></Collection>
                   </header>
 
                   {/** Login form */}
                   <section id="content" className={fullSizeCentered}>
-                     <Paper
-                        elevation={12}
-                        className={Style.loginContentContainer}
-                     >
+                     <Paper elevation={12} className={loginContent}>
                         <Collection className={fullSizeElement}>
                            <Form
+                              alignment="center"
                               sizeInMobile={1}
                               sizeInTablet={1}
                               sizeInLaptop={1}
@@ -78,7 +77,7 @@ const Login = () => {
                               sizeInTablet={0}
                               sizeInLaptop={0}
                               sizeInDesktop={1}
-                              className={`${Style.loginBackground} ${fullSizeElement}`}
+                              className={`${loginBackground} ${fullSizeElement}`}
                            />
                         </Collection>
                      </Paper>
@@ -86,7 +85,7 @@ const Login = () => {
 
                   {/** Footer */}
                   <footer id="footer" className={footerInFullPage}>
-                     <Collection alignment="right" className={Style.collection}>
+                     <Collection alignment="right" className={collection}>
                         {/** Copyright */}
                         <Copyright />
                      </Collection>

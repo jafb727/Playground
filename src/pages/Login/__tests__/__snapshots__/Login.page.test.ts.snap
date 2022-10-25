@@ -23,7 +23,7 @@ Object {
               id="header"
             >
               <div
-                class="collectionContainer collection MuiBox-root css-1fn0841"
+                class="collectionContainer collection MuiBox-root css-1fbpp7j"
                 data-testid="collection"
               />
             </header>
@@ -32,31 +32,41 @@ Object {
               id="content"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation12 loginContentContainer css-1e1fzod-MuiPaper-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation12 loginContent css-1e1fzod-MuiPaper-root"
               >
                 <div
-                  class="collectionContainer fullSizeElement MuiBox-root css-1fn0841"
+                  class="collectionContainer fullSizeElement MuiBox-root css-1fbpp7j"
                   data-testid="collection"
                 >
                   <div
-                    class="fullSizeCentered MuiBox-root css-0"
+                    class="fullSizeCentered MuiBox-root css-nntn6c"
                     data-testid="form-component"
                   >
                     <div
                       class="formHeader MuiBox-root css-0"
                     >
                       <div
-                        class="logoContainer MuiBox-root css-0"
+                        class="logoContainer undefined  MuiBox-root css-nntn6c"
                         data-testid="logo"
                       >
                         <div
-                          class="imageLogoContainer MuiBox-root css-1tyndxa"
+                          class="imageLogoContainer MuiBox-root css-0"
                         >
                           <img
                             alt="Login form logo"
                           />
                         </div>
                       </div>
+                      <h6
+                        class="MuiTypography-root MuiTypography-h6 css-1nledk2-MuiTypography-root"
+                      >
+                        Login
+                      </h6>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-10kbhik-MuiTypography-root"
+                      >
+                        Use your MY account
+                      </p>
                     </div>
                   </div>
                   <div
@@ -71,7 +81,7 @@ Object {
               id="footer"
             >
               <div
-                class="collectionContainer collection MuiBox-root css-1a9getn"
+                class="collectionContainer collection MuiBox-root css-lvb6yv"
                 data-testid="collection"
               >
                 <div
@@ -111,7 +121,7 @@ Object {
             id="header"
           >
             <div
-              class="collectionContainer collection MuiBox-root css-1fn0841"
+              class="collectionContainer collection MuiBox-root css-1fbpp7j"
               data-testid="collection"
             />
           </header>
@@ -120,31 +130,41 @@ Object {
             id="content"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation12 loginContentContainer css-1e1fzod-MuiPaper-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation12 loginContent css-1e1fzod-MuiPaper-root"
             >
               <div
-                class="collectionContainer fullSizeElement MuiBox-root css-1fn0841"
+                class="collectionContainer fullSizeElement MuiBox-root css-1fbpp7j"
                 data-testid="collection"
               >
                 <div
-                  class="fullSizeCentered MuiBox-root css-0"
+                  class="fullSizeCentered MuiBox-root css-nntn6c"
                   data-testid="form-component"
                 >
                   <div
                     class="formHeader MuiBox-root css-0"
                   >
                     <div
-                      class="logoContainer MuiBox-root css-0"
+                      class="logoContainer undefined  MuiBox-root css-nntn6c"
                       data-testid="logo"
                     >
                       <div
-                        class="imageLogoContainer MuiBox-root css-1tyndxa"
+                        class="imageLogoContainer MuiBox-root css-0"
                       >
                         <img
                           alt="Login form logo"
                         />
                       </div>
                     </div>
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6 css-1nledk2-MuiTypography-root"
+                    >
+                      Login
+                    </h6>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-10kbhik-MuiTypography-root"
+                    >
+                      Use your MY account
+                    </p>
                   </div>
                 </div>
                 <div
@@ -159,7 +179,7 @@ Object {
             id="footer"
           >
             <div
-              class="collectionContainer collection MuiBox-root css-1a9getn"
+              class="collectionContainer collection MuiBox-root css-lvb6yv"
               data-testid="collection"
             >
               <div
