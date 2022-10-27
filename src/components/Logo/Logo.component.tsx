@@ -52,8 +52,8 @@ const Logo = (props: LogoProps) => {
       <ErrorBoundary>
          <Box
             className={`${Style.logoContainer} ${className} `}
-            sx={{ ...logoAlignment, ...style }}
             data-testid="logo"
+            sx={{ ...logoAlignment, ...style }}
          >
             <Box className={Style.imageLogoContainer}>
                <img alt={altText} src={logoSource} />

@@ -32,8 +32,8 @@ const App = () => {
    /** Setting app routes */
    const router = createBrowserRouter(
       createRoutesFromElements(
-         <Route path="/" element={<Login />} errorElement={<RoutingFallback />}>
-            <Route path="/login" element={<Login />} />
+         <Route element={<Login />} errorElement={<RoutingFallback />} path="/">
+            <Route element={<Login />} path="/login" />
          </Route>
       )
    );

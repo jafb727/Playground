@@ -32,18 +32,18 @@ interface CopyrightProps {
  * @description Main functional component
  * @returns {React.ReactNode} A react node
  */
-function Copyright(props: CopyrightProps) {
+const Copyright = (props: CopyrightProps) => {
    /** @constant Properties */
    const { className, style } = props;
 
    /* ----------------------- */
 
    return (
-      <Box sx={style} className={className} data-testid="copyright-component">
+      <Box className={className} data-testid="copyright-component" sx={style}>
          <Typography variant="body2">&copy; {Text.copyright}</Typography>
       </Box>
    );
-}
+};
 
 /* --------------------------------------------- */
 

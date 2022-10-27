@@ -65,7 +65,7 @@ export const useStyleProcessor = (props: FlexItemProps) => {
     */
    const turnFlexSizeToStyle = (flexSize?: number) => {
       if (flexSize === undefined) {
-         return { flex: "auto" };
+         return { flex: 1 };
       }
 
       return { flex: flexSize };

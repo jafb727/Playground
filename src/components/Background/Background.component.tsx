@@ -27,7 +27,7 @@ import { ResponsiveSize } from "../../config/interface.config";
 export interface BackgroundProps extends ResponsiveSize {
    children?: React.ReactNode;
    className?: string;
-   defaultBackground?: boolean;
+   defaultBg?: boolean;
    fullPage?: boolean;
    style?: object;
 }
@@ -41,34 +41,20 @@ export interface BackgroundProps extends ResponsiveSize {
  */
 const Background = (props: BackgroundProps) => {
    /** @constant Properties */
-   const {
-      children,
-      className,
-      elementSize,
-      sizeInMobile,
-      sizeInTablet,
-      sizeInLaptop,
-      sizeInDesktop,
-      style,
-   } = props;
+   const { children, className, style } = props;
 
    /** @constant Hooks call */
-   const { defaultBg, fullPage } = useBackgroundStateAndEvents(props);
-   const { flexSize } = useStyleProcessor({
-      elementSize,
-      sizeInMobile,
-      sizeInTablet,
-      sizeInLaptop,
-      sizeInDesktop,
-   });
+   const { defaultBackground, fullPageBackground } =
+      useBackgroundStateAndEvents(props);
+   const { flexSize } = useStyleProcessor(props);
 
    /* ----------------------- */
 
    return (
       <Box
-         sx={{ ...flexSize, ...style }}
-         className={`${fullPage} ${defaultBg} ${className}`}
+         className={`${fullPageBackground} ${defaultBackground} ${className}`}
          data-testid="background"
+         sx={{ ...flexSize, ...style }}
       >
          {children}
       </Box>

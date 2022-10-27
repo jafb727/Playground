@@ -27,7 +27,7 @@ import { setContainerAlignment } from "../../utils/common.utils";
  */
 export const useFormStateAndEvents = (props: FormProps) => {
    /** @constant Properties */
-   const { alignment, setup, type } = props;
+   const { alignment, asModal, setup, type } = props;
 
    /* ----------------------- */
 
@@ -74,8 +74,17 @@ export const useFormStateAndEvents = (props: FormProps) => {
     * @param {FormMetadata} formMetadata - Form metadata according to form.config schema
     * @returns {null|React.ReactNode} a React node or null
     */
-   const setupFormTitle = (formMetadata: any | FormMetadata) => {
+   const setupFormTitle = (
+      formMetadata: any | FormMetadata,
+      asModal?: boolean
+   ) => {
       if (formMetadata && formMetadata.title) {
+         /** Title format when showing form in modal mode */
+         if (asModal) {
+            return formMetadata.title;
+         }
+
+         /** Title format when showing form in page mode */
          return <Typography variant="h6">{formMetadata.title}</Typography>;
       }
 
@@ -109,7 +118,7 @@ export const useFormStateAndEvents = (props: FormProps) => {
    const formAlignment = setContainerAlignment(alignment);
    const formLogo = setupFormLogo(formMetadata);
    const formSubTitle = setupFormSubTitle(formMetadata);
-   const formTitle = setupFormTitle(formMetadata);
+   const formTitle = setupFormTitle(formMetadata, asModal);
 
    /* ----------------------- */
 

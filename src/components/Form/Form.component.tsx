@@ -12,6 +12,7 @@ import React from "react";
 
 /** @import Components */
 import Box from "@mui/material/Box";
+import Dialog from "../Dialog";
 import ErrorBoundary from "../ErrorBoundary";
 
 /** @import Hooks */
@@ -29,6 +30,7 @@ import Style from "./Form.styles.module.scss";
 /** @exports @interface Form properties */
 export interface FormProps extends ResponsiveSize {
    alignment?: string;
+   asModal?: boolean;
    className?: string;
    onSubmit?: Function;
    setup?: FormType;
@@ -45,7 +47,7 @@ export interface FormProps extends ResponsiveSize {
  */
 const Form = (props: FormProps) => {
    /** @constant Properties */
-   const { className, style } = props;
+   const { asModal, className, style } = props;
 
    /** @constant Hook call */
    const { formAlignment, formLogo, formSubTitle, formTitle } =
@@ -54,12 +56,22 @@ const Form = (props: FormProps) => {
 
    /* ----------------------- */
 
+   /** Form is shown in modal mode */
+   if (asModal) {
+      return (
+         <ErrorBoundary>
+            <Dialog open={asModal} title={formTitle} />
+         </ErrorBoundary>
+      );
+   }
+
+   /** Form is shown in page mode (default) */
    return (
       <ErrorBoundary>
          <Box
             className={className}
-            sx={{ ...flexSize, ...formAlignment, ...style }}
             data-testid="form-component"
+            sx={{ ...flexSize, ...formAlignment, ...style }}
          >
             <Box className={Style.formHeader}>
                {formLogo}

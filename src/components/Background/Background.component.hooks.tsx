@@ -24,14 +24,15 @@ import {
  * @returns {object} Hook functions and state
  */
 export const useBackgroundStateAndEvents = (props: BackgroundProps) => {
-   /** @constant */
-   const defaultBg: string = setDefaultBackground(props.defaultBackground);
-   const fullPage: string = setFullPageBackground(props.fullPage);
+   /** @constant Properties */
+   const { defaultBg, fullPage } = props;
+   const defaultBackground: string = setDefaultBackground(defaultBg);
+   const fullPageBackground: string = setFullPageBackground(fullPage);
 
    /* ----------------------- */
 
    return {
-      defaultBg,
-      fullPage,
+      defaultBackground,
+      fullPageBackground,
    };
 };

@@ -49,42 +49,39 @@ const Login = () => {
    /* ----------------------- */
 
    return (
-      <Box id="login" data-testid="login">
-         <Background defaultBackground fullPage>
+      <Box data-testid="login" id="login">
+         <Background defaultBg fullPage>
             <ThemeProvider theme={Theme}>
-               <Box id="workspace" className={fullSizeCentered}>
+               <Box className={fullSizeCentered} id="workspace">
                   {/** Header */}
-                  <header id="header" className={headerInFullPage}>
+                  <header className={headerInFullPage} id="header">
                      <Collection className={collection}></Collection>
                   </header>
 
                   {/** Login form */}
-                  <section id="content" className={fullSizeCentered}>
+                  <section className={fullSizeCentered} id="content">
                      <Paper elevation={12} className={loginContent}>
                         <Collection className={fullSizeElement}>
                            <Form
                               alignment="center"
-                              sizeInMobile={1}
-                              sizeInTablet={1}
-                              sizeInLaptop={1}
-                              sizeInDesktop={1}
                               className={fullSizeCentered}
                               setup={LogInFormSetup}
+                              elementSize={1}
                               type="new"
                            />
                            <Background
+                              className={`${loginBackground} ${fullSizeElement}`}
                               sizeInMobile={0}
                               sizeInTablet={0}
                               sizeInLaptop={0}
                               sizeInDesktop={1}
-                              className={`${loginBackground} ${fullSizeElement}`}
                            />
                         </Collection>
                      </Paper>
                   </section>
 
                   {/** Footer */}
-                  <footer id="footer" className={footerInFullPage}>
+                  <footer className={footerInFullPage} id="footer">
                      <Collection alignment="right" className={collection}>
                         {/** Copyright */}
                         <Copyright />

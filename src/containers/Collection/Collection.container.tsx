@@ -49,9 +49,9 @@ const Collection = (props: CollectionProps) => {
 
    return (
       <Box
-         sx={{ ...collectionAlignment, ...style }}
          className={`${Style.collectionContainer} ${className}`}
          data-testid="collection"
+         sx={{ ...collectionAlignment, ...style }}
       >
          {children}
       </Box>

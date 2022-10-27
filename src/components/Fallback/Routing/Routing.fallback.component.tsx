@@ -51,18 +51,18 @@ const RoutingFallback = () => {
 
    return (
       <Box data-testid="routing-fallback">
-         <Background defaultBackground fullPage>
+         <Background defaultBg fullPage>
             <Box className={GlobalStyle.frameContainer}>
                <ThemeProvider theme={Theme}>
                   {/** Space background */}
                   <video
                      autoPlay
-                     loop
-                     muted
-                     ref={videoRef}
-                     poster={videoPoster}
                      className={`${Style.spaceVideoBackground} ${GlobalStyle.fade}`}
                      data-testid="space-video-background"
+                     loop
+                     muted
+                     poster={videoPoster}
+                     ref={videoRef}
                   >
                      <source src={videoSource} type="video/mp4" />
                      <Typography>{Text.videoErrorBrowserSupport}</Typography>
@@ -79,17 +79,17 @@ const RoutingFallback = () => {
                      data-testid="error-message"
                   >
                      <Typography
+                        className={Style.errorHeader}
                         color="primary"
                         gutterBottom
                         variant="h1_1"
-                        className={Style.errorHeader}
                      >
                         {Text["404"]}
                      </Typography>
                      <Typography
+                        className={Style.errorSubtitle}
                         gutterBottom
                         variant="h4"
-                        className={Style.errorSubtitle}
                      >
                         {Text["404Subtitle"]}
                      </Typography>
@@ -98,9 +98,9 @@ const RoutingFallback = () => {
                      </Typography>
                      <Link to="/">
                         <Button
-                           variant="contained"
                            className={Style.backHomeButton}
                            data-testid="back-home-button"
+                           variant="contained"
                         >
                            <Typography>{Text.btnBackHome}</Typography>
                         </Button>
