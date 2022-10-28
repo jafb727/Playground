@@ -33,9 +33,9 @@ export interface FormProps extends ResponsiveSize {
    asModal?: boolean;
    className?: string;
    onSubmit?: Function;
-   setup?: FormType;
+   setup: FormType;
    style?: object;
-   type?: string;
+   type: string;
 }
 
 /* --------------------------------------------- */
@@ -50,7 +50,7 @@ const Form = (props: FormProps) => {
    const { asModal, className, style } = props;
 
    /** @constant Hook call */
-   const { formAlignment, formLogo, formSubTitle, formTitle } =
+   const { formAlignment, formFields, formLogo, formSubTitle, formTitle } =
       useFormStateAndEvents(props);
    const { flexSize } = useStyleProcessor(props);
 
@@ -70,6 +70,7 @@ const Form = (props: FormProps) => {
       <ErrorBoundary>
          <Box
             className={className}
+            component="form"
             data-testid="form-component"
             sx={{ ...flexSize, ...formAlignment, ...style }}
          >
@@ -78,6 +79,8 @@ const Form = (props: FormProps) => {
                {formTitle}
                {formSubTitle}
             </Box>
+            <Box className={Style.formBody}>{formFields}</Box>
+            <Box className={Style.formFooter}></Box>
          </Box>
       </ErrorBoundary>
    );

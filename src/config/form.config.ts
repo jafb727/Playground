@@ -22,11 +22,13 @@ export const LogIn = {
       },
       fields: [
          {
+            autoComplete: true,
             id: "username",
             info: {
                message: "",
             },
             label: "Username",
+            focus: true,
             placeholder: "e.g. name@domain.com",
             required: true,
             type: "text",

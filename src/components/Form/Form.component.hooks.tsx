@@ -8,12 +8,13 @@
 /* --------------------------------------------- */
 
 /** @import Components */
-import { Typography } from "@mui/material";
+import Field from "../Field";
 import Logo from "../Logo";
+import Typography from "@mui/material/Typography";
 
 /** @import Interfaces */
 import { FormProps } from "./Form.component";
-import { FormMetadata, FormType } from "../../config/interface.config";
+import { FormField, FormLogo, FormType } from "../../config/interface.config";
 
 /** @import Utilities */
 import { setContainerAlignment } from "../../utils/common.utils";
@@ -34,11 +35,11 @@ export const useFormStateAndEvents = (props: FormProps) => {
    /**
     * @function setFormMetadata
     * @description Helps to setup form metadata to init form rendering
-    * @param {any|FormType} setup - Form type according to form.config schema
-    * @param {any|string} type: form type (new, edit, view)
+    * @param {FormType} setup - Form type according to form.config schema
+    * @param {string} type: form type (new, edit, view)
     * @returns {null|Object} an Object or null
     */
-   const setFormMetadata = (setup: any | FormType, type: any | string) => {
+   const setFormMetadata = (setup: FormType, type: string) => {
       if (setup && type) {
          const formSetup = setup[type as keyof FormType];
 
@@ -55,12 +56,12 @@ export const useFormStateAndEvents = (props: FormProps) => {
    /**
     * @function setupFormLogo
     * @description Helps to setup a form logo based on a setup
-    * @param {FormMetadata} formMetadata - Form metadata according to form.config schema
+    * @param {FormLogo} logoSetup - Logo setup in according to form.config schema
     * @returns {null|React.ReactNode} a React node or null
     */
-   const setupFormLogo = (formMetadata: any | FormMetadata) => {
-      if (formMetadata && formMetadata.logo) {
-         return <Logo options={{ ...formMetadata.logo, ...{ alignment } }} />;
+   const setupFormLogo = (logoSetup: FormLogo | undefined) => {
+      if (logoSetup) {
+         return <Logo options={{ ...logoSetup, ...{ alignment } }} />;
       }
 
       return null;
@@ -71,21 +72,19 @@ export const useFormStateAndEvents = (props: FormProps) => {
    /**
     * @function setupFormTitle
     * @description Helps to setup a form title based on a setup
-    * @param {FormMetadata} formMetadata - Form metadata according to form.config schema
+    * @param {string} title - Form title
+    * @param {boolean} asModal - is Form rendering in a modal
     * @returns {null|React.ReactNode} a React node or null
     */
-   const setupFormTitle = (
-      formMetadata: any | FormMetadata,
-      asModal?: boolean
-   ) => {
-      if (formMetadata && formMetadata.title) {
+   const setupFormTitle = (title: string | undefined, asModal?: boolean) => {
+      if (title) {
          /** Title format when showing form in modal mode */
          if (asModal) {
-            return formMetadata.title;
+            return title;
          }
 
          /** Title format when showing form in page mode */
-         return <Typography variant="h6">{formMetadata.title}</Typography>;
+         return <Typography variant="h6">{title}</Typography>;
       }
 
       return null;
@@ -96,14 +95,12 @@ export const useFormStateAndEvents = (props: FormProps) => {
    /**
     * @function setupFormSubTitle
     * @description Helps to setup a form subtitle based on setup
-    * @param {FormMetadata} formMetadata - Form metadata according to form.config schema
+    * @param {string} subtitle - Form subtitle
     * @returns {null|React.ReactNode} a React node or null
     */
-   const setupFormSubTitle = (formMetadata: any | FormMetadata) => {
-      if (formMetadata && formMetadata.title) {
-         return (
-            <Typography variant="body1">{formMetadata.subtitle}</Typography>
-         );
+   const setupFormSubTitle = (subtitle: string | undefined) => {
+      if (subtitle) {
+         return <Typography variant="body1">{subtitle}</Typography>;
       }
 
       return null;
@@ -111,19 +108,39 @@ export const useFormStateAndEvents = (props: FormProps) => {
 
    /* ----------------------- */
 
-   /** Getting form type setup */
+   /**
+    * @function setupFormFields
+    * @description Helps to setup a form fields based on setup
+    * @param {FormMetadata} fieldsSetup - Form metadata according to form.config schema
+    * @returns {null|React.ReactNode[]} an array of React node or null
+    */
+   const setupFormFields = (fieldsSetup: Array<FormField> | undefined) => {
+      if (fieldsSetup) {
+         return fieldsSetup.map((field: FormField) => (
+            <Field key={field.id} {...field} />
+         ));
+      }
+
+      return null;
+   };
+
+   /* ----------------------- */
+
+   /** Getting form setup */
    const formMetadata = setFormMetadata(setup, type);
 
-   /** Setting up form */
+   /** Building form */
    const formAlignment = setContainerAlignment(alignment);
-   const formLogo = setupFormLogo(formMetadata);
-   const formSubTitle = setupFormSubTitle(formMetadata);
-   const formTitle = setupFormTitle(formMetadata, asModal);
+   const formLogo = setupFormLogo(formMetadata?.logo);
+   const formSubTitle = setupFormSubTitle(formMetadata?.subtitle);
+   const formTitle = setupFormTitle(formMetadata?.title, asModal);
+   const formFields = setupFormFields(formMetadata?.fields);
 
    /* ----------------------- */
 
    return {
       formAlignment,
+      formFields,
       formLogo,
       formSubTitle,
       formTitle,

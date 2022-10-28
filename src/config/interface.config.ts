@@ -52,6 +52,8 @@ export interface FormFieldValidation {
 
 /** @export @interface FormField */
 export interface FormField {
+   autoComplete?: boolean;
+   focus?: boolean;
    id: string;
    info: FormFieldInfo;
    label: string;
