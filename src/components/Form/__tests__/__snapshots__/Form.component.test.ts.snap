@@ -5,25 +5,37 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
+      <form
         class="MuiBox-root css-1fbpp7j"
         data-testid="form-component"
       >
         <div
           class="formHeader MuiBox-root css-0"
         />
-      </div>
+        <div
+          class="formBody MuiBox-root css-0"
+        />
+        <div
+          class="formFooter MuiBox-root css-0"
+        />
+      </form>
     </div>
   </body>,
   "container": <div>
-    <div
+    <form
       class="MuiBox-root css-1fbpp7j"
       data-testid="form-component"
     >
       <div
         class="formHeader MuiBox-root css-0"
       />
-    </div>
+      <div
+        class="formBody MuiBox-root css-0"
+      />
+      <div
+        class="formFooter MuiBox-root css-0"
+      />
+    </form>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

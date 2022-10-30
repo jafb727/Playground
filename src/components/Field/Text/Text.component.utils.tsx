@@ -16,29 +16,34 @@ import { FieldProps } from "../Field.component";
 /* --------------------------------------------- */
 
 /**
- * @exports @function setTextFieldProperties
+ * @exports @function setTextField
  * @description Helps to setup a text field
  * @param {FieldProps} props - Field properties setup in form.config file
  * @returns {React.ReactNode} an React node
  */
-export const setTextFieldProperties = (props: FieldProps) => {
-   /** @constant */
-   const fieldProperties = {
-      autoComplete: props.autoComplete || false,
-      autoFocus: props.focus || false,
-      error: true,
-      id: props.id,
-      placeholder: props.placeholder || "",
-      required: props.required || false,
-      type: props.type,
+export const setTextField = (props: FieldProps) => {
+   /**
+    * @constant inputProps
+    * @description Only these properties can be passed in inputProps without
+    * interrupting regular MUI textfield behavior. Also is very convient and
+    * maintainable instead of having a React component with lots of parameters
+    * inlined. (Try putting label prop in this map to check)
+    */
+   const inputProps = {
+      autoComplete: props?.autoComplete || false,
+      autoFocus: props?.focus || false,
+      id: props?.id,
+      placeholder: props?.placeholder || "",
+      type: props?.type || "text",
       variant: "outlined",
    };
 
    return (
       <TextField
-         label={props.label}
+         inputProps={inputProps}
+         label={props?.label}
          margin="dense"
-         inputProps={fieldProperties}
+         required={props?.required || false}
       />
    );
 };

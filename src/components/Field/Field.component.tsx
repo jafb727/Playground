@@ -41,7 +41,7 @@ const Field = (props: FieldProps) => {
    const { className, style } = props;
 
    /** @constant Hook call */
-   const { initializeFieldSetup } = useFieldStateAndEvents(props);
+   const { initializeFieldSetup } = useFieldStateAndEvents();
 
    /* ----------------------- */
 

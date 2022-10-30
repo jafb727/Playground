@@ -123,3 +123,14 @@ $size720x720: "720x720";
   size720x720: $size720x720;
   size800x800: $size800x800;
 }
+
+/* --------------------------------------------- */
+
+/** @description Borders */
+$InputBorderColorNotActive: rgba(0, 0, 0, 0.1);
+$InputBorderColorHover: #ff79b0;
+
+:export {
+  InputBorderColorNotActive: $InputBorderColorNotActive;
+  InputBorderColorHover: $InputBorderColorHover;
+}

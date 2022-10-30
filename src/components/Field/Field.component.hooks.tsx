@@ -8,8 +8,8 @@
 /* --------------------------------------------- */
 
 /** @import Components */
-import React from "react";
-import TextInput from "./Text";
+import Password from "./Password";
+import Text from "./Text";
 
 /** @import Interfaces */
 import { FieldProps } from "./Field.component";
@@ -21,7 +21,7 @@ import { FieldProps } from "./Field.component";
  * @description Main component hook
  * @returns {object} Hook functions and state
  */
-export const useFieldStateAndEvents = (props: FieldProps) => {
+export const useFieldStateAndEvents = () => {
    /**
     * @function initializeFieldSetup
     * @description Helps to initialize field setup
@@ -33,10 +33,12 @@ export const useFieldStateAndEvents = (props: FieldProps) => {
       const { type } = props;
 
       switch (type) {
-         default:
          case "password":
+            return <Password {...props} />;
+
+         default:
          case "text":
-            return <TextInput {...props} />;
+            return <Text {...props} />;
       }
    };
 

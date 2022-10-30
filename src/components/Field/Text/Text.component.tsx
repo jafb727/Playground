@@ -13,11 +13,11 @@ import React from "react";
 /** @import Components */
 import Box from "@mui/material/Box";
 
-/** @import Hooks */
-import { useTextStateAndEvents } from "./Text.component.hooks";
-
 /** @import Interfaces */
 import { FieldProps } from "../Field.component";
+
+/** @import Utilities */
+import { setTextField } from "./Text.component.utils";
 
 /* --------------------------------------------- */
 
@@ -27,14 +27,7 @@ import { FieldProps } from "../Field.component";
  * @returns {React.ReactNode} A react node
  */
 const Text = (props: FieldProps) => {
-   /** @constant Hook call */
-   const { initializeTextFieldSetup } = useTextStateAndEvents();
-
-   /* ----------------------- */
-
-   return (
-      <Box data-testid="text-component">{initializeTextFieldSetup(props)}</Box>
-   );
+   return <Box data-testid="text-component">{setTextField(props)}</Box>;
 };
 
 /* --------------------------------------------- */

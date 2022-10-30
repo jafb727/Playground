@@ -98,6 +98,7 @@ const Theme = createTheme({
       h1: {
          fontFamily: Variables.headerFont,
       },
+      /** Created for big texts like Routing fallback 404 error */
       h1_1: {
          fontSize: 100,
          fontFamily: Variables.headerFont,
@@ -122,6 +123,7 @@ const Theme = createTheme({
       MuiButton: {
          styleOverrides: {
             root: {
+               /** MUI renders button value in capitals by default; tweak to not do so */
                textTransform: "initial",
             },
          },
@@ -129,7 +131,30 @@ const Theme = createTheme({
       MuiPaper: {
          styleOverrides: {
             root: {
+               /** Used to fix border-radius desappearing */
                overflow: "hidden",
+            },
+         },
+      },
+      MuiFormControl: {
+         styleOverrides: {
+            root: {
+               /** To make input size the longest input in a form */
+               width: "100%",
+            },
+         },
+      },
+      MuiOutlinedInput: {
+         styleOverrides: {
+            notchedOutline: {
+               borderColor: Variables.InputBorderColorNotActive,
+            },
+            root: {
+               "&:hover": {
+                  "& .MuiOutlinedInput-notchedOutline": {
+                     borderColor: Variables.InputBorderColorHover,
+                  },
+               },
             },
          },
       },
