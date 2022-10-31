@@ -40,7 +40,7 @@ export interface CollectionProps {
  */
 const Collection = (props: CollectionProps) => {
    /** @constant Properties */
-   const { children, className, style } = props;
+   const { children, className = "", style } = props;
 
    /** @constant Hooks call */
    const { collectionAlignment } = useCollectionStateAndEvents(props);

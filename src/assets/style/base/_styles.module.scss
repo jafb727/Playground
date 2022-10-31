@@ -96,3 +96,9 @@ header {
    @include contentFullCentered;
    @include fullSizeElement;
 }
+
+/* --------------------------------------------- */
+
+.MuiBox-root {
+   width: 100%;
+}

@@ -13,13 +13,12 @@ import React from "react";
 /** @import Components */
 import Box from "@mui/material/Box";
 import ErrorBoundary from "../ErrorBoundary";
-import TextField from "@mui/material/TextField";
-
-/** @import Hooks */
-import { useFieldStateAndEvents } from "./Field.component.hooks";
 
 /** @import Interfaces */
 import { FormField } from "../../config/interface.config";
+
+/** @import Utilities */
+import { initializeFieldSetup } from "./Field.component.utils";
 
 /* --------------------------------------------- */
 
@@ -38,14 +37,10 @@ export interface FieldProps extends FormField {
  */
 const Field = (props: FieldProps) => {
    /** @constant Properties */
-   const { className, style } = props;
-
-   /** @constant Hook call */
-   const { initializeFieldSetup } = useFieldStateAndEvents();
+   const { className = "", style } = props;
 
    /* ----------------------- */
 
-   /** Form is shown in page mode (default) */
    return (
       <ErrorBoundary>
          <Box className={className} data-testid="field-component" sx={style}>

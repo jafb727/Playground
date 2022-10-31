@@ -5,6 +5,8 @@
  * @description: All global and most used interfaces in app.
  */
 
+import React from "react";
+
 /* --------------------------------------------- */
 
 /** @export @interface FormAPI */
@@ -52,10 +54,10 @@ export interface FormFieldValidation {
 
 /** @export @interface FormField */
 export interface FormField {
-   autoComplete?: boolean;
+   autoComplete?: string;
    focus?: boolean;
    id: string;
-   info: FormFieldInfo;
+   info: string | Array<string>;
    label: string;
    placeholder?: string;
    required?: boolean;

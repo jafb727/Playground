@@ -59,3 +59,15 @@ export const checkValue = (value: any) => {
 
    return null;
 };
+
+/* --------------------------------------------- */
+
+/**
+ * @function isInstanceOfA
+ * @description Helps to confirma if an object is from the type denoted in function invoke
+ * @param object - any onject to check its type or interface
+ * @returns {boolean} true if object is of the type
+ */
+export function isInstanceOfA<Type>(object: any): object is Type {
+   return true;
+}

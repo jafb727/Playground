@@ -6,17 +6,22 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="MuiBox-root css-0"
+        class="inputContainer MuiBox-root css-0"
         data-testid="text-component"
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginDense MuiTextField-root css-4mzek5-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiFormControl-marginDense css-1bekzow-MuiFormControl-root"
         >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+          />
           <div
             class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
+              autocomplete=""
               class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
               placeholder=""
               type="text"
@@ -38,23 +43,32 @@ Object {
               </legend>
             </fieldset>
           </div>
+          <div
+            class="MuiBox-root css-0"
+            data-testid="info-component"
+          />
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="MuiBox-root css-0"
+      class="inputContainer MuiBox-root css-0"
       data-testid="text-component"
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginDense MuiTextField-root css-4mzek5-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root MuiFormControl-marginDense css-1bekzow-MuiFormControl-root"
       >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="false"
+        />
         <div
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
             aria-invalid="false"
+            autocomplete=""
             class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
             placeholder=""
             type="text"
@@ -76,6 +90,10 @@ Object {
             </legend>
           </fieldset>
         </div>
+        <div
+          class="MuiBox-root css-0"
+          data-testid="info-component"
+        />
       </div>
     </div>
   </div>,

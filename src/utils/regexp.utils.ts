@@ -13,4 +13,5 @@ export const Regexp = {
    tabletDevice: /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i,
    mobileDevice:
       /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/,
+   email: /^([\w\d.])+@([\w\d])+.([a-z]{3})$/g,
 };

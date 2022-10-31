@@ -7,6 +7,11 @@
 
 /* --------------------------------------------- */
 
+/** @import Utilities */
+import { Regexp } from "../utils/regexp.utils";
+
+/* --------------------------------------------- */
+
 /** @exports @function Login form configuration */
 export const LogIn = {
    new: {
@@ -22,11 +27,9 @@ export const LogIn = {
       },
       fields: [
          {
-            autoComplete: true,
+            autoComplete: "",
             id: "username",
-            info: {
-               message: "",
-            },
+            info: "Email you register as an account",
             label: "Username",
             focus: true,
             placeholder: "e.g. name@domain.com",
@@ -41,20 +44,19 @@ export const LogIn = {
                {
                   type: "word",
                   error: { message: "", title: "" },
-                  regex: /^([\w\d.])+@([\w\d])+.([a-z]{3})$/g,
+                  regex: Regexp.email,
                },
             ],
          },
          {
+            autoComplete: "",
             id: "password",
-            info: {
-               message: [
-                  "At least 12 characters",
-                  "At least one uppercase letter",
-                  "At least one number",
-                  "At least one of these special characters: !@#?]",
-               ],
-            },
+            info: [
+               "At least 12 characters",
+               "At least one uppercase letter",
+               "At least one number",
+               "At least one of these special characters: !@#?]",
+            ],
             label: "Password",
             placeholder: "Password",
             required: true,

@@ -20,6 +20,15 @@ $globalFont: "Montserrat", sans-serif;
 
 /* --------------------------------------------- */
 
+/** @description Neutral colors for project */
+$neutralColor: #f0f0f0;
+
+:export {
+  neutralColor: $neutralColor;
+}
+
+/* --------------------------------------------- */
+
 /** @description Primary theming colors for project */
 $primaryLight: #ff79b0;
 $primaryMain: #ff4081;

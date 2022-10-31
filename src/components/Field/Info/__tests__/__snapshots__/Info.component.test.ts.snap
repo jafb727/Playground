@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Collection.container Passes shallow snapshot test 1`] = `
+exports[`Info.component Passes shallow snapshot test 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="collectionContainer  MuiBox-root css-1fbpp7j"
-        data-testid="collection"
+        class="MuiBox-root css-0"
+        data-testid="info-component"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="collectionContainer  MuiBox-root css-1fbpp7j"
-      data-testid="collection"
+      class="MuiBox-root css-0"
+      data-testid="info-component"
     />
   </div>,
   "debug": [Function],

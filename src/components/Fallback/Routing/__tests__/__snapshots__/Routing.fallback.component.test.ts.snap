@@ -84,7 +84,7 @@ Object {
               class="footerInFullPage"
             >
               <div
-                class="collectionContainer undefined MuiBox-root css-lvb6yv"
+                class="collectionContainer  MuiBox-root css-lvb6yv"
                 data-testid="collection"
               >
                 <div
@@ -185,7 +185,7 @@ Object {
             class="footerInFullPage"
           >
             <div
-              class="collectionContainer undefined MuiBox-root css-lvb6yv"
+              class="collectionContainer  MuiBox-root css-lvb6yv"
               data-testid="collection"
             >
               <div

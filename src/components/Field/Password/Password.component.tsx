@@ -14,6 +14,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
 import IconButton from "@mui/material/IconButton";
+import Info from "../Info";
 import InputAdornment from "@mui/material/InputAdornment";
 import InputLabel from "@mui/material/InputLabel";
 import OutlinedInput from "@mui/material/OutlinedInput";
@@ -49,7 +50,7 @@ const Password = (props: FieldProps) => {
 
    return (
       <Box data-testid="password-component">
-         <FormControl variant="outlined" margin="dense" required={required}>
+         <FormControl margin="dense" required={required}>
             <InputLabel htmlFor="outlined-adornment-password">
                {label}
             </InputLabel>
@@ -76,6 +77,7 @@ const Password = (props: FieldProps) => {
                }
                label={label}
             />
+            <Info {...props} />
          </FormControl>
       </Box>
    );
