@@ -15,7 +15,7 @@ import Box from "@mui/material/Box";
 import ErrorBoundary from "../ErrorBoundary";
 
 /** @import Interfaces */
-import { FormField } from "../../config/interface.config";
+import { FormField, ResponsiveSize } from "../../config/interface.config";
 
 /** @import Utilities */
 import { initializeFieldSetup } from "./Field.component.utils";
@@ -23,7 +23,7 @@ import { initializeFieldSetup } from "./Field.component.utils";
 /* --------------------------------------------- */
 
 /** @exports @interface Field properties */
-export interface FieldProps extends FormField {
+export interface FieldProps extends FormField, ResponsiveSize {
    className?: string;
    style?: object;
 }

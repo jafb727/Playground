@@ -47,6 +47,15 @@ declare module "@mui/material/Typography" {
 
 /* --------------------------------------------- */
 
+/** @module Mui Button variants */
+declare module "@mui/material/Button" {
+   interface ButtonPropsVariantOverrides {
+      inputInfo: true;
+   }
+}
+
+/* --------------------------------------------- */
+
 /** @module Mui Breakpoints override */
 declare module "@mui/material/styles" {
    interface BreakpointOverrides {
@@ -127,6 +136,14 @@ const Theme = createTheme({
                textTransform: "initial",
             },
          },
+         variants: [
+            {
+               props: { variant: "inputInfo" },
+               style: {
+                  backgroundColor: Variables.neutralColor,
+               },
+            },
+         ],
       },
       MuiPaper: {
          styleOverrides: {

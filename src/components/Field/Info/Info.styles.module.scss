@@ -12,11 +12,27 @@
 
 /* --------------------------------------------- */
 
+.infoContainer {
+   display: none;
+}
+
+@media (min-width: $breakpointLaptop) {
+   .infoContainer {
+      display: inline-block;
+   }
+}
+
+/* --------------------------------------------- */
+
 .inputTooltipBtn {
-   background-color: $neutralColor;
    border-radius: 4px;
    bottom: 0;
    box-shadow: none !important;
+   /** 
+    * This value comes from MuiButtonBase height and padding 
+    * plus an extra to align info icon with input real height 
+    */
+   height: calc(1.4375em + 36px);
    min-width: auto;
    position: absolute;
    right: -2.3rem;

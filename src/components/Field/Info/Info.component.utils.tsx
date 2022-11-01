@@ -29,7 +29,7 @@ import Style from "./Info.styles.module.scss";
 export const initializeFieldInfoSetup = (info: string | Array<string>) => {
    /** @constant Tooltip content */
    const tooltipContent = (
-      <Button className={Style.inputTooltipBtn} variant="contained">
+      <Button className={Style.inputTooltipBtn} variant="inputInfo">
          <InfoOutlinedIcon />
       </Button>
    );

@@ -1,11 +1,16 @@
 {
+   "404": "404",
+   "404Subtitle": "Uh oh! You're lost",
+   "404Apologies": "The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage",
    "btnBackHome": "Back Home",
    "cancel": "Cancel",
    "copyright": "All rights reserved.",
    "fallAppMessage": "Something awesome is rendering",
    "error": "Something went wrong",
-   "videoErrorBrowserSupport": "Your browser does not support HTML5 video",
-   "404": "404",
-   "404Subtitle": "Uh oh! You're lost",
-   "404Apologies": "The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage"
+   "infoPasswordInput1": "At least 12 characters",
+   "infoPasswordInput2": "At least one uppercase letter",
+   "infoPasswordInput3": "At least one number",
+   "infoPasswordInput4": "At least one of these special characters: !@#?]",
+   "infoUserNameInput": "Email you registered as an account",
+   "videoErrorBrowserSupport": "Your browser does not support HTML5 video"
 }

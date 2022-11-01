@@ -10,6 +10,9 @@
 /** @import Utilities */
 import { Regexp } from "../utils/regexp.utils";
 
+/** @import Assets */
+import Text from "../assets/typography/Text.json";
+
 /* --------------------------------------------- */
 
 /** @exports @function Login form configuration */
@@ -29,7 +32,7 @@ export const LogIn = {
          {
             autoComplete: "",
             id: "username",
-            info: "Email you register as an account",
+            info: Text.infoUserNameInput,
             label: "Username",
             focus: true,
             placeholder: "e.g. name@domain.com",
@@ -52,10 +55,10 @@ export const LogIn = {
             autoComplete: "",
             id: "password",
             info: [
-               "At least 12 characters",
-               "At least one uppercase letter",
-               "At least one number",
-               "At least one of these special characters: !@#?]",
+               Text.infoPasswordInput1,
+               Text.infoPasswordInput2,
+               Text.infoPasswordInput3,
+               Text.infoPasswordInput4,
             ],
             label: "Password",
             placeholder: "Password",

@@ -12,6 +12,7 @@ import React from "react";
 
 /** @import Components */
 import Box from "@mui/material/Box";
+import FormHelperText from "@mui/material/FormHelperText";
 import Info from "../Info";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
@@ -55,10 +56,11 @@ const Text = (props: FieldProps) => {
 
    return (
       <Box className={Style.inputContainer} data-testid="text-component">
-         <FormControl margin="dense" required={required || false}>
+         <FormControl error margin="dense" required={required || false}>
             <InputLabel htmlFor={label}>{label}</InputLabel>
             <OutlinedInput inputProps={inputProps} label={label} />
             <Info {...props} />
+            <FormHelperText>Error</FormHelperText>
          </FormControl>
       </Box>
    );

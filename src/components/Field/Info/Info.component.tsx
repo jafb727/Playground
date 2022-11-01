@@ -13,11 +13,17 @@ import React from "react";
 /** @import Components */
 import Box from "@mui/material/Box";
 
+/** @import Hooks */
+import { useStyleProcessor } from "../../../utils/hooks.utils";
+
 /** @import Interfaces */
 import { FieldProps } from "../Field.component";
 
 /** @import Utilities */
 import { initializeFieldInfoSetup } from "./Info.component.utils";
+
+/** @import Styles */
+import Style from "./Info.styles.module.scss";
 
 /* --------------------------------------------- */
 
@@ -30,10 +36,19 @@ const Info = (props: FieldProps) => {
    /** @constant */
    const { info } = props;
 
+   /** @constant Hooks call */
+   const { flexSize } = useStyleProcessor(props);
+
    /* ----------------------- */
 
    return (
-      <Box data-testid="info-component">{initializeFieldInfoSetup(info)}</Box>
+      <Box
+         className={Style.infoContainer}
+         data-testid="info-component"
+         sx={flexSize}
+      >
+         {initializeFieldInfoSetup(info)}
+      </Box>
    );
 };
 
