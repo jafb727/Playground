@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Info.component Passes shallow snapshot test 1`] = `
+exports[`Dialog.component Passes shallow snapshot test 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="infoContainer MuiBox-root css-0"
-        data-testid="info-component"
+        class="MuiBox-root css-0"
+        data-testid="dialog-component"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="infoContainer MuiBox-root css-0"
-      data-testid="info-component"
+      class="MuiBox-root css-0"
+      data-testid="dialog-component"
     />
   </div>,
   "debug": [Function],

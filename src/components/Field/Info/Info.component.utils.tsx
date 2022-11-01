@@ -35,6 +35,7 @@ export const initializeFieldInfoSetup = (info: string | Array<string>) => {
    );
 
    /* ----------------------- */
+
    if (info && typeof info === "string") {
       return <Tooltip title={info}>{tooltipContent}</Tooltip>;
    }

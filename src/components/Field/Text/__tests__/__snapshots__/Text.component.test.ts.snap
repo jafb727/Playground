@@ -12,15 +12,76 @@ Object {
         <div
           class="MuiFormControl-root MuiFormControl-marginDense css-1bekzow-MuiFormControl-root"
         >
+          <div
+            class="collectionContainer  MuiBox-root css-1fbpp7j"
+            data-testid="collection"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="false"
+            />
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-95rifq-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-invalid="true"
+                autocomplete=""
+                class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                placeholder=""
+                type="text"
+                value=""
+                variant="outlined"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-ihdtdm"
+                >
+                  <span
+                    class="notranslate"
+                  >
+                    ​
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <div
+              class="infoContainer MuiBox-root css-1rr4qq7"
+              data-testid="info-component"
+            />
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+          >
+            Error
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="inputContainer MuiBox-root css-0"
+      data-testid="text-component"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-marginDense css-1bekzow-MuiFormControl-root"
+      >
+        <div
+          class="collectionContainer  MuiBox-root css-1fbpp7j"
+          data-testid="collection"
+        >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
           />
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-95rifq-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
-              aria-invalid="false"
+              aria-invalid="true"
               autocomplete=""
               class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
               placeholder=""
@@ -44,56 +105,15 @@ Object {
             </fieldset>
           </div>
           <div
-            class="MuiBox-root css-0"
+            class="infoContainer MuiBox-root css-1rr4qq7"
             data-testid="info-component"
           />
         </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="inputContainer MuiBox-root css-0"
-      data-testid="text-component"
-    >
-      <div
-        class="MuiFormControl-root MuiFormControl-marginDense css-1bekzow-MuiFormControl-root"
-      >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-        />
-        <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+        <p
+          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
         >
-          <input
-            aria-invalid="false"
-            autocomplete=""
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            placeholder=""
-            type="text"
-            value=""
-            variant="outlined"
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-          >
-            <legend
-              class="css-ihdtdm"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </legend>
-          </fieldset>
-        </div>
-        <div
-          class="MuiBox-root css-0"
-          data-testid="info-component"
-        />
+          Error
+        </p>
       </div>
     </div>
   </div>,

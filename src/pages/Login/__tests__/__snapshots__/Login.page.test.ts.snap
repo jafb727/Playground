@@ -76,35 +76,35 @@ Object {
                         data-testid="field-component"
                       >
                         <div
-                          class="collectionContainer  MuiBox-root css-1fbpp7j"
-                          data-testid="collection"
+                          class="inputContainer MuiBox-root css-0"
+                          data-testid="text-component"
                         >
                           <div
-                            class="inputContainer MuiBox-root css-0"
-                            data-testid="text-component"
+                            class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
                           >
                             <div
-                              class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
+                              class="collectionContainer  MuiBox-root css-1fbpp7j"
+                              data-testid="collection"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-k9l82h-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-k9l82h-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="true"
                                 for="Username"
                               >
                                 Username
                                 <span
                                   aria-hidden="true"
-                                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
                                 >
                                    
                                   *
                                 </span>
                               </label>
                               <div
-                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-1xezgc6-MuiInputBase-root-MuiOutlinedInput-root"
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-1s2gbya-MuiInputBase-root-MuiOutlinedInput-root"
                               >
                                 <input
-                                  aria-invalid="false"
+                                  aria-invalid="true"
                                   autocomplete=""
                                   class="MuiInputBase-input MuiOutlinedInput-input css-24rejj-MuiInputBase-input-MuiOutlinedInput-input"
                                   id="username"
@@ -130,12 +130,12 @@ Object {
                                 </fieldset>
                               </div>
                               <div
-                                class="MuiBox-root css-0"
+                                class="infoContainer MuiBox-root css-1rr4qq7"
                                 data-testid="info-component"
                               >
                                 <button
-                                  aria-label="Email you register as an account"
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium inputTooltipBtn css-5y2byu-MuiButtonBase-root-MuiButton-root"
+                                  aria-label="Email you registered as an account"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium inputTooltipBtn css-1ts67qs-MuiButtonBase-root-MuiButton-root"
                                   data-mui-internal-clone-element="true"
                                   tabindex="0"
                                   type="button"
@@ -157,6 +157,11 @@ Object {
                                 </button>
                               </div>
                             </div>
+                            <p
+                              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-focused Mui-required css-15etk2q-MuiFormHelperText-root"
+                            >
+                              Error
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -165,15 +170,15 @@ Object {
                         data-testid="field-component"
                       >
                         <div
-                          class="collectionContainer  MuiBox-root css-1fbpp7j"
-                          data-testid="collection"
+                          class="MuiBox-root css-0"
+                          data-testid="password-component"
                         >
                           <div
-                            class="MuiBox-root css-0"
-                            data-testid="password-component"
+                            class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
                           >
                             <div
-                              class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
+                              class="collectionContainer  MuiBox-root css-1fbpp7j"
+                              data-testid="collection"
                             >
                               <label
                                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-1bfzf0l-MuiFormLabel-root-MuiInputLabel-root"
@@ -190,7 +195,7 @@ Object {
                                 </span>
                               </label>
                               <div
-                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-6dcjgr-MuiInputBase-root-MuiOutlinedInput-root"
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-17t1ezm-MuiInputBase-root-MuiOutlinedInput-root"
                               >
                                 <input
                                   aria-invalid="false"
@@ -241,11 +246,11 @@ Object {
                                 </fieldset>
                               </div>
                               <div
-                                class="MuiBox-root css-0"
+                                class="infoContainer MuiBox-root css-1rr4qq7"
                                 data-testid="info-component"
                               >
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium inputTooltipBtn css-5y2byu-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium inputTooltipBtn css-1ts67qs-MuiButtonBase-root-MuiButton-root"
                                   data-mui-internal-clone-element="true"
                                   tabindex="0"
                                   type="button"
@@ -380,35 +385,35 @@ Object {
                       data-testid="field-component"
                     >
                       <div
-                        class="collectionContainer  MuiBox-root css-1fbpp7j"
-                        data-testid="collection"
+                        class="inputContainer MuiBox-root css-0"
+                        data-testid="text-component"
                       >
                         <div
-                          class="inputContainer MuiBox-root css-0"
-                          data-testid="text-component"
+                          class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
                         >
                           <div
-                            class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
+                            class="collectionContainer  MuiBox-root css-1fbpp7j"
+                            data-testid="collection"
                           >
                             <label
-                              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-k9l82h-MuiFormLabel-root-MuiInputLabel-root"
+                              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-k9l82h-MuiFormLabel-root-MuiInputLabel-root"
                               data-shrink="true"
                               for="Username"
                             >
                               Username
                               <span
                                 aria-hidden="true"
-                                class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
                               >
                                  
                                 *
                               </span>
                             </label>
                             <div
-                              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-1xezgc6-MuiInputBase-root-MuiOutlinedInput-root"
+                              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-1s2gbya-MuiInputBase-root-MuiOutlinedInput-root"
                             >
                               <input
-                                aria-invalid="false"
+                                aria-invalid="true"
                                 autocomplete=""
                                 class="MuiInputBase-input MuiOutlinedInput-input css-24rejj-MuiInputBase-input-MuiOutlinedInput-input"
                                 id="username"
@@ -434,12 +439,12 @@ Object {
                               </fieldset>
                             </div>
                             <div
-                              class="MuiBox-root css-0"
+                              class="infoContainer MuiBox-root css-1rr4qq7"
                               data-testid="info-component"
                             >
                               <button
-                                aria-label="Email you register as an account"
-                                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium inputTooltipBtn css-5y2byu-MuiButtonBase-root-MuiButton-root"
+                                aria-label="Email you registered as an account"
+                                class="MuiButtonBase-root MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium inputTooltipBtn css-1ts67qs-MuiButtonBase-root-MuiButton-root"
                                 data-mui-internal-clone-element="true"
                                 tabindex="0"
                                 type="button"
@@ -461,6 +466,11 @@ Object {
                               </button>
                             </div>
                           </div>
+                          <p
+                            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-focused Mui-required css-15etk2q-MuiFormHelperText-root"
+                          >
+                            Error
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -469,15 +479,15 @@ Object {
                       data-testid="field-component"
                     >
                       <div
-                        class="collectionContainer  MuiBox-root css-1fbpp7j"
-                        data-testid="collection"
+                        class="MuiBox-root css-0"
+                        data-testid="password-component"
                       >
                         <div
-                          class="MuiBox-root css-0"
-                          data-testid="password-component"
+                          class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
                         >
                           <div
-                            class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
+                            class="collectionContainer  MuiBox-root css-1fbpp7j"
+                            data-testid="collection"
                           >
                             <label
                               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-1bfzf0l-MuiFormLabel-root-MuiInputLabel-root"
@@ -494,7 +504,7 @@ Object {
                               </span>
                             </label>
                             <div
-                              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-6dcjgr-MuiInputBase-root-MuiOutlinedInput-root"
+                              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-17t1ezm-MuiInputBase-root-MuiOutlinedInput-root"
                             >
                               <input
                                 aria-invalid="false"
@@ -545,11 +555,11 @@ Object {
                               </fieldset>
                             </div>
                             <div
-                              class="MuiBox-root css-0"
+                              class="infoContainer MuiBox-root css-1rr4qq7"
                               data-testid="info-component"
                             >
                               <button
-                                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium inputTooltipBtn css-5y2byu-MuiButtonBase-root-MuiButton-root"
+                                class="MuiButtonBase-root MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium inputTooltipBtn css-1ts67qs-MuiButtonBase-root-MuiButton-root"
                                 data-mui-internal-clone-element="true"
                                 tabindex="0"
                                 type="button"

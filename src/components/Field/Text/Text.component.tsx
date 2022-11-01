@@ -12,6 +12,7 @@ import React from "react";
 
 /** @import Components */
 import Box from "@mui/material/Box";
+import Collection from "../../../containers/Collection";
 import FormHelperText from "@mui/material/FormHelperText";
 import Info from "../Info";
 import InputLabel from "@mui/material/InputLabel";
@@ -57,9 +58,15 @@ const Text = (props: FieldProps) => {
    return (
       <Box className={Style.inputContainer} data-testid="text-component">
          <FormControl error margin="dense" required={required || false}>
-            <InputLabel htmlFor={label}>{label}</InputLabel>
-            <OutlinedInput inputProps={inputProps} label={label} />
-            <Info {...props} />
+            <Collection>
+               <InputLabel htmlFor={label}>{label}</InputLabel>
+               <OutlinedInput
+                  inputProps={inputProps}
+                  label={label}
+                  sx={{ flex: 12 }}
+               />
+               <Info {...props} style={{ flex: 1 }} />
+            </Collection>
             <FormHelperText>Error</FormHelperText>
          </FormControl>
       </Box>

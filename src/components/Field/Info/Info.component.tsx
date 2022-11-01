@@ -34,7 +34,7 @@ import Style from "./Info.styles.module.scss";
  */
 const Info = (props: FieldProps) => {
    /** @constant */
-   const { info } = props;
+   const { info, style } = props;
 
    /** @constant Hooks call */
    const { flexSize } = useStyleProcessor(props);
@@ -45,7 +45,7 @@ const Info = (props: FieldProps) => {
       <Box
          className={Style.infoContainer}
          data-testid="info-component"
-         sx={flexSize}
+         sx={{ ...flexSize, ...style }}
       >
          {initializeFieldInfoSetup(info)}
       </Box>

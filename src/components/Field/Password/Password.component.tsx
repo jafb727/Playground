@@ -12,6 +12,7 @@ import React from "react";
 
 /** @import Components */
 import Box from "@mui/material/Box";
+import Collection from "../../../containers/Collection";
 import FormControl from "@mui/material/FormControl";
 import IconButton from "@mui/material/IconButton";
 import Info from "../Info";
@@ -51,33 +52,36 @@ const Password = (props: FieldProps) => {
    return (
       <Box data-testid="password-component">
          <FormControl margin="dense" required={required}>
-            <InputLabel htmlFor="outlined-adornment-password">
-               {label}
-            </InputLabel>
-            <OutlinedInput
-               id="outlined-adornment-password"
-               type={passwordSetup.visibility ? "text" : "password"}
-               value={passwordSetup.value}
-               onChange={updatePasswordFieldValue("value")}
-               endAdornment={
-                  <InputAdornment position="end">
-                     <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={setPasswordVsby}
-                        onMouseDown={handleMouseDownPassword}
-                        edge="end"
-                     >
-                        {passwordSetup.visibility ? (
-                           <VisibilityOff />
-                        ) : (
-                           <Visibility />
-                        )}
-                     </IconButton>
-                  </InputAdornment>
-               }
-               label={label}
-            />
-            <Info {...props} />
+            <Collection>
+               <InputLabel htmlFor="outlined-adornment-password">
+                  {label}
+               </InputLabel>
+               <OutlinedInput
+                  id="outlined-adornment-password"
+                  type={passwordSetup.visibility ? "text" : "password"}
+                  value={passwordSetup.value}
+                  onChange={updatePasswordFieldValue("value")}
+                  endAdornment={
+                     <InputAdornment position="end">
+                        <IconButton
+                           aria-label="toggle password visibility"
+                           onClick={setPasswordVsby}
+                           onMouseDown={handleMouseDownPassword}
+                           edge="end"
+                        >
+                           {passwordSetup.visibility ? (
+                              <VisibilityOff />
+                           ) : (
+                              <Visibility />
+                           )}
+                        </IconButton>
+                     </InputAdornment>
+                  }
+                  label={label}
+                  sx={{ flex: 12 }}
+               />
+               <Info {...props} style={{ flex: 1 }} />
+            </Collection>
          </FormControl>
       </Box>
    );

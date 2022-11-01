@@ -1,8 +1,8 @@
 /*
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Copyright.component.test
- * @description: Copyright component test cases
+ * @name: Dialog.component.test
+ * @description: Dialog component test cases
  */
 
 /* --------------------------------------------- */
@@ -18,10 +18,10 @@ import { basicSetup } from "../../../test/setupTests";
 
 /* --------------------------------------------- */
 
-describe("Copyright.component", () => {
+describe("Dialog.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("copyright-component")).toBeInTheDocument();
+      expect(screen.getByTestId("dialog-component")).toBeInTheDocument();
    });
 
    /* ----------------------- */

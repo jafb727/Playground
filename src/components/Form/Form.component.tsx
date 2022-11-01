@@ -60,7 +60,7 @@ const Form = (props: FormProps) => {
    if (asModal) {
       return (
          <ErrorBoundary>
-            <Dialog open={asModal} title={formTitle} />
+            <Dialog open={asModal} title={formTitle} content={formFields} />
          </ErrorBoundary>
       );
    }
