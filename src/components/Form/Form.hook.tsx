@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Form.component.hooks
+ * @name: Form.hook
  * @description: Form component hooks
  */
 

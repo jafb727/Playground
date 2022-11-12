@@ -9,7 +9,7 @@
 
 /** @import Styles */
 import GlobalStyle from "./../../../assets/style/base/_styles.module.scss";
-import Style from "./App.fallback.styles.module.scss";
+import Style from "./App.fallback.module.scss";
 
 /** @import Assets */
 import Text from "../../../assets/typography/Text.json";

@@ -16,7 +16,7 @@ import Dialog from "../Dialog";
 import ErrorBoundary from "../ErrorBoundary";
 
 /** @import Hooks */
-import { useFormStateAndEvents } from "./Form.component.hooks";
+import { useFormStateAndEvents } from "./Form.hook";
 import { useStyleProcessor } from "../../utils/hooks/style.hook";
 
 /** @import Interfaces */
@@ -27,7 +27,7 @@ import {
 } from "../../config/interface.config";
 
 /** @import Styles */
-import Style from "./Form.styles.module.scss";
+import Style from "./Form.module.scss";
 
 /* --------------------------------------------- */
 

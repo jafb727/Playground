@@ -24,8 +24,9 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 /** @import Hooks */
-import { usePasswordStateAndEvents } from "./Password.component.hooks";
-import { useFieldEvaluation } from "../../../utils/hooks/fieldEvaluation.hook";
+import { useFieldEvaluation } from "../../../utils/hooks/field/evaluation.hook";
+import { useFieldStateAndEvents } from "../../../utils/hooks/field/field.hook";
+import { usePasswordStateAndEvents } from "./Password.hook";
 
 /** @import Interfaces */
 import { FieldProps } from "../Field.component";
@@ -43,13 +44,12 @@ const Password = (props: FieldProps) => {
 
    /** @constant Hook call */
    const { errorSetup, evaluate } = useFieldEvaluation();
-   const {
-      handleMouseDownPassword,
-      onFieldChange,
-      passwordValue,
-      passwordVsby,
-      handlePasswordVsby,
-   } = usePasswordStateAndEvents({ ...props, evaluateField: evaluate });
+   const { onFieldChange, fieldValue } = useFieldStateAndEvents({
+      ...props,
+      evaluateField: evaluate,
+   });
+   const { handleMouseDownPassword, passwordVsby, handlePasswordVsby } =
+      usePasswordStateAndEvents(props);
 
    /* ----------------------- */
 
@@ -66,9 +66,6 @@ const Password = (props: FieldProps) => {
                </InputLabel>
                <OutlinedInput
                   id="outlined-adornment-password"
-                  type={passwordVsby ? "text" : "password"}
-                  value={passwordValue}
-                  onChange={onFieldChange}
                   endAdornment={
                      <InputAdornment position="end">
                         <IconButton
@@ -82,7 +79,10 @@ const Password = (props: FieldProps) => {
                      </InputAdornment>
                   }
                   label={label}
+                  onChange={onFieldChange}
                   sx={{ flex: 1 }}
+                  type={passwordVsby ? "text" : "password"}
+                  value={fieldValue}
                />
                <Info {...props} />
             </Collection>

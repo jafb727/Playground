@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Password.component.hooks
+ * @name: Password.hook
  * @description: Password component hooks
  */
 
@@ -23,22 +23,6 @@ import { FieldProps } from "../Field.component";
 export const usePasswordStateAndEvents = (props: FieldProps) => {
    /** @constant State */
    const [passwordVsby, setPasswordVsby] = useState(false);
-   const [passwordValue, setPasswordValue] = useState("");
-
-   /* ----------------------- */
-
-   /**
-    * @function updatePasswordFieldValue
-    * @description Stores current password input value in state
-    * @param {React.ChangeEvent<HTMLInputElement>} event - Event information
-    * @returns {boolean} A boolean
-    */
-   const updatePasswordFieldValue = (
-      event: React.ChangeEvent<HTMLInputElement>
-   ) => {
-      setPasswordValue(event.target.value);
-      return true;
-   };
 
    /* ----------------------- */
 
@@ -69,27 +53,9 @@ export const usePasswordStateAndEvents = (props: FieldProps) => {
 
    /* ----------------------- */
 
-   /**
-    * @function onFieldChange
-    * @description Handles field event change
-    * @param {React.ChangeEvent<HTMLInputElement>} event - Event information
-    * @returns {boolean} A boolean
-    */
-   const onFieldChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      const { evaluateField, validations } = props;
-      updatePasswordFieldValue(event);
-      evaluateField?.(validations, event.target.value);
-      return true;
-   };
-
-   /* ----------------------- */
-
    return {
       handleMouseDownPassword,
       handlePasswordVsby,
-      onFieldChange,
-      passwordValue,
       passwordVsby,
-      updatePasswordFieldValue,
    };
 };

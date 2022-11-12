@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: fieldEvaluation.hook
+ * @name: evaluation.hook
  * @description: Field evaluation hook. Handles field form validation activities
  */
 
@@ -11,10 +11,10 @@
 import { useState } from "react";
 
 /** @import Interfaces */
-import { FormFieldValidation } from "../../config/interface.config";
+import { FormFieldValidation } from "../../../config/interface.config";
 
 /** @import Utilities */
-import { Regexp } from "../../utils/regexp.utils";
+import { Regexp } from "../../regexp.utils";
 
 /* --------------------------------------------- */
 

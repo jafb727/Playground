@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Collection.container.utils
+ * @name: Collection.utils
  * @description: Collection container utilities
  */
 

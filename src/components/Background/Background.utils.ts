@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Background.component.utils
+ * @name: Background.utils
  * @description: Background component utilities
  */
 

@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Info.component.utils
+ * @name: Info.utils
  * @description: Info component utilities
  */
 
@@ -16,7 +16,7 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import Tooltip from "@mui/material/Tooltip";
 
 /** @import Styles */
-import Style from "./Info.styles.module.scss";
+import Style from "./Info.module.scss";
 
 /* --------------------------------------------- */
 

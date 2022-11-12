@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Logo.component.utils
+ * @name: Logo.utils
  * @description: Logo component utilities
  */
 

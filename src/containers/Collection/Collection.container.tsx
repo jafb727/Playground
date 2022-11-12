@@ -16,7 +16,7 @@ import React from "react";
 import { Box } from "@mui/material";
 
 /** @import Hooks */
-import { useCollectionStateAndEvents } from "./Collection.container.hooks";
+import { useCollectionStateAndEvents } from "./Collection.hook";
 
 /** @import Styles */
 import Style from "./Collection.module.scss";

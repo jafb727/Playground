@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Routing.fallback.hooks
+ * @name: Routing.fallback.hook
  * @description: Routing fallback hooks
  */
 
@@ -11,7 +11,7 @@
 import { useEffect, useState, useRef } from "react";
 
 /** @import Utilities */
-import { Device } from "./../../../utils/style.utils";
+import { Device } from "../../../utils/style.utils";
 
 /** @import Styles */
 import GlobalVariables from "./../../../assets/style/abstracts/_variables.module.scss";

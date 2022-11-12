@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Field.component.utils
+ * @name: Field.utils
  * @description: Field component utilities
  */
 

@@ -15,7 +15,10 @@ import Text from "../assets/typography/Text.json";
 
 /* --------------------------------------------- */
 
-/** @exports @function Login form configuration */
+/**
+ * @exports @function Login
+ * @description form configuration
+ */
 export const LogIn = {
    new: {
       api: {

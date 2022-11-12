@@ -18,7 +18,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import MuiDialog from "@mui/material/Dialog";
 
 /** @import Hooks */
-import { useDialogStateAndEvents } from "./Dialog.component.hooks";
+import { useDialogStateAndEvents } from "./Dialog.hook";
 
 /** @import Interfaces */
 import { ComponentBasic } from "../../config/interface.config";

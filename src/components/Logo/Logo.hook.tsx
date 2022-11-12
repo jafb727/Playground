@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Logo.component.hooks
+ * @name: Logo.hook
  * @description: Logo component hooks
  */
 
@@ -14,7 +14,7 @@ import { useCallback, useEffect, useState } from "react";
 import { LogoProps } from "./Logo.component";
 
 /** @import Utilities */
-import { setLogoName } from "./Logo.component.utils";
+import { setLogoName } from "./Logo.utils";
 import { setContainerAlignment } from "../../utils/common.utils";
 
 /* --------------------------------------------- */

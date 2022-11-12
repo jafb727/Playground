@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Dialog.component.hooks
+ * @name: Dialog.hook
  * @description: Dialog component hooks
  */
 
@@ -17,7 +17,7 @@ import Button from "@mui/material/Button";
 import { DialogProps } from "./Dialog.component";
 
 /** @import Assets */
-import Text from "./../../assets/typography/Text.json";
+import Text from "../../assets/typography/Text.json";
 
 /* --------------------------------------------- */
 

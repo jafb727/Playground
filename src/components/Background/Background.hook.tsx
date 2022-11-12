@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Background.component.hooks
+ * @name: Background.hook
  * @description: Background component hooks.
  */
 
@@ -14,7 +14,7 @@ import { BackgroundProps } from "./Background.component";
 import {
    setDefaultBackground,
    setFullPageBackground,
-} from "./Background.component.utils";
+} from "./Background.utils";
 
 /* --------------------------------------------- */
 

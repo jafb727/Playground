@@ -20,10 +20,10 @@ import { useStyleProcessor } from "../../../utils/hooks/style.hook";
 import { FieldProps } from "../Field.component";
 
 /** @import Utilities */
-import { initializeFieldInfoSetup } from "./Info.component.utils";
+import { initializeFieldInfoSetup } from "./Info.utils";
 
 /** @import Styles */
-import Style from "./Info.styles.module.scss";
+import Style from "./Info.module.scss";
 
 /* --------------------------------------------- */
 

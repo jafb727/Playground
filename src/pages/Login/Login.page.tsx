@@ -27,7 +27,7 @@ import Theme from "./../../config/theme.config";
 
 /** @import Styles */
 import GlobalStyle from "./../../assets/style/base/_styles.module.scss";
-import Style from "./Login.styles.module.scss";
+import Style from "./Login.module.scss";
 
 /* --------------------------------------------- */
 

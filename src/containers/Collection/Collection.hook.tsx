@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Collection.container.hooks
+ * @name: Collection.container.hook
  * @description: Collection container hooks
  */
 

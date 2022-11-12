@@ -144,6 +144,7 @@ const Theme = createTheme({
          },
          variants: [
             {
+               /** New variant to render a eutral color button */
                props: { variant: "inputInfo" },
                style: {
                   backgroundColor: Variables.neutralColor,
@@ -154,7 +155,7 @@ const Theme = createTheme({
       MuiPaper: {
          styleOverrides: {
             root: {
-               /** Used to fix border-radius desappearing */
+               /** Used to fix border-radius desappearing in paper */
                overflow: "hidden",
             },
          },
@@ -162,7 +163,7 @@ const Theme = createTheme({
       MuiFormControl: {
          styleOverrides: {
             root: {
-               /** To make input size the longest input in a form */
+               /** To make any input size the longest input in a form */
                width: "100%",
             },
          },

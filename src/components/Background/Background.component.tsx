@@ -15,7 +15,7 @@ import React from "react";
 import { Box } from "@mui/material";
 
 /** @import Hooks */
-import { useBackgroundStateAndEvents } from "./Background.component.hooks";
+import { useBackgroundStateAndEvents } from "./Background.hook";
 import { useStyleProcessor } from "../../utils/hooks/style.hook";
 
 /** @import Interfaces */

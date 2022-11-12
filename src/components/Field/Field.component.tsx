@@ -22,7 +22,7 @@ import {
 } from "../../config/interface.config";
 
 /** @import Utilities */
-import { initializeFieldSetup } from "./Field.component.utils";
+import { initializeFieldSetup } from "./Field.utils";
 
 /* --------------------------------------------- */
 

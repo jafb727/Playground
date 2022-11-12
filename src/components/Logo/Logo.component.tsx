@@ -15,7 +15,7 @@ import Box from "@mui/material/Box";
 import ErrorBoundary from "../ErrorBoundary";
 
 /** @import Hooks */
-import { useLogoStateAndEvents } from "./Logo.component.hooks";
+import { useLogoStateAndEvents } from "./Logo.hook";
 
 /** @import Interfaces */
 import { ComponentBasic, LogoItem } from "../../config/interface.config";
