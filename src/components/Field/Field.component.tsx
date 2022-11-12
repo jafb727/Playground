@@ -27,7 +27,9 @@ import { initializeFieldSetup } from "./Field.component.utils";
 /* --------------------------------------------- */
 
 /** @exports @interface Field properties */
-export interface FieldProps extends ComponentBasic, FormField, ResponsiveSize {}
+export interface FieldProps extends ComponentBasic, FormField, ResponsiveSize {
+   evaluateField?: Function;
+}
 
 /* --------------------------------------------- */
 

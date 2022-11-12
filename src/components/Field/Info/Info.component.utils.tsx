@@ -24,7 +24,7 @@ import Style from "./Info.styles.module.scss";
  * @exports @function initializeFieldInfoSetup
  * @description Helps to set field info icon if defined in field configuration
  * @param {string | Array<string>} info - Field info configuration
- * @returns {React.ReactNode|null} a React node or null
+ * @returns {React.ReactNode|null} A React node or null
  */
 export const initializeFieldInfoSetup = (info: string | Array<string>) => {
    /** @constant Tooltip content */
@@ -36,10 +36,12 @@ export const initializeFieldInfoSetup = (info: string | Array<string>) => {
 
    /* ----------------------- */
 
+   /** Setting tooltip content when info message is just a line */
    if (info && typeof info === "string") {
       return <Tooltip title={info}>{tooltipContent}</Tooltip>;
    }
 
+   /** Setting tooltip content when info message is multiline */
    if (info && Array.isArray(info)) {
       return (
          <Tooltip

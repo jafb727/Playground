@@ -10,7 +10,7 @@
 /**
  * @exports @function setCollectionAlignment
  * @description Determines collection container alignment
- * @returns {object} an object to set on sx collection MUI container property
+ * @returns {object} { justifyContent }
  */
 export const setCollectionAlignment = (alignment = "left") => {
    if (alignment === "center") {

@@ -8,7 +8,7 @@
 /* --------------------------------------------- */
 
 /** @import Llibraries */
-import { useState } from "react";
+import React, { useState } from "react";
 
 /** @import Components */
 import Button from "@mui/material/Button";
@@ -38,8 +38,8 @@ export const useDialogStateAndEvents = (props: DialogProps) => {
    /**
     * @function closeDialog
     * @description Handles dialog action when executing a closing action
-    * @param {undefined|Function} onClose - a custom function to execute when closing dialog
-    * @returns {boolean} an boolean
+    * @param {undefined|Function} onClose - A custom function to execute when closing dialog
+    * @returns {boolean} A boolean
     */
    const closeDialog = (onClose?: Function) => {
       /** Executing custom close action if defined in parent component */
@@ -59,7 +59,7 @@ export const useDialogStateAndEvents = (props: DialogProps) => {
     * @function setDialogButtonActions
     * @description Helps to setup dialog actions buttons based on config or default
     * @param {undefined|React.ReactNode|Array<React.ReactNode>} actionButtons - Action buttons configuration
-    * @returns {null|Object} an Object or null
+    * @returns {React.ReactNode} A React node
     */
    const setDialogButtonActions = (
       actionButtons?: React.ReactNode | Array<React.ReactNode>

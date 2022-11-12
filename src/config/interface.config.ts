@@ -52,7 +52,6 @@ export interface FormFieldValidation {
  */
 export interface FormField {
    autoComplete?: string;
-   evaluateField?: Function;
    focus?: boolean;
    id: string;
    info: string | Array<string>;

@@ -25,6 +25,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 /** @import Hooks */
 import { usePasswordStateAndEvents } from "./Password.component.hooks";
+import { useFieldEvaluation } from "../../../utils/hooks/fieldEvaluation.hook";
 
 /** @import Interfaces */
 import { FieldProps } from "../Field.component";
@@ -38,16 +39,17 @@ import { FieldProps } from "../Field.component";
  */
 const Password = (props: FieldProps) => {
    /** @constant */
-   const { label, required, onChange } = props;
+   const { label, required } = props;
 
    /** @constant Hook call */
+   const { errorSetup, evaluate } = useFieldEvaluation();
    const {
-      errorSetup,
       handleMouseDownPassword,
       onFieldChange,
-      passwordSetup,
-      setPasswordVsby,
-   } = usePasswordStateAndEvents(props);
+      passwordValue,
+      passwordVsby,
+      handlePasswordVsby,
+   } = usePasswordStateAndEvents({ ...props, evaluateField: evaluate });
 
    /* ----------------------- */
 
@@ -64,22 +66,18 @@ const Password = (props: FieldProps) => {
                </InputLabel>
                <OutlinedInput
                   id="outlined-adornment-password"
-                  type={passwordSetup.visibility ? "text" : "password"}
-                  value={passwordSetup.value}
+                  type={passwordVsby ? "text" : "password"}
+                  value={passwordValue}
                   onChange={onFieldChange}
                   endAdornment={
                      <InputAdornment position="end">
                         <IconButton
                            aria-label="toggle password visibility"
-                           onClick={setPasswordVsby}
+                           onClick={handlePasswordVsby}
                            onMouseDown={handleMouseDownPassword}
                            edge="end"
                         >
-                           {passwordSetup.visibility ? (
-                              <VisibilityOff />
-                           ) : (
-                              <Visibility />
-                           )}
+                           {passwordVsby ? <VisibilityOff /> : <Visibility />}
                         </IconButton>
                      </InputAdornment>
                   }

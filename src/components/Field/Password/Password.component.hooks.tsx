@@ -15,20 +15,6 @@ import { FieldProps } from "../Field.component";
 
 /* --------------------------------------------- */
 
-/** @type Password setup */
-type PasswordSetup = {
-   value: string;
-   visibility: boolean;
-};
-
-/** @type Error setup */
-type ErrorSetup = {
-   isThereAnError: boolean;
-   message: string;
-};
-
-/* --------------------------------------------- */
-
 /**
  * @function usePasswordStateAndEvents
  * @description Main component hook
@@ -36,44 +22,33 @@ type ErrorSetup = {
  */
 export const usePasswordStateAndEvents = (props: FieldProps) => {
    /** @constant State */
-   const [passwordSetup, setPasswordSetup] = useState<PasswordSetup>({
-      value: "",
-      visibility: false,
-   });
-   const [errorSetup, setErrorSetup] = useState<ErrorSetup>({
-      isThereAnError: false,
-      message: "",
-   });
+   const [passwordVsby, setPasswordVsby] = useState(false);
+   const [passwordValue, setPasswordValue] = useState("");
 
    /* ----------------------- */
 
    /**
     * @function updatePasswordFieldValue
     * @description Stores current password input value in state
-    * @param {key} prop - key in password setup
-    * @param {React.ChangeEvent<HTMLInputElement>} event - event information
-    * @returns {boolean} a boolean
+    * @param {React.ChangeEvent<HTMLInputElement>} event - Event information
+    * @returns {boolean} A boolean
     */
    const updatePasswordFieldValue = (
-      prop: keyof PasswordSetup,
       event: React.ChangeEvent<HTMLInputElement>
    ) => {
-      setPasswordSetup({ ...passwordSetup, [prop]: event.target.value });
+      setPasswordValue(event.target.value);
       return true;
    };
 
    /* ----------------------- */
 
    /**
-    * @function setPasswordVsby
+    * @function handlePasswordVsby
     * @description Handles password visibility button click
-    * @returns {boolean} a boolean
+    * @returns {boolean} A boolean
     */
-   const setPasswordVsby = () => {
-      setPasswordSetup({
-         ...passwordSetup,
-         visibility: !passwordSetup.visibility,
-      });
+   const handlePasswordVsby = () => {
+      setPasswordVsby(!passwordVsby);
       return true;
    };
 
@@ -82,8 +57,8 @@ export const usePasswordStateAndEvents = (props: FieldProps) => {
    /**
     * @function handleMouseDownPassword
     * @description Handles user action when mouse is clicked
-    * @param {React.MouseEvent} event - event information
-    * @returns {boolean} a boolean
+    * @param {React.MouseEvent} event - Event information
+    * @returns {boolean} A boolean
     */
    const handleMouseDownPassword = (
       event: React.MouseEvent<HTMLButtonElement>
@@ -97,41 +72,24 @@ export const usePasswordStateAndEvents = (props: FieldProps) => {
    /**
     * @function onFieldChange
     * @description Handles field event change
-    * @param {React.ChangeEvent<HTMLInputElement>} event - event information
-    * @returns {boolean} a boolean
+    * @param {React.ChangeEvent<HTMLInputElement>} event - Event information
+    * @returns {boolean} A boolean
     */
    const onFieldChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       const { evaluateField, validations } = props;
-
-      updatePasswordFieldValue("value", event);
-      const { evaluation, errorMessage } = evaluateField?.(
-         validations,
-         event.target.value
-      );
-
-      if (!evaluation) {
-         setErrorSetup({
-            isThereAnError: true,
-            message: errorMessage,
-         });
-      } else {
-         setErrorSetup({
-            isThereAnError: false,
-            message: "",
-         });
-      }
-
-      return evaluation;
+      updatePasswordFieldValue(event);
+      evaluateField?.(validations, event.target.value);
+      return true;
    };
 
    /* ----------------------- */
 
    return {
-      errorSetup,
       handleMouseDownPassword,
-      setPasswordVsby,
+      handlePasswordVsby,
       onFieldChange,
-      passwordSetup,
+      passwordValue,
+      passwordVsby,
       updatePasswordFieldValue,
    };
 };

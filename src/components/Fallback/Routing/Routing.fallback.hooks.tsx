@@ -165,6 +165,10 @@ export const useRoutingFallbackStateAndEvents = () => {
 
    /* ----------------------- */
 
+   /**
+    * @function useEffect
+    * @description Sets the conditions to start listening viewport rezising
+    */
    useEffect(() => {
       /** Adding a resize listener */
       window.addEventListener("resize", setVideoResourcesUponUA);
@@ -183,6 +187,10 @@ export const useRoutingFallbackStateAndEvents = () => {
 
    /* ----------------------- */
 
+   /**
+    * @function useEffect
+    * @description Updates video background
+    */
    useEffect(() => {
       /** Reload video space background when URL source changes */
       videoRef.current?.load();

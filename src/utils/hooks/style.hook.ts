@@ -32,6 +32,7 @@ export interface FlexItemProps extends ResponsiveSize {
  * @function useStyleProcessor
  * @description Helps to setup, calculate, transform any style component properties
  * into a useful metadata ready to be used implemented in MUI components
+ * @param {FlexItemProps} props - Flex item properties
  * @returns {object} Hook functions and state
  */
 export const useStyleProcessor = (props: FlexItemProps) => {
@@ -60,8 +61,8 @@ export const useStyleProcessor = (props: FlexItemProps) => {
     * @function turnFlexSizeToStyle
     * @description Helps to convert a flexSize defined property,
     * into a object that MUI "sx" property would accept
-    * @param {number} flexSize - a flexbox unit in format number
-    * @returns {object}
+    * @param {number} flexSize - A flexbox unit in format number
+    * @returns {object} { flex }
     */
    const turnFlexSizeToStyle = (flexSize?: number) => {
       if (flexSize === undefined) {
@@ -79,7 +80,7 @@ export const useStyleProcessor = (props: FlexItemProps) => {
     * its User Agent configuration to support responsive layout
     * @param {number} innerWidth - Current viewport width
     * @param {object} props - Flex item properties
-    * @returns {object} an object
+    * @returns {string} Device size
     */
    const setElementSizeInUA = (innerWidth: number, props: FlexItemProps) => {
       /** @constant Properties */
@@ -147,6 +148,10 @@ export const useStyleProcessor = (props: FlexItemProps) => {
 
    /* ----------------------- */
 
+   /**
+    * @function useEffect
+    * @description Sets the conditions to start listening viewport rezising
+    */
    useEffect(() => {
       /** Adding a resize listener */
       window.addEventListener("resize", setElementSizeUponUA);

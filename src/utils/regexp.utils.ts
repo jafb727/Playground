@@ -10,11 +10,11 @@
 
 /** @exports @module @enum Regexp */
 export const Regexp = {
-   email: /^([\w\d.])+@([\w\d])+.([a-z]{3})$/g,
+   email: /^([\w\d.])+@([\w\d])+.([a-z]{3})$/i,
    mobileDevice:
       /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/,
-   oneCapital: /[A-Z]+/g,
-   oneNumber: /\d+/g,
-   oneSpecialChar: /[!@#$%^&*()_+\-=¿¡`´¨ºª[\]{};':"\\|,.<>/?]+/g,
+   oneCapital: /[A-Z]+/,
+   oneNumber: /\d+/,
+   oneSpecialChar: /[!@#$%^&*()_+\-=¿¡`´¨ºª[\]{};':"\\|,.<>/?]+/,
    tabletDevice: /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i,
 };

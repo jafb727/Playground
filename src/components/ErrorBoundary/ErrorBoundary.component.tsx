@@ -58,9 +58,9 @@ class ErrorBoundary extends React.Component<Props, State> {
    /**
     * @function componentDidCatch
     * @description Lifecycle method used catch any UI error at rendering
-    * @param {Error} error - generic error message
-    * @param {ErrorInfo} errorInfo - error details
-    * @returns {boolean} a boolean
+    * @param {Error} error - Generic error message
+    * @param {ErrorInfo} errorInfo - Error details
+    * @returns {boolean} A boolean
     */
    componentDidCatch(error: Error, errorInfo: ErrorInfo) {
       console.error("Uncaught error:", error, errorInfo);

@@ -41,7 +41,7 @@ export const useLogoStateAndEvents = (props: LogoProps) => {
    /**
     * @async @function fetchLogo
     * @description Dinamically imports logo file from assets and sets it in state
-    * @returns {File} a logo file as data:image
+    * @returns {File} A logo file as data:image
     */
    const fetchLogo = useCallback(async () => {
       const response = await import(`../../assets/images/Logo/${logoName}`);

@@ -10,7 +10,7 @@
 /**
  * @exports @function setContainerAlignment
  * @description Determines container alignment
- * @returns {object} an object to set on sx MUI component property
+ * @returns {object} { justifyContent, textAlign }
  */
 export const setContainerAlignment = (alignment = "left") => {
    if (alignment === "center") {
@@ -33,8 +33,8 @@ export const setContainerAlignment = (alignment = "left") => {
 /**
  * @function capitalizeFirstLetter
  * @description Sets first letter of a word, capital
- * @param {string} word - word to transform
- * @returns {string} a word with first letter capitalized
+ * @param {string} word - Word to transform
+ * @returns {string} A word with first letter capitalized
  */
 export const capitalizeFirstLetter = (word: any | string) => {
    if (checkValue(word)) {
@@ -49,8 +49,8 @@ export const capitalizeFirstLetter = (word: any | string) => {
 /**
  * @function checkValue
  * @description Checks if passed argument is null, undefined, 0 or ""
- * @param {any} value - value to check
- * @returns {any | null} value evaluated or null
+ * @param {any} value - Value to check
+ * @returns {any | null} Value evaluated or null
  */
 export const checkValue = (value: any) => {
    if (value) {
@@ -65,8 +65,8 @@ export const checkValue = (value: any) => {
 /**
  * @function isInstanceOfA
  * @description Helps to confirma if an object is from the type denoted in function invoke
- * @param object - any onject to check its type or interface
- * @returns {boolean} true if object is of the type
+ * @param {object} - Any onject to check its type or interface
+ * @returns {boolean} True if object is of the type
  */
 export function isInstanceOfA<Type>(object: any): object is Type {
    return true;

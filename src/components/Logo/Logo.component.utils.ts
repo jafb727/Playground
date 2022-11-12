@@ -27,9 +27,9 @@ const LogoSize = {
  * @function setLogoName
  * @description Sets logo name based on size and color setup. Loads the asset
  * corresponding the logo images available in assets/images/logo folder
- * @param {any|string} size - logo size expected
- * @param {any|string} color - logo themed color (primary|secondary)
- * @returns {string} a string with asset path following next pattern: My[logoSize][logoColor].png
+ * @param {any|string} size - Logo size expected
+ * @param {any|string} color - Logo themed color (primary|secondary)
+ * @returns {string} A string with asset path following next pattern: My[logoSize][logoColor].png
  */
 export const setLogoName = (size: any | string, color: any | string) => {
    const logoColor = capitalizeFirstLetter(color);

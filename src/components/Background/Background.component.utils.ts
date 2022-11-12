@@ -15,7 +15,7 @@ import Style from "./../../assets/style/base/_styles.module.scss";
 /**
  * @exports @function setDefaultBackground
  * @description Sets default background referencing from global module styles
- * @param {boolean|undefined} defaultBackground - is background will have default background
+ * @param {boolean|undefined} defaultBackground - Is background will have default background
  * @returns {string}
  */
 export const setDefaultBackground = (
@@ -36,7 +36,7 @@ export const setDefaultBackground = (
 /**
  * @exports @function setFullPageBackground
  * @description Sets background at full size referencing from global module styles
- * @param {boolen|undefined} fullPage - is background will be shown full page
+ * @param {boolen|undefined} fullPage - Is background will be shown full page
  * @returns {string}
  */
 export const setFullPageBackground = (fullPage: boolean | undefined) => {

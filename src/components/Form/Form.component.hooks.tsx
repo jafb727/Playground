@@ -36,8 +36,8 @@ export const useFormStateAndEvents = (props: FormProps) => {
     * @function setFormMetadata
     * @description Helps to setup form metadata to init form rendering
     * @param {FormType} setup - Form type according to form.config schema
-    * @param {string} type: form type (new, edit, view)
-    * @returns {null|Object} an Object or null
+    * @param {string} type: Form type (new, edit, view)
+    * @returns {null|Object} An Object or null
     */
    const setFormMetadata = (setup: FormType, type: string) => {
       if (setup && type) {
@@ -57,7 +57,7 @@ export const useFormStateAndEvents = (props: FormProps) => {
     * @function setupFormLogo
     * @description Helps to setup a form logo based on a setup
     * @param {LogoItem} logoSetup - Logo setup in according to form.config schema
-    * @returns {null|React.ReactNode} a React node or null
+    * @returns {null|React.ReactNode} A React node or null
     */
    const setupFormLogo = (logoSetup: LogoItem | undefined) => {
       if (logoSetup) {
@@ -73,8 +73,8 @@ export const useFormStateAndEvents = (props: FormProps) => {
     * @function setupFormTitle
     * @description Helps to setup a form title based on a setup
     * @param {string} title - Form title
-    * @param {boolean} asModal - is Form rendering in a modal
-    * @returns {null|React.ReactNode} a React node or null
+    * @param {boolean} asModal - Is Form rendering in a modal
+    * @returns {null|React.ReactNode} A React node or null
     */
    const setupFormTitle = (title: string | undefined, asModal?: boolean) => {
       if (title) {
@@ -96,7 +96,7 @@ export const useFormStateAndEvents = (props: FormProps) => {
     * @function setupFormSubTitle
     * @description Helps to setup a form subtitle based on setup
     * @param {string} subtitle - Form subtitle
-    * @returns {null|React.ReactNode} a React node or null
+    * @returns {null|React.ReactNode} A React node or null
     */
    const setupFormSubTitle = (subtitle: string | undefined) => {
       if (subtitle) {
@@ -112,7 +112,7 @@ export const useFormStateAndEvents = (props: FormProps) => {
     * @function setupFormFields
     * @description Helps to setup a form fields based on setup
     * @param {FormMetadata} fieldsSetup - Form metadata according to form.config schema
-    * @returns {null|React.ReactNode[]} an array of React node or null
+    * @returns {null|React.ReactNode[]} An array of React node or null
     */
    const setupFormFields = (fieldsSetup: Array<FormField> | undefined) => {
       if (fieldsSetup) {
