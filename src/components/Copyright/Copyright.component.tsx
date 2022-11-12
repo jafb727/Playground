@@ -34,7 +34,7 @@ const Copyright = (props: ComponentBasic) => {
    /* ----------------------- */
 
    return (
-      <Box className={className} data-testid="copyright-component" sx={style}>
+      <Box className={className} data-testid="copyright" sx={style}>
          <Typography variant="body2">&copy; {Text.copyright}</Typography>
       </Box>
    );

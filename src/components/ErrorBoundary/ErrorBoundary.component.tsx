@@ -73,7 +73,7 @@ class ErrorBoundary extends React.Component<Props, State> {
    render() {
       if (this.state.hasError) {
          return (
-            <Box data-testid="error-boundary-component">
+            <Box data-testid="error-boundary">
                <Typography variant="body1">{Text.error}</Typography>
             </Box>
          );

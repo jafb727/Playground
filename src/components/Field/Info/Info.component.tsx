@@ -44,7 +44,7 @@ const Info = (props: FieldProps) => {
    return (
       <Box
          className={Style.infoContainer}
-         data-testid="info-component"
+         data-testid="info"
          sx={{ ...flexSize, ...style }}
       >
          {initializeFieldInfoSetup(info)}

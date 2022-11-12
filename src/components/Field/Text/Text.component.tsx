@@ -69,7 +69,7 @@ const Text = (props: FieldProps) => {
    /* ----------------------- */
 
    return (
-      <Box className={Style.inputContainer} data-testid="text-component">
+      <Box className={Style.inputContainer} data-testid="text">
          <FormControl
             error={errorSetup.isThereAnError}
             margin="dense"

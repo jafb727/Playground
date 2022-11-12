@@ -54,7 +54,7 @@ const Dialog = (props: DialogProps) => {
    /* ----------------------- */
 
    return (
-      <Box className={className} data-testid="dialog-component" sx={style}>
+      <Box className={className} data-testid="dialog" sx={style}>
          <MuiDialog open={open && dialogVsby}>
             <DialogTitle>{title}</DialogTitle>
             <DialogContent dividers>{content}</DialogContent>

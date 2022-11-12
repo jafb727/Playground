@@ -54,7 +54,7 @@ const Password = (props: FieldProps) => {
    /* ----------------------- */
 
    return (
-      <Box data-testid="password-component">
+      <Box data-testid="password">
          <FormControl
             error={errorSetup.isThereAnError}
             margin="dense"

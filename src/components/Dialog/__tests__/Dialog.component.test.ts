@@ -21,7 +21,7 @@ import { basicSetup } from "../../../test/setupTests";
 describe("Dialog.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("dialog-component")).toBeInTheDocument();
+      expect(screen.getByTestId("dialog")).toBeInTheDocument();
    });
 
    /* ----------------------- */

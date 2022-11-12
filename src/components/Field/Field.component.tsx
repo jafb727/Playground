@@ -46,7 +46,7 @@ const Field = (props: FieldProps) => {
 
    return (
       <ErrorBoundary>
-         <Box className={className} data-testid="field-component" sx={style}>
+         <Box className={className} data-testid="field" sx={style}>
             {initializeFieldSetup(props)}
          </Box>
       </ErrorBoundary>

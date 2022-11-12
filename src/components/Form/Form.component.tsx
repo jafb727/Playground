@@ -14,6 +14,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Dialog from "../Dialog";
 import ErrorBoundary from "../ErrorBoundary";
+import FormHeader from "./FormHeader";
 
 /** @import Hooks */
 import { useFormStateAndEvents } from "./Form.hook";
@@ -31,10 +32,17 @@ import Style from "./Form.module.scss";
 
 /* --------------------------------------------- */
 
-/** @exports @interface Form properties */
-export interface FormProps extends ComponentBasic, ResponsiveSize {
+/** @export @interface FormShared properties */
+export interface FormSharedProps {
    alignment?: string;
    asModal?: boolean;
+}
+
+/** @exports @interface Form properties */
+export interface FormProps
+   extends ComponentBasic,
+      ResponsiveSize,
+      FormSharedProps {
    onSubmit?: Function;
    setup: FormType;
    type: string;
@@ -49,10 +57,10 @@ export interface FormProps extends ComponentBasic, ResponsiveSize {
  */
 const Form = (props: FormProps) => {
    /** @constant Properties */
-   const { asModal, className, style } = props;
+   const { asModal, alignment, className, style } = props;
 
    /** @constant Hook call */
-   const { formAlignment, formFields, formLogo, formSubTitle, formTitle } =
+   const { formAlignment, formFields, formMetadata } =
       useFormStateAndEvents(props);
    const { flexSize } = useStyleProcessor(props);
 
@@ -62,7 +70,17 @@ const Form = (props: FormProps) => {
    if (asModal) {
       return (
          <ErrorBoundary>
-            <Dialog open={asModal} title={formTitle} content={formFields} />
+            <Dialog
+               open={asModal}
+               title={
+                  <FormHeader
+                     formMetadata={formMetadata}
+                     asModal={asModal}
+                     alignment={alignment}
+                  />
+               }
+               content={formFields}
+            />
          </ErrorBoundary>
       );
    }
@@ -72,15 +90,14 @@ const Form = (props: FormProps) => {
       <ErrorBoundary>
          <Box
             className={className}
-            component="form"
-            data-testid="form-component"
+            data-testid="form"
             sx={{ ...flexSize, ...formAlignment, ...style }}
          >
-            <Box className={Style.formHeader}>
-               {formLogo}
-               {formTitle}
-               {formSubTitle}
-            </Box>
+            <FormHeader
+               formMetadata={formMetadata}
+               asModal={asModal}
+               alignment={alignment}
+            />
             <Box className={Style.formBody}>{formFields}</Box>
             <Box className={Style.formFooter}></Box>
          </Box>

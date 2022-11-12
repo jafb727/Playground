@@ -21,7 +21,7 @@ import { basicSetup } from "../../../../test/setupTests";
 describe("Text.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("text-component")).toBeInTheDocument();
+      expect(screen.getByTestId("text")).toBeInTheDocument();
    });
 
    /* ----------------------- */

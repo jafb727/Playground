@@ -21,7 +21,7 @@ import { basicSetup } from "../../../../test/setupTests";
 describe("Password.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("password-component")).toBeInTheDocument();
+      expect(screen.getByTestId("password")).toBeInTheDocument();
    });
 
    /* ----------------------- */

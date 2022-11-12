@@ -21,7 +21,7 @@ import { basicSetup } from "../../../test/setupTests";
 describe("Form.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("form-component")).toBeInTheDocument();
+      expect(screen.getByTestId("form")).toBeInTheDocument();
    });
 
    /* ----------------------- */

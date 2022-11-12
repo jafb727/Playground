@@ -7,9 +7,6 @@
 
 /* --------------------------------------------- */
 
-/** @import Libraries */
-import { screen } from "@testing-library/react";
-
 /** @import Components */
 import Component from "../ErrorBoundary.component";
 
