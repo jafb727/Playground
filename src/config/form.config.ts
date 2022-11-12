@@ -38,15 +38,15 @@ export const LogIn = {
             placeholder: "e.g. name@domain.com",
             required: true,
             type: "text",
-            validation: [
+            validations: [
                {
                   type: "required",
-                  error: { message: "", title: "" },
+                  error: "Username is required",
                   required: true,
                },
                {
-                  type: "word",
-                  error: { message: "", title: "" },
+                  type: "pattern",
+                  error: "Should be an email account",
                   regex: Regexp.email,
                },
             ],
@@ -55,20 +55,41 @@ export const LogIn = {
             autoComplete: "",
             id: "password",
             info: [
-               Text.infoPasswordInput1,
-               Text.infoPasswordInput2,
-               Text.infoPasswordInput3,
-               Text.infoPasswordInput4,
+               Text.infoPwdCondMinLength,
+               Text.infoPwdCondOneCapital,
+               Text.infoPwdCondOneNumber,
+               Text.infoPwdCondOneSpecial,
             ],
             label: "Password",
             placeholder: "Password",
             required: true,
             type: "password",
-            validation: [
+            validations: [
                {
                   type: "required",
-                  error: { message: "", title: "" },
+                  error: "Password is required",
                   required: true,
+               },
+               {
+                  type: "password",
+                  error: "Length should be at least 12",
+                  condition: "minLength",
+                  minLength: 12,
+               },
+               {
+                  type: "password",
+                  error: "Should have at least one capital letter",
+                  condition: "oneCapital",
+               },
+               {
+                  type: "password",
+                  error: "Should have at least one number",
+                  condition: "oneNumber",
+               },
+               {
+                  type: "password",
+                  error: "Should have at least one special character",
+                  condition: "oneSpecialChar",
                },
             ],
          },

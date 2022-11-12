@@ -17,10 +17,14 @@ import ErrorBoundary from "../ErrorBoundary";
 
 /** @import Hooks */
 import { useFormStateAndEvents } from "./Form.component.hooks";
-import { useStyleProcessor } from "../../utils/hooks.utils";
+import { useStyleProcessor } from "../../utils/hooks/style.hook";
 
 /** @import Interfaces */
-import { FormType, ResponsiveSize } from "../../config/interface.config";
+import {
+   ComponentBasic,
+   FormType,
+   ResponsiveSize,
+} from "../../config/interface.config";
 
 /** @import Styles */
 import Style from "./Form.styles.module.scss";
@@ -28,13 +32,11 @@ import Style from "./Form.styles.module.scss";
 /* --------------------------------------------- */
 
 /** @exports @interface Form properties */
-export interface FormProps extends ResponsiveSize {
+export interface FormProps extends ComponentBasic, ResponsiveSize {
    alignment?: string;
    asModal?: boolean;
-   className?: string;
    onSubmit?: Function;
    setup: FormType;
-   style?: object;
    type: string;
 }
 

@@ -20,16 +20,20 @@ import MuiDialog from "@mui/material/Dialog";
 /** @import Hooks */
 import { useDialogStateAndEvents } from "./Dialog.component.hooks";
 
+/** @import Interfaces */
+import { ComponentBasic } from "../../config/interface.config";
+
 /* --------------------------------------------- */
 
-/** @exports @interface Dialog properties */
-export interface DialogProps {
+/**
+ * @exports @interface DialogProps
+ * @description Dialog properties
+ */
+export interface DialogProps extends ComponentBasic {
    buttons?: React.ReactNode;
-   className?: string;
    content?: React.ReactNode;
    onClose?: Function;
    open: boolean;
-   style?: object;
    title?: string | React.ReactNode;
 }
 
@@ -42,7 +46,7 @@ export interface DialogProps {
  */
 const Dialog = (props: DialogProps) => {
    /** @constant Properties */
-   const { className, content, open, style, title } = props;
+   const { className = "", content, open, style, title } = props;
 
    /** @constant Hook call */
    const { actionButtons, dialogVsby } = useDialogStateAndEvents(props);

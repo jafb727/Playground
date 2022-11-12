@@ -2,7 +2,7 @@
  * @author: Jose A Felix
  * @editor: Jose A Felix
  * @name: Background.component.hooks
- * @description: Background component hooks
+ * @description: Background component hooks.
  */
 
 /* --------------------------------------------- */

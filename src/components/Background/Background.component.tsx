@@ -16,20 +16,21 @@ import { Box } from "@mui/material";
 
 /** @import Hooks */
 import { useBackgroundStateAndEvents } from "./Background.component.hooks";
-import { useStyleProcessor } from "../../utils/hooks.utils";
+import { useStyleProcessor } from "../../utils/hooks/style.hook";
 
 /** @import Interfaces */
-import { ResponsiveSize } from "../../config/interface.config";
+import { ComponentBasic, ResponsiveSize } from "../../config/interface.config";
 
 /* --------------------------------------------- */
 
-/** @@exports @interface Background properties */
-export interface BackgroundProps extends ResponsiveSize {
+/**
+ * @exports @interface BackgroundProps
+ * @description Background properties
+ */
+export interface BackgroundProps extends ComponentBasic, ResponsiveSize {
    children?: React.ReactNode;
-   className?: string;
    defaultBg?: boolean;
    fullPage?: boolean;
-   style?: object;
 }
 
 /* --------------------------------------------- */

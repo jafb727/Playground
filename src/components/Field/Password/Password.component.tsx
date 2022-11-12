@@ -14,6 +14,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Collection from "../../../containers/Collection";
 import FormControl from "@mui/material/FormControl";
+import FormHelperText from "@mui/material/FormHelperText";
 import IconButton from "@mui/material/IconButton";
 import Info from "../Info";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -37,21 +38,26 @@ import { FieldProps } from "../Field.component";
  */
 const Password = (props: FieldProps) => {
    /** @constant */
-   const { label, required } = props;
+   const { label, required, onChange } = props;
 
    /** @constant Hook call */
    const {
+      errorSetup,
       handleMouseDownPassword,
-      setPasswordVsby,
+      onFieldChange,
       passwordSetup,
-      updatePasswordFieldValue,
-   } = usePasswordStateAndEvents();
+      setPasswordVsby,
+   } = usePasswordStateAndEvents(props);
 
    /* ----------------------- */
 
    return (
       <Box data-testid="password-component">
-         <FormControl margin="dense" required={required}>
+         <FormControl
+            error={errorSetup.isThereAnError}
+            margin="dense"
+            required={required}
+         >
             <Collection>
                <InputLabel htmlFor="outlined-adornment-password">
                   {label}
@@ -60,7 +66,7 @@ const Password = (props: FieldProps) => {
                   id="outlined-adornment-password"
                   type={passwordSetup.visibility ? "text" : "password"}
                   value={passwordSetup.value}
-                  onChange={updatePasswordFieldValue("value")}
+                  onChange={onFieldChange}
                   endAdornment={
                      <InputAdornment position="end">
                         <IconButton
@@ -78,10 +84,11 @@ const Password = (props: FieldProps) => {
                      </InputAdornment>
                   }
                   label={label}
-                  sx={{ flex: 12 }}
+                  sx={{ flex: 1 }}
                />
-               <Info {...props} style={{ flex: 1 }} />
+               <Info {...props} />
             </Collection>
+            <FormHelperText>{errorSetup.message}</FormHelperText>
          </FormControl>
       </Box>
    );

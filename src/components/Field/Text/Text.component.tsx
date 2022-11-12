@@ -57,17 +57,17 @@ const Text = (props: FieldProps) => {
 
    return (
       <Box className={Style.inputContainer} data-testid="text-component">
-         <FormControl error margin="dense" required={required || false}>
+         <FormControl margin="dense" required={required || false}>
             <Collection>
                <InputLabel htmlFor={label}>{label}</InputLabel>
                <OutlinedInput
                   inputProps={inputProps}
                   label={label}
-                  sx={{ flex: 12 }}
+                  sx={{ flex: 1 }}
                />
-               <Info {...props} style={{ flex: 1 }} />
+               <Info {...props} />
             </Collection>
-            <FormHelperText>Error</FormHelperText>
+            <FormHelperText></FormHelperText>
          </FormControl>
       </Box>
    );

@@ -14,16 +14,11 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
+/** @import Interfaces */
+import { ComponentBasic } from "../../config/interface.config";
+
 /** @import Assets */
 import Text from "./../../assets/typography/Text.json";
-
-/* --------------------------------------------- */
-
-/** @interface Copyright properties */
-interface CopyrightProps {
-   className?: string;
-   style?: object;
-}
 
 /* --------------------------------------------- */
 
@@ -32,9 +27,9 @@ interface CopyrightProps {
  * @description Main functional component
  * @returns {React.ReactNode} A react node
  */
-const Copyright = (props: CopyrightProps) => {
+const Copyright = (props: ComponentBasic) => {
    /** @constant Properties */
-   const { className, style } = props;
+   const { className = "", style } = props;
 
    /* ----------------------- */
 

@@ -15,7 +15,7 @@ import Variables from "./../assets/style/abstracts/_variables.module.scss";
 
 /* --------------------------------------------- */
 
-/** @module Mui Typography variants */
+/** @module Mui Typography variants addition */
 declare module "@mui/material/styles" {
    /**
     * @interface TypographyVariants
@@ -47,7 +47,7 @@ declare module "@mui/material/Typography" {
 
 /* --------------------------------------------- */
 
-/** @module Mui Button variants */
+/** @module Mui Button variants addition */
 declare module "@mui/material/Button" {
    interface ButtonPropsVariantOverrides {
       inputInfo: true;
@@ -91,6 +91,12 @@ const Theme = createTheme({
          main: Variables.secondaryMain,
          dark: Variables.secondaryDark,
          contrastText: Variables.secondaryContrastText,
+      },
+      error: {
+         light: Variables.errorLight,
+         main: Variables.errorMain,
+         dark: Variables.errorDark,
+         contrastText: Variables.errorContrastText,
       },
    },
    breakpoints: {

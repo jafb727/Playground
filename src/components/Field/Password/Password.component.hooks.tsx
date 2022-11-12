@@ -10,12 +10,21 @@
 /** @import Libraries */
 import { useState } from "react";
 
+/** @import Interfaces */
+import { FieldProps } from "../Field.component";
+
 /* --------------------------------------------- */
 
 /** @type Password setup */
 type PasswordSetup = {
    value: string;
    visibility: boolean;
+};
+
+/** @type Error setup */
+type ErrorSetup = {
+   isThereAnError: boolean;
+   message: string;
 };
 
 /* --------------------------------------------- */
@@ -25,11 +34,15 @@ type PasswordSetup = {
  * @description Main component hook
  * @returns {object} Hook functions and state
  */
-export const usePasswordStateAndEvents = () => {
+export const usePasswordStateAndEvents = (props: FieldProps) => {
    /** @constant State */
    const [passwordSetup, setPasswordSetup] = useState<PasswordSetup>({
       value: "",
       visibility: false,
+   });
+   const [errorSetup, setErrorSetup] = useState<ErrorSetup>({
+      isThereAnError: false,
+      message: "",
    });
 
    /* ----------------------- */
@@ -38,14 +51,16 @@ export const usePasswordStateAndEvents = () => {
     * @function updatePasswordFieldValue
     * @description Stores current password input value in state
     * @param {key} prop - key in password setup
+    * @param {React.ChangeEvent<HTMLInputElement>} event - event information
     * @returns {boolean} a boolean
     */
-   const updatePasswordFieldValue =
-      (prop: keyof PasswordSetup) =>
-      (event: React.ChangeEvent<HTMLInputElement>) => {
-         setPasswordSetup({ ...passwordSetup, [prop]: event.target.value });
-         return true;
-      };
+   const updatePasswordFieldValue = (
+      prop: keyof PasswordSetup,
+      event: React.ChangeEvent<HTMLInputElement>
+   ) => {
+      setPasswordSetup({ ...passwordSetup, [prop]: event.target.value });
+      return true;
+   };
 
    /* ----------------------- */
 
@@ -79,9 +94,43 @@ export const usePasswordStateAndEvents = () => {
 
    /* ----------------------- */
 
+   /**
+    * @function onFieldChange
+    * @description Handles field event change
+    * @param {React.ChangeEvent<HTMLInputElement>} event - event information
+    * @returns {boolean} a boolean
+    */
+   const onFieldChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const { evaluateField, validations } = props;
+
+      updatePasswordFieldValue("value", event);
+      const { evaluation, errorMessage } = evaluateField?.(
+         validations,
+         event.target.value
+      );
+
+      if (!evaluation) {
+         setErrorSetup({
+            isThereAnError: true,
+            message: errorMessage,
+         });
+      } else {
+         setErrorSetup({
+            isThereAnError: false,
+            message: "",
+         });
+      }
+
+      return evaluation;
+   };
+
+   /* ----------------------- */
+
    return {
+      errorSetup,
       handleMouseDownPassword,
       setPasswordVsby,
+      onFieldChange,
       passwordSetup,
       updatePasswordFieldValue,
    };

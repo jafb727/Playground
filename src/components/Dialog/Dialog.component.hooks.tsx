@@ -58,13 +58,15 @@ export const useDialogStateAndEvents = (props: DialogProps) => {
    /**
     * @function setDialogButtonActions
     * @description Helps to setup dialog actions buttons based on config or default
-    * @param {undefined|React.ReactNode} buttons - Action buttons configuration
+    * @param {undefined|React.ReactNode|Array<React.ReactNode>} actionButtons - Action buttons configuration
     * @returns {null|Object} an Object or null
     */
-   const setDialogButtonActions = (buttons?: React.ReactNode) => {
-      /** Cancel button added by default */
+   const setDialogButtonActions = (
+      actionButtons?: React.ReactNode | Array<React.ReactNode>
+   ) => {
       return (
          <>
+            {/** Cancel button added by default */}
             <Button
                color="secondary"
                onClick={() => closeDialog(onClose)}
@@ -72,7 +74,9 @@ export const useDialogStateAndEvents = (props: DialogProps) => {
             >
                {Text.cancel}
             </Button>
-            {buttons}
+
+            {/** User custom action buttons definition */}
+            {actionButtons}
          </>
       );
    };

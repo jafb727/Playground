@@ -19,10 +19,18 @@ import Text from "./../../assets/typography/Text.json";
 
 /* --------------------------------------------- */
 
+/**
+ * @interface Props
+ * @description Error boundary properties
+ */
 interface Props {
    children?: ReactNode;
 }
 
+/**
+ * @interface State
+ * @description State properties
+ */
 interface State {
    hasError: boolean;
 }

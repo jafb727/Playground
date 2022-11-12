@@ -18,7 +18,7 @@ import ErrorBoundary from "../ErrorBoundary";
 import { useLogoStateAndEvents } from "./Logo.component.hooks";
 
 /** @import Interfaces */
-import { FormLogo } from "../../config/interface.config";
+import { ComponentBasic, LogoItem } from "../../config/interface.config";
 
 /** @import Styles */
 import Style from "./Logo.module.scss";
@@ -26,10 +26,8 @@ import Style from "./Logo.module.scss";
 /* --------------------------------------------- */
 
 /** @exports @interface Logo properties */
-export interface LogoProps extends FormLogo {
-   className?: string;
-   options: FormLogo;
-   style?: object;
+export interface LogoProps extends ComponentBasic, LogoItem {
+   options: LogoItem;
 }
 
 /* --------------------------------------------- */
@@ -41,7 +39,7 @@ export interface LogoProps extends FormLogo {
  */
 const Logo = (props: LogoProps) => {
    /** @constant Properties */
-   const { className, style } = props;
+   const { className = "", style } = props;
 
    /** @constant Hooks call */
    const { altText, logoSource, logoAlignment } = useLogoStateAndEvents(props);
@@ -51,7 +49,7 @@ const Logo = (props: LogoProps) => {
    return (
       <ErrorBoundary>
          <Box
-            className={`${Style.logoContainer} ${className} `}
+            className={`${Style.logoContainer} ${className}`}
             data-testid="logo"
             sx={{ ...logoAlignment, ...style }}
          >

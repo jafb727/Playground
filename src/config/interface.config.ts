@@ -5,20 +5,24 @@
  * @description: All global and most used interfaces in app.
  */
 
-import React from "react";
-
 /* --------------------------------------------- */
 
-/** @export @interface FormAPI */
-export interface FormAPI {
+/**
+ * @exports @interface APIOptions
+ * @description Request options to perform an API call
+ */
+export interface APIOptions {
    endpoint: string;
    method: string;
 }
 
 /* --------------------------------------------- */
 
-/** @export @interface FormLogo */
-export interface FormLogo {
+/**
+ * @exports @interface LogoItem
+ * @description Properties to setup a logo item
+ */
+export interface LogoItem {
    altText?: string;
    alignment?: string;
    size?: string;
@@ -27,34 +31,28 @@ export interface FormLogo {
 
 /* --------------------------------------------- */
 
-/** @export @interface FormFieldInfo */
-export interface FormFieldInfo {
-   message: string | Array<string>;
-}
-
-/* --------------------------------------------- */
-
-/** @export @interface FormFieldValidationError */
-export interface FormFieldValidationError {
-   message: string;
-   title?: string;
-}
-
-/* --------------------------------------------- */
-
-/** @export @interface FormFieldValidation */
+/**
+ * @exports @interface FormFieldValidation
+ * @description Elements a field validation should have
+ */
 export interface FormFieldValidation {
    type: string;
-   error: FormFieldValidationError;
+   error: string;
    required?: boolean;
    regex?: any;
+   condition?: string;
+   minLength?: number;
 }
 
 /* --------------------------------------------- */
 
-/** @export @interface FormField */
+/**
+ * @exports @interface FormField
+ * @description Properties an input filed in a form may have
+ */
 export interface FormField {
    autoComplete?: string;
+   evaluateField?: Function;
    focus?: boolean;
    id: string;
    info: string | Array<string>;
@@ -62,15 +60,18 @@ export interface FormField {
    placeholder?: string;
    required?: boolean;
    type: string;
-   validation?: Array<FormFieldValidation>;
+   validations?: Array<FormFieldValidation>;
 }
 
 /* --------------------------------------------- */
 
-/** @export @interface FormMetadata */
+/**
+ * @exports @interface FormMetadata
+ * @description Used in form.config. Defines the basic configuration a form may have
+ */
 export interface FormMetadata {
-   api: FormAPI;
-   logo?: FormLogo;
+   api: APIOptions;
+   logo?: LogoItem;
    fields: Array<FormField>;
    subtitle?: string;
    title?: string;
@@ -78,7 +79,10 @@ export interface FormMetadata {
 
 /* --------------------------------------------- */
 
-/** @exports @interface FormType */
+/**
+ * @exports @interface FormType
+ * @description All possible form types
+ */
 export interface FormType {
    new?: FormMetadata;
    edit?: FormMetadata;
@@ -97,4 +101,16 @@ export interface ResponsiveSize {
    sizeInTablet?: number;
    sizeInLaptop?: number;
    sizeInDesktop?: number;
+}
+
+/* --------------------------------------------- */
+
+/**
+ * @exports @interface ComponentBasic
+ * @description Global properties any component will have by default
+ */
+export interface ComponentBasic {
+   style?: object;
+   className?: string;
+   onChange?: Function;
 }

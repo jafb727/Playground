@@ -14,7 +14,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 
 /** @import Hooks */
-import { useStyleProcessor } from "../../../utils/hooks.utils";
+import { useStyleProcessor } from "../../../utils/hooks/style.hook";
 
 /** @import Interfaces */
 import { FieldProps } from "../Field.component";

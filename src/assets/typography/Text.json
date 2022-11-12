@@ -7,10 +7,10 @@
    "copyright": "All rights reserved.",
    "fallAppMessage": "Something awesome is rendering",
    "error": "Something went wrong",
-   "infoPasswordInput1": "At least 12 characters",
-   "infoPasswordInput2": "At least one uppercase letter",
-   "infoPasswordInput3": "At least one number",
-   "infoPasswordInput4": "At least one of these special characters: !@#?]",
+   "infoPwdCondMinLength": "At least 12 characters",
+   "infoPwdCondOneCapital": "At least one uppercase letter",
+   "infoPwdCondOneNumber": "At least one number",
+   "infoPwdCondOneSpecial": "At least one special character",
    "infoUserNameInput": "Email you registered as an account",
    "videoErrorBrowserSupport": "Your browser does not support HTML5 video"
 }

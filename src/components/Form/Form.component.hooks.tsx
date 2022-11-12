@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 
 /** @import Interfaces */
 import { FormProps } from "./Form.component";
-import { FormField, FormLogo, FormType } from "../../config/interface.config";
+import { FormField, LogoItem, FormType } from "../../config/interface.config";
 
 /** @import Utilities */
 import { setContainerAlignment } from "../../utils/common.utils";
@@ -56,10 +56,10 @@ export const useFormStateAndEvents = (props: FormProps) => {
    /**
     * @function setupFormLogo
     * @description Helps to setup a form logo based on a setup
-    * @param {FormLogo} logoSetup - Logo setup in according to form.config schema
+    * @param {LogoItem} logoSetup - Logo setup in according to form.config schema
     * @returns {null|React.ReactNode} a React node or null
     */
-   const setupFormLogo = (logoSetup: FormLogo | undefined) => {
+   const setupFormLogo = (logoSetup: LogoItem | undefined) => {
       if (logoSetup) {
          return <Logo options={{ ...logoSetup, ...{ alignment } }} />;
       }

@@ -59,6 +59,21 @@ $secondaryContrastText: #fff;
 
 /* --------------------------------------------- */
 
+/** @description Error theming colors for project */
+$errorLight: #ff616f;
+$errorMain: #ff1744;
+$errorDark: #c4001d;
+$errorContrastText: #000;
+
+:export {
+  errorLight: $errorLight;
+  errorMain: $errorMain;
+  errorDark: $errorDark;
+  errorContrastText: $errorContrastText;
+}
+
+/* --------------------------------------------- */
+
 /** @description Breakpoints for media queries */
 $breakpointMobile: 480px;
 $breakpointTablet: 768px;
@@ -137,7 +152,7 @@ $size720x720: "720x720";
 
 /** @description Borders */
 $InputBorderColorNotActive: rgba(0, 0, 0, 0.1);
-$InputBorderColorHover: #ff79b0;
+$InputBorderColorHover: $primaryDark;
 
 :export {
   InputBorderColorNotActive: $InputBorderColorNotActive;

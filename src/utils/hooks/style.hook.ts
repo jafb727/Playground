@@ -1,8 +1,8 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: hooks.utils
- * @description: Hooks utilities. Gathers all reusable hooks to
+ * @name: style.hook
+ * @description: Style hook. Adds responsiveness to any component
  */
 
 /* --------------------------------------------- */
@@ -11,13 +11,13 @@
 import { useEffect, useRef, useState } from "react";
 
 /** @import Interfaces */
-import { ResponsiveSize } from "../config/interface.config";
+import { ResponsiveSize } from "../../config/interface.config";
 
 /** @import Utilities */
-import { Device } from "./../utils/style.utils";
+import { Device } from "../style.utils";
 
 /** @import Styles */
-import GlobalVariables from "./../assets/style/abstracts/_variables.module.scss";
+import GlobalVariables from "../../assets/style/abstracts/_variables.module.scss";
 
 /* --------------------------------------------- */
 
