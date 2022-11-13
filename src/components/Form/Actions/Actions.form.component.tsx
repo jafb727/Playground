@@ -1,8 +1,8 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: FormHeader.component
- * @description: Form header component
+ * @name: Actions.form.component
+ * @description: Form actions component
  */
 
 /* --------------------------------------------- */
@@ -12,72 +12,60 @@ import React from "react";
 
 /** @import Components */
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import ErrorBoundary from "../../ErrorBoundary";
+import Typography from "@mui/material/Typography";
 
 /** @import Hooks */
-import { useFormHeaderStateAndEvents } from "./FormHeader.hook";
+import { useFormActionsStateAndEvents } from "./Actions.form.hook";
 import { useStyleProcessor } from "../../../utils/hooks/style.hook";
 
 /** @import Interfaces */
-import { FormSharedProps } from "../Form.component";
 import {
    ComponentBasic,
    ResponsiveSize,
-   FormMetadata,
 } from "../../../config/interface.config";
 
 /** @import Styles */
-import Style from "./FormHeader.module.scss";
+import Style from "./Actions.form.module.scss";
+
+/** @import Assets */
+import Text from "../../../assets/typography/Text.json";
 
 /* --------------------------------------------- */
 
-/** @exports @interface FormHeader properties */
-export interface FormHeaderProps
-   extends ComponentBasic,
-      ResponsiveSize,
-      FormSharedProps {
-   formMetadata?: FormMetadata;
-}
+/** @exports @interface FormFooter properties */
+export interface FormFooterProps extends ComponentBasic, ResponsiveSize {}
 
 /* --------------------------------------------- */
 
 /**
- * @function FormHeader
+ * @function FormActions
  * @description Main functional component
  * @returns {React.ReactNode} A react node
  */
-const FormHeader = (props: FormHeaderProps) => {
+const FormActions = (props: FormFooterProps) => {
    /** @constant Properties */
-   const { asModal, className, style } = props;
+   const { className, style } = props;
 
    /** @constant Hook call */
-   const { formLogo, formSubTitle, formTitle } =
-      useFormHeaderStateAndEvents(props);
+   const { actionsAlignment } = useFormActionsStateAndEvents(props);
    const { flexSize } = useStyleProcessor(props);
 
    /* ----------------------- */
-
-   /** Form is shown in modal mode */
-   if (asModal) {
-      return (
-         <ErrorBoundary>
-            <Box className={Style.formHeader}>{formTitle}</Box>
-         </ErrorBoundary>
-      );
-   }
 
    /** Form is shown in page mode (default) */
    return (
       <ErrorBoundary>
          <Box
             className={className}
-            data-testid="form-header"
-            sx={{ ...flexSize, ...style }}
+            data-testid="form-actions"
+            sx={{ ...flexSize, ...actionsAlignment, ...style }}
          >
-            <Box className={Style.formHeader}>
-               {formLogo}
-               {formTitle}
-               {formSubTitle}
+            <Box className={Style.formActions}>
+               <Button variant="contained">
+                  <Typography>{Text.btnSubmit}</Typography>
+               </Button>
             </Box>
          </Box>
       </ErrorBoundary>
@@ -87,11 +75,11 @@ const FormHeader = (props: FormHeaderProps) => {
 /* --------------------------------------------- */
 
 /** @static Component fields */
-FormHeader.fields = {
-   componentName: "form",
+FormActions.fields = {
+   componentName: "form-actions",
 };
 
 /* --------------------------------------------- */
 
 /** @exports @default component */
-export default FormHeader;
+export default FormActions;

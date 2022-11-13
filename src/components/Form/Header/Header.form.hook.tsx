@@ -1,7 +1,7 @@
 /**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Header.hook
+ * @name: Header.form.hook
  * @description: Form header component hooks
  */
 
@@ -12,7 +12,7 @@ import Logo from "../../Logo";
 import Typography from "@mui/material/Typography";
 
 /** @import Interfaces */
-import { FormHeaderProps } from "./FormHeader.component";
+import { FormHeaderProps } from "./Header.form.component";
 import { LogoItem } from "../../../config/interface.config";
 
 /* --------------------------------------------- */

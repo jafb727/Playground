@@ -27,7 +27,7 @@ import { useFieldStateAndEvents } from "../../../utils/hooks/field/field.hook";
 import { FieldProps } from "../Field.component";
 
 /** @import */
-import Style from "./Text.styles.module.scss";
+import Style from "./Text.module.scss";
 
 /* --------------------------------------------- */
 

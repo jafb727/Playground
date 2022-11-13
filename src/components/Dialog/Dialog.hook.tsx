@@ -72,7 +72,7 @@ export const useDialogStateAndEvents = (props: DialogProps) => {
                onClick={() => closeDialog(onClose)}
                variant="outlined"
             >
-               {Text.cancel}
+               {Text.btnCancel}
             </Button>
 
             {/** User custom action buttons definition */}

@@ -14,7 +14,9 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Dialog from "../Dialog";
 import ErrorBoundary from "../ErrorBoundary";
-import FormHeader from "./FormHeader";
+import FormActions from "./Actions";
+import FormContent from "./Content";
+import FormHeader from "./Header";
 
 /** @import Hooks */
 import { useFormStateAndEvents } from "./Form.hook";
@@ -26,9 +28,6 @@ import {
    FormType,
    ResponsiveSize,
 } from "../../config/interface.config";
-
-/** @import Styles */
-import Style from "./Form.module.scss";
 
 /* --------------------------------------------- */
 
@@ -60,8 +59,7 @@ const Form = (props: FormProps) => {
    const { asModal, alignment, className, style } = props;
 
    /** @constant Hook call */
-   const { formAlignment, formFields, formMetadata } =
-      useFormStateAndEvents(props);
+   const { formAlignment, formMetadata } = useFormStateAndEvents(props);
    const { flexSize } = useStyleProcessor(props);
 
    /* ----------------------- */
@@ -79,7 +77,7 @@ const Form = (props: FormProps) => {
                      alignment={alignment}
                   />
                }
-               content={formFields}
+               content={<FormContent formMetadata={formMetadata} />}
             />
          </ErrorBoundary>
       );
@@ -98,8 +96,9 @@ const Form = (props: FormProps) => {
                asModal={asModal}
                alignment={alignment}
             />
-            <Box className={Style.formBody}>{formFields}</Box>
-            <Box className={Style.formFooter}></Box>
+            <FormContent formMetadata={formMetadata}>
+               <FormActions />
+            </FormContent>
          </Box>
       </ErrorBoundary>
    );

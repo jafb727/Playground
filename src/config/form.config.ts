@@ -98,6 +98,6 @@ export const LogIn = {
          },
       ],
       subtitle: "Use your MY account",
-      title: "Login",
+      title: "Log In",
    },
 };
