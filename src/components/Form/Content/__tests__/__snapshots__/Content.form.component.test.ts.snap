@@ -1,21 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Info.component Passes shallow snapshot test 1`] = `
+exports[`Content.form.component Passes shallow snapshot test 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="infoContainer MuiBox-root css-0"
-        data-testid="info"
-      />
+        class="MuiBox-root css-0"
+        data-testid="form-content"
+      >
+        <div
+          class="formBody MuiBox-root css-0"
+        />
+      </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="infoContainer MuiBox-root css-0"
-      data-testid="info"
-    />
+      class="MuiBox-root css-0"
+      data-testid="form-content"
+    >
+      <div
+        class="formBody MuiBox-root css-0"
+      />
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

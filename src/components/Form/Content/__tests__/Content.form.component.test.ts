@@ -1,27 +1,27 @@
-/*
+/**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Copyright.component.test
- * @description: Copyright component test cases
+ * @name: Content.form.component.test
+ * @description: Content form component test cases
  */
 
 /* --------------------------------------------- */
 
-/** @import Libraries */
+/** Libraries */
 import { screen } from "@testing-library/react";
 
-/** @import Components */
-import Component from "../Copyright.component";
+/** Components */
+import Component from "../Content.form.component";
 
-/** @import Utilities */
-import { basicSetup } from "../../../test/setupTests";
+/** Utilities */
+import { basicSetup } from "../../../../test/setupTests";
 
 /* --------------------------------------------- */
 
-describe("Copyright.component", () => {
+describe("Content.form.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("copyright")).toBeInTheDocument();
+      expect(screen.getByTestId("form-content")).toBeInTheDocument();
    });
 
    /* ----------------------- */

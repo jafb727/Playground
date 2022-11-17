@@ -54,7 +54,6 @@ const FormActions = (props: FormFooterProps) => {
 
    /* ----------------------- */
 
-   /** Form is shown in page mode (default) */
    return (
       <ErrorBoundary>
          <Box

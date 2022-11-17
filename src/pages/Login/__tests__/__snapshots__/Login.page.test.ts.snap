@@ -38,15 +38,359 @@ Object {
                   class="collectionContainer fullSizeElement MuiBox-root css-1fbpp7j"
                   data-testid="collection"
                 >
-                  <form
+                  <div
                     class="fullSizeCentered MuiBox-root css-19v1o98"
-                    data-testid="form-component"
+                    data-testid="form"
+                  >
+                    <div
+                      class="MuiBox-root css-0"
+                      data-testid="form-header"
+                    >
+                      <div
+                        class="formHeader MuiBox-root css-0"
+                      >
+                        <div
+                          class="logoContainer  MuiBox-root css-nntn6c"
+                          data-testid="logo"
+                        >
+                          <div
+                            class="imageLogoContainer MuiBox-root css-0"
+                          >
+                            <img
+                              alt="Login form logo"
+                            />
+                          </div>
+                        </div>
+                        <h6
+                          class="MuiTypography-root MuiTypography-h6 css-1nledk2-MuiTypography-root"
+                        >
+                          Log In
+                        </h6>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-10kbhik-MuiTypography-root"
+                        >
+                          Use your MY account
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiBox-root css-0"
+                      data-testid="form-content"
+                    >
+                      <div
+                        class="formBody MuiBox-root css-0"
+                      >
+                        <div
+                          class="MuiBox-root css-0"
+                          data-testid="field"
+                        >
+                          <div
+                            class="inputContainer MuiBox-root css-0"
+                            data-testid="text"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
+                            >
+                              <div
+                                class="collectionContainer  MuiBox-root css-1fbpp7j"
+                                data-testid="collection"
+                              >
+                                <label
+                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-15o8ij7-MuiFormLabel-root-MuiInputLabel-root"
+                                  data-shrink="true"
+                                  for="Username"
+                                >
+                                  Username
+                                  <span
+                                    aria-hidden="true"
+                                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1wb5no1-MuiFormLabel-asterisk"
+                                  >
+                                     
+                                    *
+                                  </span>
+                                </label>
+                                <div
+                                  class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-163e1ze-MuiInputBase-root-MuiOutlinedInput-root"
+                                >
+                                  <input
+                                    aria-invalid="false"
+                                    autocomplete=""
+                                    class="MuiInputBase-input MuiOutlinedInput-input css-24rejj-MuiInputBase-input-MuiOutlinedInput-input"
+                                    id="username"
+                                    placeholder="e.g. name@domain.com"
+                                    required=""
+                                    type="text"
+                                    value=""
+                                    variant="outlined"
+                                  />
+                                  <fieldset
+                                    aria-hidden="true"
+                                    class="MuiOutlinedInput-notchedOutline css-cmg8f-MuiOutlinedInput-notchedOutline"
+                                  >
+                                    <legend
+                                      class="css-14lo706"
+                                    >
+                                      <span>
+                                        Username
+                                         
+                                        *
+                                      </span>
+                                    </legend>
+                                  </fieldset>
+                                </div>
+                                <div
+                                  class="infoContainer MuiBox-root css-0"
+                                  data-testid="info"
+                                >
+                                  <button
+                                    aria-label="Email you registered as an account"
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium inputTooltipBtn css-1ts67qs-MuiButtonBase-root-MuiButton-root"
+                                    data-mui-internal-clone-element="true"
+                                    tabindex="0"
+                                    type="button"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                      data-testid="InfoOutlinedIcon"
+                                      focusable="false"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                              <p
+                                class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-focused Mui-required css-181a5dx-MuiFormHelperText-root"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="MuiBox-root css-0"
+                          data-testid="field"
+                        >
+                          <div
+                            class="MuiBox-root css-0"
+                            data-testid="password"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
+                            >
+                              <div
+                                class="collectionContainer  MuiBox-root css-1fbpp7j"
+                                data-testid="collection"
+                              >
+                                <label
+                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-2zv488-MuiFormLabel-root-MuiInputLabel-root"
+                                  data-shrink="false"
+                                  for="outlined-adornment-password"
+                                >
+                                  Password
+                                  <span
+                                    aria-hidden="true"
+                                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1wb5no1-MuiFormLabel-asterisk"
+                                  >
+                                     
+                                    *
+                                  </span>
+                                </label>
+                                <div
+                                  class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-a7av4h-MuiInputBase-root-MuiOutlinedInput-root"
+                                >
+                                  <input
+                                    aria-invalid="false"
+                                    class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-12qs7hp-MuiInputBase-input-MuiOutlinedInput-input"
+                                    id="outlined-adornment-password"
+                                    required=""
+                                    type="password"
+                                    value=""
+                                  />
+                                  <div
+                                    class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
+                                  >
+                                    <button
+                                      aria-label="toggle password visibility"
+                                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
+                                      tabindex="0"
+                                      type="button"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                        data-testid="VisibilityIcon"
+                                        focusable="false"
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                                        />
+                                      </svg>
+                                      <span
+                                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                                      />
+                                    </button>
+                                  </div>
+                                  <fieldset
+                                    aria-hidden="true"
+                                    class="MuiOutlinedInput-notchedOutline css-cmg8f-MuiOutlinedInput-notchedOutline"
+                                  >
+                                    <legend
+                                      class="css-yjsfm1"
+                                    >
+                                      <span>
+                                        Password
+                                         
+                                        *
+                                      </span>
+                                    </legend>
+                                  </fieldset>
+                                </div>
+                                <div
+                                  class="infoContainer MuiBox-root css-0"
+                                  data-testid="info"
+                                >
+                                  <button
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium inputTooltipBtn css-1ts67qs-MuiButtonBase-root-MuiButton-root"
+                                    data-mui-internal-clone-element="true"
+                                    tabindex="0"
+                                    type="button"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                      data-testid="InfoOutlinedIcon"
+                                      focusable="false"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                              <p
+                                class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-181a5dx-MuiFormHelperText-root"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="MuiBox-root css-lvb6yv"
+                          data-testid="form-actions"
+                        >
+                          <div
+                            class="formActions MuiBox-root css-0"
+                          >
+                            <button
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-5y2byu-MuiButtonBase-root-MuiButton-root"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <p
+                                class="MuiTypography-root MuiTypography-body1 css-10kbhik-MuiTypography-root"
+                              >
+                                Submit
+                              </p>
+                              <span
+                                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="  loginBackground fullSizeElement MuiBox-root css-0"
+                    data-testid="background"
+                  />
+                </div>
+              </div>
+            </section>
+            <footer
+              class="footerInFullPage"
+              id="footer"
+            >
+              <div
+                class="collectionContainer collection MuiBox-root css-lvb6yv"
+                data-testid="collection"
+              >
+                <div
+                  class="MuiBox-root css-0"
+                  data-testid="copyright"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-n6q3br-MuiTypography-root"
+                  >
+                    © 
+                    All rights reserved.
+                  </p>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiBox-root css-0"
+      data-testid="login"
+      id="login"
+    >
+      <div
+        class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
+        data-testid="background"
+      >
+        <div
+          class="fullSizeCentered MuiBox-root css-0"
+          id="workspace"
+        >
+          <header
+            class="headerInFullPage"
+            id="header"
+          >
+            <div
+              class="collectionContainer collection MuiBox-root css-1fbpp7j"
+              data-testid="collection"
+            />
+          </header>
+          <section
+            class="fullSizeCentered"
+            id="content"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation12 loginContent css-1e1fzod-MuiPaper-root"
+            >
+              <div
+                class="collectionContainer fullSizeElement MuiBox-root css-1fbpp7j"
+                data-testid="collection"
+              >
+                <div
+                  class="fullSizeCentered MuiBox-root css-19v1o98"
+                  data-testid="form"
+                >
+                  <div
+                    class="MuiBox-root css-0"
+                    data-testid="form-header"
                   >
                     <div
                       class="formHeader MuiBox-root css-0"
                     >
                       <div
-                        class="logoContainer undefined  MuiBox-root css-nntn6c"
+                        class="logoContainer  MuiBox-root css-nntn6c"
                         data-testid="logo"
                       >
                         <div
@@ -60,7 +404,7 @@ Object {
                       <h6
                         class="MuiTypography-root MuiTypography-h6 css-1nledk2-MuiTypography-root"
                       >
-                        Login
+                        Log In
                       </h6>
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-10kbhik-MuiTypography-root"
@@ -68,16 +412,21 @@ Object {
                         Use your MY account
                       </p>
                     </div>
+                  </div>
+                  <div
+                    class="MuiBox-root css-0"
+                    data-testid="form-content"
+                  >
                     <div
                       class="formBody MuiBox-root css-0"
                     >
                       <div
                         class="MuiBox-root css-0"
-                        data-testid="field-component"
+                        data-testid="field"
                       >
                         <div
                           class="inputContainer MuiBox-root css-0"
-                          data-testid="text-component"
+                          data-testid="text"
                         >
                           <div
                             class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
@@ -87,24 +436,24 @@ Object {
                               data-testid="collection"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-k9l82h-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-15o8ij7-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="true"
                                 for="Username"
                               >
                                 Username
                                 <span
                                   aria-hidden="true"
-                                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+                                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1wb5no1-MuiFormLabel-asterisk"
                                 >
                                    
                                   *
                                 </span>
                               </label>
                               <div
-                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-1s2gbya-MuiInputBase-root-MuiOutlinedInput-root"
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-163e1ze-MuiInputBase-root-MuiOutlinedInput-root"
                               >
                                 <input
-                                  aria-invalid="true"
+                                  aria-invalid="false"
                                   autocomplete=""
                                   class="MuiInputBase-input MuiOutlinedInput-input css-24rejj-MuiInputBase-input-MuiOutlinedInput-input"
                                   id="username"
@@ -130,8 +479,8 @@ Object {
                                 </fieldset>
                               </div>
                               <div
-                                class="infoContainer MuiBox-root css-1rr4qq7"
-                                data-testid="info-component"
+                                class="infoContainer MuiBox-root css-0"
+                                data-testid="info"
                               >
                                 <button
                                   aria-label="Email you registered as an account"
@@ -158,20 +507,18 @@ Object {
                               </div>
                             </div>
                             <p
-                              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-focused Mui-required css-15etk2q-MuiFormHelperText-root"
-                            >
-                              Error
-                            </p>
+                              class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-focused Mui-required css-181a5dx-MuiFormHelperText-root"
+                            />
                           </div>
                         </div>
                       </div>
                       <div
                         class="MuiBox-root css-0"
-                        data-testid="field-component"
+                        data-testid="field"
                       >
                         <div
                           class="MuiBox-root css-0"
-                          data-testid="password-component"
+                          data-testid="password"
                         >
                           <div
                             class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
@@ -181,21 +528,21 @@ Object {
                               data-testid="collection"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-1bfzf0l-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-2zv488-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 for="outlined-adornment-password"
                               >
                                 Password
                                 <span
                                   aria-hidden="true"
-                                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1wb5no1-MuiFormLabel-asterisk"
                                 >
                                    
                                   *
                                 </span>
                               </label>
                               <div
-                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-17t1ezm-MuiInputBase-root-MuiOutlinedInput-root"
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-a7av4h-MuiInputBase-root-MuiOutlinedInput-root"
                               >
                                 <input
                                   aria-invalid="false"
@@ -246,8 +593,8 @@ Object {
                                 </fieldset>
                               </div>
                               <div
-                                class="infoContainer MuiBox-root css-1rr4qq7"
-                                data-testid="info-component"
+                                class="infoContainer MuiBox-root css-0"
+                                data-testid="info"
                               >
                                 <button
                                   class="MuiButtonBase-root MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium inputTooltipBtn css-1ts67qs-MuiButtonBase-root-MuiButton-root"
@@ -272,323 +619,38 @@ Object {
                                 </button>
                               </div>
                             </div>
+                            <p
+                              class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-181a5dx-MuiFormHelperText-root"
+                            />
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      class="formFooter MuiBox-root css-0"
-                    />
-                  </form>
-                  <div
-                    class="  loginBackground fullSizeElement MuiBox-root css-0"
-                    data-testid="background"
-                  />
-                </div>
-              </div>
-            </section>
-            <footer
-              class="footerInFullPage"
-              id="footer"
-            >
-              <div
-                class="collectionContainer collection MuiBox-root css-lvb6yv"
-                data-testid="collection"
-              >
-                <div
-                  class="MuiBox-root css-0"
-                  data-testid="copyright-component"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 css-n6q3br-MuiTypography-root"
-                  >
-                    © 
-                    All rights reserved.
-                  </p>
-                </div>
-              </div>
-            </footer>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="MuiBox-root css-0"
-      data-testid="login"
-      id="login"
-    >
-      <div
-        class="fullPageBackground defaultBackground undefined MuiBox-root css-0"
-        data-testid="background"
-      >
-        <div
-          class="fullSizeCentered MuiBox-root css-0"
-          id="workspace"
-        >
-          <header
-            class="headerInFullPage"
-            id="header"
-          >
-            <div
-              class="collectionContainer collection MuiBox-root css-1fbpp7j"
-              data-testid="collection"
-            />
-          </header>
-          <section
-            class="fullSizeCentered"
-            id="content"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation12 loginContent css-1e1fzod-MuiPaper-root"
-            >
-              <div
-                class="collectionContainer fullSizeElement MuiBox-root css-1fbpp7j"
-                data-testid="collection"
-              >
-                <form
-                  class="fullSizeCentered MuiBox-root css-19v1o98"
-                  data-testid="form-component"
-                >
-                  <div
-                    class="formHeader MuiBox-root css-0"
-                  >
-                    <div
-                      class="logoContainer undefined  MuiBox-root css-nntn6c"
-                      data-testid="logo"
-                    >
                       <div
-                        class="imageLogoContainer MuiBox-root css-0"
-                      >
-                        <img
-                          alt="Login form logo"
-                        />
-                      </div>
-                    </div>
-                    <h6
-                      class="MuiTypography-root MuiTypography-h6 css-1nledk2-MuiTypography-root"
-                    >
-                      Login
-                    </h6>
-                    <p
-                      class="MuiTypography-root MuiTypography-body1 css-10kbhik-MuiTypography-root"
-                    >
-                      Use your MY account
-                    </p>
-                  </div>
-                  <div
-                    class="formBody MuiBox-root css-0"
-                  >
-                    <div
-                      class="MuiBox-root css-0"
-                      data-testid="field-component"
-                    >
-                      <div
-                        class="inputContainer MuiBox-root css-0"
-                        data-testid="text-component"
+                        class="MuiBox-root css-lvb6yv"
+                        data-testid="form-actions"
                       >
                         <div
-                          class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
+                          class="formActions MuiBox-root css-0"
                         >
-                          <div
-                            class="collectionContainer  MuiBox-root css-1fbpp7j"
-                            data-testid="collection"
+                          <button
+                            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-5y2byu-MuiButtonBase-root-MuiButton-root"
+                            tabindex="0"
+                            type="button"
                           >
-                            <label
-                              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-k9l82h-MuiFormLabel-root-MuiInputLabel-root"
-                              data-shrink="true"
-                              for="Username"
+                            <p
+                              class="MuiTypography-root MuiTypography-body1 css-10kbhik-MuiTypography-root"
                             >
-                              Username
-                              <span
-                                aria-hidden="true"
-                                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
-                              >
-                                 
-                                *
-                              </span>
-                            </label>
-                            <div
-                              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-1s2gbya-MuiInputBase-root-MuiOutlinedInput-root"
-                            >
-                              <input
-                                aria-invalid="true"
-                                autocomplete=""
-                                class="MuiInputBase-input MuiOutlinedInput-input css-24rejj-MuiInputBase-input-MuiOutlinedInput-input"
-                                id="username"
-                                placeholder="e.g. name@domain.com"
-                                required=""
-                                type="text"
-                                value=""
-                                variant="outlined"
-                              />
-                              <fieldset
-                                aria-hidden="true"
-                                class="MuiOutlinedInput-notchedOutline css-cmg8f-MuiOutlinedInput-notchedOutline"
-                              >
-                                <legend
-                                  class="css-14lo706"
-                                >
-                                  <span>
-                                    Username
-                                     
-                                    *
-                                  </span>
-                                </legend>
-                              </fieldset>
-                            </div>
-                            <div
-                              class="infoContainer MuiBox-root css-1rr4qq7"
-                              data-testid="info-component"
-                            >
-                              <button
-                                aria-label="Email you registered as an account"
-                                class="MuiButtonBase-root MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium inputTooltipBtn css-1ts67qs-MuiButtonBase-root-MuiButton-root"
-                                data-mui-internal-clone-element="true"
-                                tabindex="0"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="InfoOutlinedIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                                  />
-                                </svg>
-                                <span
-                                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                                />
-                              </button>
-                            </div>
-                          </div>
-                          <p
-                            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-focused Mui-required css-15etk2q-MuiFormHelperText-root"
-                          >
-                            Error
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiBox-root css-0"
-                      data-testid="field-component"
-                    >
-                      <div
-                        class="MuiBox-root css-0"
-                        data-testid="password-component"
-                      >
-                        <div
-                          class="MuiFormControl-root MuiFormControl-marginDense css-zevgu-MuiFormControl-root"
-                        >
-                          <div
-                            class="collectionContainer  MuiBox-root css-1fbpp7j"
-                            data-testid="collection"
-                          >
-                            <label
-                              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-1bfzf0l-MuiFormLabel-root-MuiInputLabel-root"
-                              data-shrink="false"
-                              for="outlined-adornment-password"
-                            >
-                              Password
-                              <span
-                                aria-hidden="true"
-                                class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
-                              >
-                                 
-                                *
-                              </span>
-                            </label>
-                            <div
-                              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-17t1ezm-MuiInputBase-root-MuiOutlinedInput-root"
-                            >
-                              <input
-                                aria-invalid="false"
-                                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-12qs7hp-MuiInputBase-input-MuiOutlinedInput-input"
-                                id="outlined-adornment-password"
-                                required=""
-                                type="password"
-                                value=""
-                              />
-                              <div
-                                class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
-                              >
-                                <button
-                                  aria-label="toggle password visibility"
-                                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
-                                  tabindex="0"
-                                  type="button"
-                                >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                    data-testid="VisibilityIcon"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
-                                    />
-                                  </svg>
-                                  <span
-                                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                                  />
-                                </button>
-                              </div>
-                              <fieldset
-                                aria-hidden="true"
-                                class="MuiOutlinedInput-notchedOutline css-cmg8f-MuiOutlinedInput-notchedOutline"
-                              >
-                                <legend
-                                  class="css-yjsfm1"
-                                >
-                                  <span>
-                                    Password
-                                     
-                                    *
-                                  </span>
-                                </legend>
-                              </fieldset>
-                            </div>
-                            <div
-                              class="infoContainer MuiBox-root css-1rr4qq7"
-                              data-testid="info-component"
-                            >
-                              <button
-                                class="MuiButtonBase-root MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium MuiButton-root MuiButton-inputInfo MuiButton-inputInfoPrimary MuiButton-sizeMedium MuiButton-inputInfoSizeMedium inputTooltipBtn css-1ts67qs-MuiButtonBase-root-MuiButton-root"
-                                data-mui-internal-clone-element="true"
-                                tabindex="0"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="InfoOutlinedIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                                  />
-                                </svg>
-                                <span
-                                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                                />
-                              </button>
-                            </div>
-                          </div>
+                              Submit
+                            </p>
+                            <span
+                              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                            />
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="formFooter MuiBox-root css-0"
-                  />
-                </form>
+                </div>
                 <div
                   class="  loginBackground fullSizeElement MuiBox-root css-0"
                   data-testid="background"
@@ -606,7 +668,7 @@ Object {
             >
               <div
                 class="MuiBox-root css-0"
-                data-testid="copyright-component"
+                data-testid="copyright"
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-n6q3br-MuiTypography-root"

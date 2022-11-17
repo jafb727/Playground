@@ -1,27 +1,27 @@
-/*
+/**
  * @author: Jose A Felix
  * @editor: Jose A Felix
- * @name: Copyright.component.test
- * @description: Copyright component test cases
+ * @name: Actions.form.component.test
+ * @description: Actions form component test cases
  */
 
 /* --------------------------------------------- */
 
-/** @import Libraries */
+/** Libraries */
 import { screen } from "@testing-library/react";
 
-/** @import Components */
-import Component from "../Copyright.component";
+/** Components */
+import Component from "../Actions.form.component";
 
-/** @import Utilities */
-import { basicSetup } from "../../../test/setupTests";
+/** Utilities */
+import { basicSetup } from "../../../../test/setupTests";
 
 /* --------------------------------------------- */
 
-describe("Copyright.component", () => {
+describe("Actions.form.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("copyright")).toBeInTheDocument();
+      expect(screen.getByTestId("form-actions")).toBeInTheDocument();
    });
 
    /* ----------------------- */

@@ -5,37 +5,99 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <form
+      <div
         class="MuiBox-root css-1fbpp7j"
-        data-testid="form-component"
+        data-testid="form"
+      >
+        <div
+          class="MuiBox-root css-0"
+          data-testid="form-header"
+        >
+          <div
+            class="formHeader MuiBox-root css-0"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-0"
+          data-testid="form-content"
+        >
+          <div
+            class="formBody MuiBox-root css-0"
+          >
+            <div
+              class="MuiBox-root css-lvb6yv"
+              data-testid="form-actions"
+            >
+              <div
+                class="formActions MuiBox-root css-0"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                  >
+                    Submit
+                  </p>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiBox-root css-1fbpp7j"
+      data-testid="form"
+    >
+      <div
+        class="MuiBox-root css-0"
+        data-testid="form-header"
       >
         <div
           class="formHeader MuiBox-root css-0"
         />
+      </div>
+      <div
+        class="MuiBox-root css-0"
+        data-testid="form-content"
+      >
         <div
           class="formBody MuiBox-root css-0"
-        />
-        <div
-          class="formFooter MuiBox-root css-0"
-        />
-      </form>
+        >
+          <div
+            class="MuiBox-root css-lvb6yv"
+            data-testid="form-actions"
+          >
+            <div
+              class="formActions MuiBox-root css-0"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                >
+                  Submit
+                </p>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>,
-  "container": <div>
-    <form
-      class="MuiBox-root css-1fbpp7j"
-      data-testid="form-component"
-    >
-      <div
-        class="formHeader MuiBox-root css-0"
-      />
-      <div
-        class="formBody MuiBox-root css-0"
-      />
-      <div
-        class="formFooter MuiBox-root css-0"
-      />
-    </form>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

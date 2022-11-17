@@ -89,7 +89,7 @@ Object {
               >
                 <div
                   class="copyright MuiBox-root css-0"
-                  data-testid="copyright-component"
+                  data-testid="copyright"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body2 css-n6q3br-MuiTypography-root"
@@ -190,7 +190,7 @@ Object {
             >
               <div
                 class="copyright MuiBox-root css-0"
-                data-testid="copyright-component"
+                data-testid="copyright"
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-n6q3br-MuiTypography-root"

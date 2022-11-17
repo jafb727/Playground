@@ -2,7 +2,7 @@
 
 exports[`Logo.component Passes shallow snapshot test 1`] = `
 <div
-  class="logoContainer undefined  MuiBox-root css-nntn6c"
+  class="logoContainer  MuiBox-root css-nntn6c"
   data-testid="logo"
 >
   <div

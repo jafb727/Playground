@@ -7,7 +7,7 @@ Object {
     <div>
       <div
         class="MuiBox-root css-0"
-        data-testid="copyright-component"
+        data-testid="copyright"
       >
         <p
           class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
@@ -21,7 +21,7 @@ Object {
   "container": <div>
     <div
       class="MuiBox-root css-0"
-      data-testid="copyright-component"
+      data-testid="copyright"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"

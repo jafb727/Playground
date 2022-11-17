@@ -53,7 +53,6 @@ const FormContent = (props: FormFieldsProps) => {
 
    /* ----------------------- */
 
-   /** Form is shown in page mode (default) */
    return (
       <ErrorBoundary>
          <Box
