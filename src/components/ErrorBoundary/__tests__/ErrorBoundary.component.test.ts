@@ -7,6 +7,9 @@
 
 /* --------------------------------------------- */
 
+/** @import Libraries */
+import { act } from "@testing-library/react";
+
 /** @import Components */
 import Component from "../ErrorBoundary.component";
 
@@ -18,6 +21,9 @@ import { basicSetup } from "../../../test/setupTests";
 describe("ErrorBoundary.component", () => {
    test("Passes shallow snapshot test", () => {
       const component = basicSetup(Component);
-      expect(component).toMatchSnapshot();
+
+      act(() => {
+         expect(component).toMatchSnapshot();
+      });
    });
 });

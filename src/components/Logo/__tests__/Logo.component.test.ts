@@ -8,7 +8,7 @@
 /* --------------------------------------------- */
 
 /** @import Libraries */
-import { screen } from "@testing-library/react";
+import { act, screen } from "@testing-library/react";
 
 /** @import Components */
 import Component from "../Logo.component";
@@ -31,15 +31,20 @@ describe("Logo.component", () => {
 
    test("Renders component ok", async () => {
       basicSetup(Component, props);
-      const component = await screen.findByTestId("logo");
-      expect(component).toBeInTheDocument();
+      const component = screen.getByTestId("logo");
+
+      await act(() => {
+         expect(component).toBeInTheDocument();
+      });
    });
 
    /* ----------------------- */
 
    test("Passes shallow snapshot test", async () => {
-      basicSetup(Component, props);
-      const component = await screen.findByTestId("logo");
-      expect(component).toMatchSnapshot();
+      const component = basicSetup(Component, props);
+
+      await act(() => {
+         expect(component).toMatchSnapshot();
+      });
    });
 });

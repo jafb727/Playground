@@ -8,7 +8,7 @@
 /* --------------------------------------------- */
 
 /** @import Libraries */
-import { screen } from "@testing-library/react";
+import { act, screen } from "@testing-library/react";
 
 /** @import Components */
 import Component from "../Copyright.component";
@@ -21,13 +21,20 @@ import { basicSetup } from "../../../test/setupTests";
 describe("Copyright.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("copyright")).toBeInTheDocument();
+      const component = screen.getByTestId("copyright");
+
+      act(() => {
+         expect(component).toBeInTheDocument();
+      });
    });
 
    /* ----------------------- */
 
    test("Passes shallow snapshot test", () => {
       const component = basicSetup(Component);
-      expect(component).toMatchSnapshot();
+
+      act(() => {
+         expect(component).toMatchSnapshot();
+      });
    });
 });

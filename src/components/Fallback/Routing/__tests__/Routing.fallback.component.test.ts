@@ -8,7 +8,7 @@
 /* --------------------------------------------- */
 
 /** @import Libraries */
-import { screen } from "@testing-library/react";
+import { act, screen } from "@testing-library/react";
 
 /** @import Components */
 import Component from "../Routing.fallback.component";
@@ -35,7 +35,11 @@ describe("Routing.fallback.component", () => {
 
    test("Renders component ok", () => {
       routerSetup(Component, routingSetup);
-      expect(screen.getByTestId("routing-fallback")).toBeInTheDocument();
+      const component = screen.getByTestId("routing-fallback");
+
+      act(() => {
+         expect(component).toBeInTheDocument();
+      });
    });
 
    /* ----------------------- */
@@ -44,13 +48,19 @@ describe("Routing.fallback.component", () => {
       routerSetup(Component, routingSetup);
       const button = screen.getByTestId("back-home-button");
       await userEvent.click(button);
-      expect(history.location.pathname).toBe("/");
+
+      act(() => {
+         expect(history.location.pathname).toBe("/");
+      });
    });
 
    /* ----------------------- */
 
    test("Passes shallow snapshot test", () => {
       const component = routerSetup(Component, routingSetup);
-      expect(component).toMatchSnapshot();
+
+      act(() => {
+         expect(component).toMatchSnapshot();
+      });
    });
 });

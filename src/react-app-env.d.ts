@@ -11,5 +11,5 @@
 
 /// <reference types="react-scripts" />
 
-/** @module Allows to import videos as a module in TS */
+/** @module Allows to import videos as a module in TS files */
 declare module "*.mp4";

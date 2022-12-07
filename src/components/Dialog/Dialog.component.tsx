@@ -46,7 +46,7 @@ export interface DialogProps extends ComponentBasic {
  */
 const Dialog = (props: DialogProps) => {
    /** @constant Properties */
-   const { className = "", content, open, style, title } = props;
+   const { className = "", content, open = false, style, title } = props;
 
    /** @constant Hook call */
    const { actionButtons, dialogVsby } = useDialogStateAndEvents(props);

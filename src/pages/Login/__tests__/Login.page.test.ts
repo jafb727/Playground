@@ -8,7 +8,7 @@
 /* --------------------------------------------- */
 
 /** @import Libraries */
-import { screen } from "@testing-library/react";
+import { act, screen } from "@testing-library/react";
 
 /** @import Components */
 import Component from "../Login.page";
@@ -19,15 +19,22 @@ import { basicSetup } from "../../../test/setupTests";
 /* --------------------------------------------- */
 
 describe("Login.page", () => {
-   test("Renders component ok", () => {
+   test("Renders component ok", async () => {
       basicSetup(Component);
-      expect(screen.getByTestId("login")).toBeInTheDocument();
+      const component = screen.getByTestId("login");
+
+      await act(() => {
+         expect(component).toBeInTheDocument();
+      });
    });
 
    /* ----------------------- */
 
-   test("Passes shallow snapshot test", () => {
+   test("Passes shallow snapshot test", async () => {
       const component = basicSetup(Component);
-      expect(component).toMatchSnapshot();
+
+      await act(() => {
+         expect(component).toMatchSnapshot();
+      });
    });
 });

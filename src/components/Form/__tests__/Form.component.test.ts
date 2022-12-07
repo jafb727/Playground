@@ -8,7 +8,7 @@
 /* --------------------------------------------- */
 
 /** Libraries */
-import { screen } from "@testing-library/react";
+import { act, screen } from "@testing-library/react";
 
 /** Components */
 import Component from "../Form.component";
@@ -21,13 +21,20 @@ import { basicSetup } from "../../../test/setupTests";
 describe("Form.component", () => {
    test("Renders component ok", () => {
       basicSetup(Component);
-      expect(screen.getByTestId("form")).toBeInTheDocument();
+      const component = screen.getByTestId("form");
+
+      act(() => {
+         expect(component).toBeInTheDocument();
+      });
    });
 
    /* ----------------------- */
 
    test("Passes shallow snapshot test", () => {
       const component = basicSetup(Component);
-      expect(component).toMatchSnapshot();
+
+      act(() => {
+         expect(component).toMatchSnapshot();
+      });
    });
 });
