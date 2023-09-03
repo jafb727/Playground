@@ -49,7 +49,7 @@ const Login = () => {
    /* ----------------------- */
 
    return (
-      <Box data-testid="login" id="login">
+      <Box data-testid="login" id="login" className="container-fluid">
          <Background defaultBg fullPage>
             <ThemeProvider theme={Theme}>
                <Box className={fullSizeCentered} id="workspace">

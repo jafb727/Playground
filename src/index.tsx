@@ -7,6 +7,9 @@
 
 /* --------------------------------------------- */
 
+/** @import Styles */
+import "bootstrap/dist/css/bootstrap.min.css";
+
 /** @import Libraries */
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
